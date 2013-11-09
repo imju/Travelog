@@ -57,6 +57,8 @@
 		8A0C688B1819B5D60057E670 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C688A1819B5D60057E670 /* CoreLocation.framework */; };
 		8A41EB36182780D4007B6E9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB35182780D4007B6E9E /* AddressBook.framework */; };
 		8A41EB4C182865F6007B6E9E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB4B182865F6007B6E9E /* MessageUI.framework */; };
+		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
+		8A574CE4182DED4E009EA870 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE3182DED4E009EA870 /* Default.png */; };
 		8A7CAC3D1829995100A2653C /* Time Machine.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8A7CAC3C1829995100A2653C /* Time Machine.icns */; };
 		8AFFB9E6181EC0D000BAB4FF /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */; };
 		8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E8181EE7CA00BAB4FF /* TagPickerViewController.m */; };
@@ -85,7 +87,6 @@
 		456D8D91182DCCCA00DD5479 /* fun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fun.png; path = Travelog/Images.xcassets/AppIcon.appiconset/fun.png; sourceTree = "<group>"; };
 		456D8D94182DCD2E00DD5479 /* peopleOther.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peopleOther.png; path = Travelog/Images.xcassets/AppIcon.appiconset/peopleOther.png; sourceTree = "<group>"; };
 		456D8D95182DCD2E00DD5479 /* places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = places.png; path = Travelog/Images.xcassets/AppIcon.appiconset/places.png; sourceTree = "<group>"; };
-		456D8D98182DCDE700DD5479 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Travelog/Images.xcassets/AppIcon.appiconset/Default.png; sourceTree = "<group>"; };
 		456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareOauth.m; path = Travelog/FourSquareOauth.m; sourceTree = "<group>"; };
 		456D8DC3182DD28A00DD5479 /* FourSquareOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareOauth.h; path = Travelog/FourSquareOauth.h; sourceTree = "<group>"; };
 		456D8DC5182DD28A00DD5479 /* FourSquareClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareClient.m; path = Travelog/FourSquareClient.m; sourceTree = "<group>"; };
@@ -157,6 +158,8 @@
 		8A0C688A1819B5D60057E670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8A41EB35182780D4007B6E9E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8A41EB4B182865F6007B6E9E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
+		8A574CE3182DED4E009EA870 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Travelog/images/Default.png; sourceTree = "<group>"; };
 		8A7CAC3C1829995100A2653C /* Time Machine.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Time Machine.icns"; sourceTree = "<group>"; };
 		8AFFB9E4181EC0D000BAB4FF /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
@@ -347,8 +350,8 @@
 		8A6EF24C182AC50E00625B6B /* startupAppIcon */ = {
 			isa = PBXGroup;
 			children = (
+				8A574CE3182DED4E009EA870 /* Default.png */,
 				8A7CAC3C1829995100A2653C /* Time Machine.icns */,
-				456D8D98182DCDE700DD5479 /* Default.png */,
 			);
 			name = startupAppIcon;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 		8AFFBA23182313A300BAB4FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A574CE1182DED2A009EA870 /* camera.png */,
 				8A6EF24D182AC54600625B6B /* UISegmentIcon */,
 				8A6EF24C182AC50E00625B6B /* startupAppIcon */,
 				8A6EF24B182AC46D00625B6B /* mapIcon */,
@@ -517,9 +521,11 @@
 				456D8E02182DDBF400DD5479 /* other.png in Resources */,
 				456D8E04182DDBF400DD5479 /* peopleOther.png in Resources */,
 				456D8E06182DDBF400DD5479 /* restaurant.png in Resources */,
+				8A574CE2182DED2A009EA870 /* camera.png in Resources */,
 				456D8DFA182DDBF400DD5479 /* events.png in Resources */,
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
+				8A574CE4182DED4E009EA870 /* Default.png in Resources */,
 				456D8DFC182DDBF400DD5479 /* fun.png in Resources */,
 				456D8DFE182DDBF400DD5479 /* map-pin.png in Resources */,
 				456D8E0B182DDC2200DD5479 /* travel.png in Resources */,
