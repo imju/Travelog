@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1C4EB1B9-A135-4848-991A-BCD07F4459B6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Travelog</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>07FD835C-50A4-4A63-B64E-CB2334F9690A</key>
+		<string>https://github.com/willysharp5/TwitterAppIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Travelog/Travelog.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>07FD835C-50A4-4A63-B64E-CB2334F9690A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/willysharp5/TwitterAppIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>07FD835C-50A4-4A63-B64E-CB2334F9690A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>07FD835C-50A4-4A63-B64E-CB2334F9690A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOSTrainingClass</string>
+		</dict>
+	</array>
+</dict>
+</plist>
