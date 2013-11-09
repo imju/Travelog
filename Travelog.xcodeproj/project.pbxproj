@@ -59,6 +59,7 @@
 		8A41EB4C182865F6007B6E9E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB4B182865F6007B6E9E /* MessageUI.framework */; };
 		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
 		8A574CE4182DED4E009EA870 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE3182DED4E009EA870 /* Default.png */; };
+		8A574CE7182DF449009EA870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE5182DF449009EA870 /* Main.storyboard */; };
 		8A7CAC3D1829995100A2653C /* Time Machine.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8A7CAC3C1829995100A2653C /* Time Machine.icns */; };
 		8AFFB9E6181EC0D000BAB4FF /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */; };
 		8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E8181EE7CA00BAB4FF /* TagPickerViewController.m */; };
@@ -145,7 +146,6 @@
 		8A01A38C18189666005A2A70 /* Travelog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Travelog-Prefix.pch"; sourceTree = "<group>"; };
 		8A01A38D18189666005A2A70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A01A38E18189666005A2A70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A01A39118189666005A2A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A01A39918189666005A2A70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8A01A39F18189666005A2A70 /* TravelogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A01A3A018189666005A2A70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -160,6 +160,7 @@
 		8A41EB4B182865F6007B6E9E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
 		8A574CE3182DED4E009EA870 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Travelog/images/Default.png; sourceTree = "<group>"; };
+		8A574CE6182DF449009EA870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Travelog/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A7CAC3C1829995100A2653C /* Time Machine.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Time Machine.icns"; sourceTree = "<group>"; };
 		8AFFB9E4181EC0D000BAB4FF /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
@@ -395,7 +396,7 @@
 		8AFFBA2A1823186400BAB4FF /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				8A01A39018189666005A2A70 /* Main.storyboard */,
+				8A574CE5182DF449009EA870 /* Main.storyboard */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -522,6 +523,7 @@
 				456D8E04182DDBF400DD5479 /* peopleOther.png in Resources */,
 				456D8E06182DDBF400DD5479 /* restaurant.png in Resources */,
 				8A574CE2182DED2A009EA870 /* camera.png in Resources */,
+				8A574CE7182DF449009EA870 /* Main.storyboard in Resources */,
 				456D8DFA182DDBF400DD5479 /* events.png in Resources */,
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
@@ -643,21 +645,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		8A01A39018189666005A2A70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A01A39118189666005A2A70 /* Base */,
-			);
-			name = Main.storyboard;
-			path = Travelog;
-			sourceTree = "<group>";
-		};
 		8A01A3A918189666005A2A70 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A01A3AA18189666005A2A70 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8A574CE5182DF449009EA870 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A574CE6182DF449009EA870 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
