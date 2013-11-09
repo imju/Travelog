@@ -84,10 +84,6 @@
 /* Begin PBXFileReference section */
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
-		456D8D90182DCCCA00DD5479 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = Travelog/Images.xcassets/AppIcon.appiconset/food.png; sourceTree = "<group>"; };
-		456D8D91182DCCCA00DD5479 /* fun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fun.png; path = Travelog/Images.xcassets/AppIcon.appiconset/fun.png; sourceTree = "<group>"; };
-		456D8D94182DCD2E00DD5479 /* peopleOther.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peopleOther.png; path = Travelog/Images.xcassets/AppIcon.appiconset/peopleOther.png; sourceTree = "<group>"; };
-		456D8D95182DCD2E00DD5479 /* places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = places.png; path = Travelog/Images.xcassets/AppIcon.appiconset/places.png; sourceTree = "<group>"; };
 		456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareOauth.m; path = Travelog/FourSquareOauth.m; sourceTree = "<group>"; };
 		456D8DC3182DD28A00DD5479 /* FourSquareOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareOauth.h; path = Travelog/FourSquareOauth.h; sourceTree = "<group>"; };
 		456D8DC5182DD28A00DD5479 /* FourSquareClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareClient.m; path = Travelog/FourSquareClient.m; sourceTree = "<group>"; };
@@ -329,8 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				456D8DEC182DDBF400DD5479 /* events.png */,
-				456D8DED182DDBF400DD5479 /* food.png */,
-				456D8DEE182DDBF400DD5479 /* fun.png */,
 				456D8DEF182DDBF400DD5479 /* house.png */,
 				456D8DF0182DDBF400DD5479 /* map-pin.png */,
 				456D8DF1182DDBF400DD5479 /* message.png */,
@@ -338,8 +332,6 @@
 				456D8DF3182DDBF400DD5479 /* office.png */,
 				456D8DF4182DDBF400DD5479 /* other.png */,
 				456D8DF5182DDBF400DD5479 /* people.png */,
-				456D8DF6182DDBF400DD5479 /* peopleOther.png */,
-				456D8DF7182DDBF400DD5479 /* places.png */,
 				456D8DF8182DDBF400DD5479 /* restaurant.png */,
 				456D8DF9182DDBF400DD5479 /* shopping.png */,
 				456D8E08182DDC2200DD5479 /* transportation.png */,
@@ -360,10 +352,10 @@
 		8A6EF24D182AC54600625B6B /* UISegmentIcon */ = {
 			isa = PBXGroup;
 			children = (
-				456D8D90182DCCCA00DD5479 /* food.png */,
-				456D8D91182DCCCA00DD5479 /* fun.png */,
-				456D8D94182DCD2E00DD5479 /* peopleOther.png */,
-				456D8D95182DCD2E00DD5479 /* places.png */,
+				456D8DED182DDBF400DD5479 /* food.png */,
+				456D8DEE182DDBF400DD5479 /* fun.png */,
+				456D8DF6182DDBF400DD5479 /* peopleOther.png */,
+				456D8DF7182DDBF400DD5479 /* places.png */,
 			);
 			name = UISegmentIcon;
 			sourceTree = "<group>";

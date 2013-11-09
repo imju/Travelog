@@ -248,11 +248,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="address" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="71" translatesAutoresizingMaskIntoConstraints="NO" id="J10-k1-AkT">
-                                                    <rect key="frame" x="229" y="11" width="71" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="address" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="178" translatesAutoresizingMaskIntoConstraints="NO" id="J10-k1-AkT">
+                                                    <rect key="frame" x="134" y="-1" width="178" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
-                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -481,7 +481,7 @@
                             <constraint firstItem="sZl-gc-xkS" firstAttribute="leading" secondItem="PeP-Vc-MD7" secondAttribute="leading" constant="-4" id="eGV-bR-XUA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="63L-iE-g9J"/>
+                    <navigationItem key="navigationItem" title="Lets Get Started!" id="63L-iE-g9J"/>
                     <connections>
                         <outlet property="mapView" destination="vko-VJ-K1Y" id="Blq-qO-5rr"/>
                         <outlet property="nearbyVenueTableView" destination="sZl-gc-xkS" id="EXd-ej-4LZ"/>
