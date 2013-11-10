@@ -47,8 +47,11 @@
     
     tagsViewController.managedObjectContext = self.managedObjectContext;
     
+    //create a new managed object property for TagsViewController
+    navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:2];
+
     //Pass the context to the MapViewController
-    MapViewController *mapViewController = (MapViewController *)[[tabBarController viewControllers] objectAtIndex:2];
+    MapViewController *mapViewController = (MapViewController *)[[navigationController viewControllers] objectAtIndex:0];
     mapViewController.managedObjectContext = self.managedObjectContext;
     
     
