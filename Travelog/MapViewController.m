@@ -159,9 +159,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"EditTag"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
+        CheckInViewController *controller= segue.destinationViewController;
         
-        CheckInViewController *controller = (CheckInViewController *)navigationController.topViewController;
         controller.managedObjectContext = self.managedObjectContext;
         
         Travelog *travelog = [travelogs objectAtIndex:((UIButton *)sender).tag];

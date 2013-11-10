@@ -55,7 +55,7 @@ static NSString * const kAccessTokenKey = @"access_token";
         self.parameterEncoding = AFJSONParameterEncoding;
 
         NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"ll":[NSString stringWithFormat:@"%f,%f",latitude,longitude] } ];
-        [params setObject:@(10) forKey:@"limit"];
+        [params setObject:@(5) forKey:@"limit"];
         [params setObject:@"20131030" forKey:@"v"];
         
         if (User.currentUser){ // no authentication performed

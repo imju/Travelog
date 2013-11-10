@@ -178,9 +178,9 @@ CLGeocoder *geocoder; //object that performs the geocode
     //[cell.venueNameLabel setText:[NSString stringWithFormat:@"%@. %@", venue.index, venue.name]];
     [cell.distanceLabel  setText:venue.distance.description];
 
-    UIFont *distanceArialFont = [UIFont fontWithName:@"helvetica" size:11.0 ];
-    NSDictionary *distanceArialdict = [NSDictionary dictionaryWithObject: distanceArialFont forKey:NSFontAttributeName];
-    NSMutableAttributedString *distanceAttrString = [[NSMutableAttributedString alloc] initWithString:distanceString attributes:distanceArialdict];
+    UIFont *distanceFont = [UIFont fontWithName:@"helvetica" size:11.0 ];
+    NSDictionary *distancedict = [NSDictionary dictionaryWithObject: distanceFont forKey:NSFontAttributeName];
+    NSMutableAttributedString *distanceAttrString = [[NSMutableAttributedString alloc] initWithString:distanceString attributes:distancedict];
     cell.distanceLabel.attributedText = distanceAttrString;
     [cell.distanceLabel setTextColor:UIColorFromRGB(0x66CCFF)];
     

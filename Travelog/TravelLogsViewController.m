@@ -480,10 +480,8 @@
     //it belongs to and puts it into travelogToEdit property
     
     if ([segue.identifier isEqualToString:@"EditTravelog"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        
-        CheckInViewController *controller = (CheckInViewController *)navigationController.topViewController;
-        
+        CheckInViewController *controller = segue.destinationViewController;
+                
         controller.managedObjectContext = self.managedObjectContext;
         
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
