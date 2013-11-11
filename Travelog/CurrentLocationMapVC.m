@@ -160,6 +160,13 @@ CLGeocoder *geocoder; //object that performs the geocode
 }
 
 
+- (IBAction)upadateLocationButton:(id)sender
+{
+    [self updateLocations];
+    [self fetchData];
+}
+
+
 #pragma mark - tableview delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

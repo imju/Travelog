@@ -121,13 +121,13 @@ UIImagePickerController *imagePicker;
     //thoroughfare - street name
     //locality - city
     //administrativeArea - state/province
-    /*
+    
     return [NSString stringWithFormat:@"%@ %@, %@, %@ %@, %@",
             self.placemark.subThoroughfare, self.placemark.thoroughfare,
             self.placemark.locality, self.placemark.administrativeArea,
-            self.placemark.postalCode, self.placemark.country];*/
+            self.placemark.postalCode, self.placemark.country];
     
-    NSMutableString *line1 = [NSMutableString stringWithCapacity:100];
+    /*NSMutableString *line1 = [NSMutableString stringWithCapacity:100];
     [self addText:thePlacemark.subThoroughfare toLine:line1 withSeparator:@" "];
     [self addText:thePlacemark.thoroughfare toLine:line1 withSeparator:@" "];
     
@@ -140,7 +140,7 @@ UIImagePickerController *imagePicker;
     [line1 appendString:@"\n"];
     [line1 appendString:line2];
     
-    return line1;
+    return line1;*/
 
 }
 
@@ -616,7 +616,7 @@ UIImagePickerController *imagePicker;
     {
         [self.travelnotesTextView becomeFirstResponder];
     }
-    else if (indexPath.section == 0 && indexPath.row == 5)//photo row
+    else if (indexPath.section == 0 && indexPath.row == 4)//photo row
     {
         [tableView deselectRowAtIndexPath:indexPath animated:YES]; //this deselects the row Photo
         [self showPhotoMenu];
