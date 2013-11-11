@@ -616,7 +616,7 @@ UIImagePickerController *imagePicker;
     {
         [self.travelnotesTextView becomeFirstResponder];
     }
-    else if (indexPath.section == 0 && indexPath.row == 5)//photo row
+    else if (indexPath.section == 0 && indexPath.row == 4)//photo row
     {
         [tableView deselectRowAtIndexPath:indexPath animated:YES]; //this deselects the row Photo
         [self showPhotoMenu];

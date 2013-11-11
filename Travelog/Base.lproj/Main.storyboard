@@ -271,7 +271,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J10-k1-AkT">
-                                                    <rect key="frame" x="115" y="8" width="266" height="29"/>
+                                                    <rect key="frame" x="228" y="7" width="80" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
