@@ -548,10 +548,10 @@ UIImagePickerController *imagePicker;
 //sizing of the Cell Column when table view loads
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //set the top cell to 88 height for travelog notes
+    //set the top cell to 88 height + date 12 for travelog notes
     if (indexPath.section == 0 && indexPath.row == 0)
     {
-        return 88;
+        return 130;
     }
     //the addresslabel cell expands based on the text
     else if (indexPath.section == 0 && indexPath.row == 2)
