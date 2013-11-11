@@ -21,14 +21,12 @@
 @dynamic url;
 @dynamic phone;
 @dynamic buinessName;
-
-
+//@dynamic tagSet;
 
 - (CLLocationCoordinate2D)coordinate
 {
     return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
 }
-
 
 
 //set the MKAnnotations properties
@@ -47,6 +45,8 @@
 {
     return self.tag;
 }
+
+
 
 
 //Photos
@@ -93,6 +93,7 @@
         }
     }
 }
+
 
 
 @end

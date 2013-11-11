@@ -645,52 +645,52 @@ UIImagePickerController *imagePicker;
     tagName = TagName;
     self.tagsLabel.text = tagName;
     
-    
-    
     //Refracor code Very Inneficent
     //tag Images
-    if ([tagName  isEqual: @"Events"]) {
-        self.tagImageView.image  = [UIImage imageNamed:@"events.png"];
-    }
-    else if ([tagName  isEqual: @"House"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"house.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Restaurant"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"restaurant.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Travel"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"travel.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Office"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"office.png"];
-    }
-    
-    else if ([tagName  isEqual: @"People"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"people.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Nature"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"nature.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Shopping"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"shopping.png"];
-    }
-    
-    else
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"other.png"];
-    }
+    //if ([travelogToEdit.tagSet containsObject:tagName]){
+    self.tagImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[tagName lowercaseString]]];
+//    if ([tagName  isEqual: @"Events"]) {
+//        self.tagImageView.image  = [UIImage imageNamed:@"events.png"];
+//    }
+//    else if ([tagName  isEqual: @"House"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"house.png"];
+//    }
+//    
+//    else if ([tagName  isEqual: @"Restaurant"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"restaurant.png"];
+//    }
+//    
+//    else if ([tagName  isEqual: @"Travel"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"travel.png"];
+//    }
+//    
+//    else if ([tagName  isEqual: @"Office"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"office.png"];
+//    }
+//    
+//    else if ([tagName  isEqual: @"People"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"people.png"];
+//    }
+//    
+//    else if ([tagName  isEqual: @"Nature"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"nature.png"];
+//    }
+//    
+//    else if ([tagName  isEqual: @"Shopping"])
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"shopping.png"];
+//    }
+//    
+//    else
+//    {
+//        self.tagImageView.image  = [UIImage imageNamed:@"other.png"];
+//    }
     
     
     [self.navigationController popViewControllerAnimated:YES];
