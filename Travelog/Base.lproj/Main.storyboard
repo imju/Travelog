@@ -271,10 +271,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="J10-k1-AkT">
-                                                    <rect key="frame" x="229" y="11" width="71" height="21"/>
+                                                    <rect key="frame" x="115" y="8" width="266" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
-                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -467,7 +467,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="63L-iE-g9J"/>
+                    <navigationItem key="navigationItem" title="Travelog" id="63L-iE-g9J">
+                        <barButtonItem key="rightBarButtonItem" title="Update" id="DWA-t3-nX7">
+                            <connections>
+                                <action selector="upadateLocationButton:" destination="IFb-gu-goA" id="eth-3n-22n"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="vko-VJ-K1Y" id="Blq-qO-5rr"/>
                         <outlet property="nearbyVenueTableView" destination="sZl-gc-xkS" id="EXd-ej-4LZ"/>

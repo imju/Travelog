@@ -14,4 +14,6 @@
 //Core Data
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
+- (IBAction)upadateLocationButton:(id)sender;
+
 @end
