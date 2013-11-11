@@ -21,7 +21,7 @@
 @property (nonatomic, retain) NSNumber * photoId;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) NSString * BuinessName;
+@property (nonatomic, retain) NSString * buinessName;
 
 //hasPhoto this is used to determine if location object has a photo assocated
 //or not -1 (no) and any poistive number (yes)

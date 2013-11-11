@@ -20,7 +20,7 @@
 @dynamic photoId;
 @dynamic url;
 @dynamic phone;
-@dynamic BuinessName;
+@dynamic buinessName;
 
 
 

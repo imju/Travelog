@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "TagPickerViewController.h"
 
-@interface CheckInViewController : UITableViewController <UITextViewDelegate, UITableViewDelegate, TagPickerViewControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
+@interface CheckInViewController : UITableViewController <UITextViewDelegate, UITextFieldDelegate, UITableViewDelegate, TagPickerViewControllerDelegate, UIImagePickerControllerDelegate, UIActionSheetDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 
 @property (nonatomic, strong) IBOutlet UITextView *travelnotesTextView;
@@ -19,6 +19,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *addressLabel;
 @property (nonatomic, strong) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *tagImageView;
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 //for photo
 @property (nonatomic, strong) IBOutlet UIImageView *imageView;

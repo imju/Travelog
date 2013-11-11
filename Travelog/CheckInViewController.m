@@ -28,6 +28,7 @@ UIImagePickerController *imagePicker;
     NSString *tagName;
     NSDate *date;
     UIImage *image;
+    NSString *title;
 }
 
 
@@ -207,6 +208,7 @@ UIImagePickerController *imagePicker;
     
     self.travelnotesTextView.text = travelogNote;
     self.tagsLabel.text = tagName;
+    self.titleTextField.text = title;
     
     
     //tag Images
@@ -297,14 +299,15 @@ UIImagePickerController *imagePicker;
              
          }];
         
+        // for creation flow, we have venue object
+        if (self.venue && self.venue.address ){
+            self.addressLabel.text = self.venue.address;
+            self.titleTextField.text = self.venue.name;
+        }
         
     }else{
-        // for creation flow, we have venue object
-        if (self.venue && self.venue.address){
-            self.addressLabel.text = self.venue.address;
-        }
-        else
-            self.addressLabel.text = @"No Address Found";
+        self.addressLabel.text = @"No Address Found";
+        self.titleTextField.text = @"Enter yout title";
     }
     
     //self.titleLabel
@@ -349,6 +352,7 @@ UIImagePickerController *imagePicker;
         
         self.placemark = travelogToEdit.placemark;
         date = travelogToEdit.date;
+        title = travelogToEdit.buinessName;
     }
 }
 
@@ -419,6 +423,7 @@ UIImagePickerController *imagePicker;
     travelog.longitude = [NSNumber numberWithDouble:self.coordinate.longitude];
     travelog.date = date;
     travelog.placemark = self.placemark;
+    travelog.buinessName = self.titleTextField.text;
     
     //Load photos if the image is not nil, when the user picks an image
     if (image != nil) {
@@ -611,7 +616,7 @@ UIImagePickerController *imagePicker;
     {
         [self.travelnotesTextView becomeFirstResponder];
     }
-    else if (indexPath.section == 0 && indexPath.row == 4)
+    else if (indexPath.section == 0 && indexPath.row == 5)//photo row
     {
         [tableView deselectRowAtIndexPath:indexPath animated:YES]; //this deselects the row Photo
         [self showPhotoMenu];
@@ -716,6 +721,16 @@ UIImagePickerController *imagePicker;
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
     //[self.navigationController popViewControllerAnimated:YES];
     imagePicker = nil;
+}
+
+#pragma UITextFieldDelegate
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{   //if it still has default title then clear
+    if (textField == self.titleTextField){
+        if ([textField.text isEqualToString:@"Enter title here"]){
+            textField.text = nil;
+        }
+    }
 }
 
 #pragma mark - UIActionSheetDelegate
