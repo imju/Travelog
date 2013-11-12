@@ -183,13 +183,16 @@
         MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         
         //set some properties to configure the look and feel ofthe annotation view
-        //chnage the pins to green
         if (annotationView == nil) {
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            annotationView.animatesDrop = NO;
-            annotationView.pinColor = MKPinAnnotationColorPurple;
+            //annotationView.animatesDrop = NO;
+            //annotationView.pinColor = MKPinAnnotationColorPurple;
+            NSLog(@"image file:%@", [NSString stringWithFormat:@"%@.png",((Travelog *)annotation).tag]);
+            annotationView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",
+                                                        [((Travelog *)annotation).tag lowercaseString]]
+                                                        ];
             
             
             

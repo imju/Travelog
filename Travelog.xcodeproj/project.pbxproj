@@ -41,6 +41,8 @@
 		456D8E11182DDCA700DD5479 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8E10182DDCA700DD5479 /* email.png */; };
 		456D8E13182DDCC600DD5479 /* tag.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8E12182DDCC600DD5479 /* tag.png */; };
 		456D8E15182DDCD600DD5479 /* camera-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8E14182DDCD600DD5479 /* camera-select.png */; };
+		45713ADA1831BC4B00A8A885 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45713AD91831BC4B00A8A885 /* SystemConfiguration.framework */; };
+		45713ADC1831BC5800A8A885 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45713ADB1831BC5800A8A885 /* MobileCoreServices.framework */; };
 		8A01A37F18189666005A2A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
 		8A01A38118189666005A2A70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38018189666005A2A70 /* CoreGraphics.framework */; };
 		8A01A38318189666005A2A70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
@@ -130,6 +132,8 @@
 		456D8E10182DDCA700DD5479 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = Travelog/images/email.png; sourceTree = "<group>"; };
 		456D8E12182DDCC600DD5479 /* tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tag.png; path = Travelog/images/tag.png; sourceTree = "<group>"; };
 		456D8E14182DDCD600DD5479 /* camera-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-select.png"; path = "Travelog/images/camera-select.png"; sourceTree = "<group>"; };
+		45713AD91831BC4B00A8A885 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		45713ADB1831BC5800A8A885 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6D875F55ED86444FBE9EBF1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759EECECBE1C4F748E0E6315 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8A01A37B18189666005A2A70 /* Travelog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45713ADC1831BC5800A8A885 /* MobileCoreServices.framework in Frameworks */,
+				45713ADA1831BC4B00A8A885 /* SystemConfiguration.framework in Frameworks */,
 				8A41EB4C182865F6007B6E9E /* MessageUI.framework in Frameworks */,
 				8A41EB36182780D4007B6E9E /* AddressBook.framework in Frameworks */,
 				8AFFBA1318207DBA00BAB4FF /* MapKit.framework in Frameworks */,
@@ -231,6 +237,8 @@
 		8A01A37D18189666005A2A70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45713ADB1831BC5800A8A885 /* MobileCoreServices.framework */,
+				45713AD91831BC4B00A8A885 /* SystemConfiguration.framework */,
 				8A41EB4B182865F6007B6E9E /* MessageUI.framework */,
 				8A41EB35182780D4007B6E9E /* AddressBook.framework */,
 				8AFFBA1218207DBA00BAB4FF /* MapKit.framework */,

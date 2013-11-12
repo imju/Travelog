@@ -448,7 +448,7 @@
 
 
 - (IBAction)valueChanged:(UISegmentedControl *)sender {
-    NSLog(@"%i", sender.selectedSegmentIndex);
+    NSLog(@"%li", (long)sender.selectedSegmentIndex);
     switch (self.segmentedControl.selectedSegmentIndex) {
         case 0:
             fetchedResultsController = self.allFetchedResultsController;
