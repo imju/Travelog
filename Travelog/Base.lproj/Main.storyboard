@@ -40,7 +40,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="S9h-5C-kIP"/>
+                    <navigationItem key="navigationItem" id="S9h-5C-kIP">
+                        <barButtonItem key="leftBarButtonItem" title="Where Am I" id="jwY-fM-RGS">
+                            <connections>
+                                <action selector="WhereAmI" destination="oTR-cr-iNB" id="tx9-Mq-OhD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tags" id="YSP-fW-isu">
+                            <connections>
+                                <action selector="showTags" destination="oTR-cr-iNB" id="OVW-nW-C7J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="OHf-G7-PVg" id="scw-uS-hF4"/>
                         <segue destination="aG2-fD-IgR" kind="push" identifier="EditTag" id="QN3-0d-7Jh"/>
