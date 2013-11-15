@@ -30,6 +30,10 @@
     return self.address;
 }
 
+//-(void)setaddress(NSString *addressTxt) {
+//    //
+//}
+
 //-(NSString *)address {
 //    NSDictionary *location = (NSDictionary *)[self.data valueOrNilForKeyPath:@"location"];
 //    NSString *addressdata = [location objectForKey:@"address"];

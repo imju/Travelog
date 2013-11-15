@@ -125,7 +125,17 @@ CLGeocoder *geocoder; //object that performs the geocode
 
                                                      //self.venueArray = [Venue venuesWithArray:items];
                                                      // sort by distance
-                                                     NSArray *venues = [Venue venuesWithArray:items];
+                                                     NSMutableArray *venues = [Venue venuesWithArray:items];
+                                                     BOOL locationMatched = false;
+                                                     
+                                                     for (Venue *venue in venues) {
+                                                         if (venue.distance == 0)
+                                                             locationMatched = true;
+                                                     }
+                                                     
+                                                     if (!locationMatched){
+                                                         
+                                                     }
                                                      
                                                      //if first item 4sq list already has 0 in distance then no sort because
                                                      //the more reliable location is given by 4sq
@@ -208,8 +218,6 @@ CLGeocoder *geocoder; //object that performs the geocode
     self.selectedVenue = venue;
     //NSLog(@"index:%d venue lat:%@, long:%@",indexPath.row, venue.latitude,venue.longitude);
     //get location of selected row
-     self.selectedLocation = [[CLLocation alloc] initWithLatitude:(CLLocationDegrees)[venue.latitude doubleValue]
-                                                         longitude:(CLLocationDegrees)[venue.longitude doubleValue] ];
     
     [self performSegueWithIdentifier:@"CheckIn" sender:self];
     
@@ -219,47 +227,24 @@ CLGeocoder *geocoder; //object that performs the geocode
 //send the long, lat, and address information to CheckInView
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"CheckIn"]) {
+    if ([segue.identifier isEqualToString:@"CheckIn"] ) {
         
-        CheckInViewController *nvc = segue.destinationViewController;
+        CheckInViewController *checkinvc = segue.destinationViewController;
 
 
         //pass the core data elements
-        nvc.managedObjectContext = self.managedObjectContext;
-        nvc.venue = self.selectedVenue;
+        checkinvc.managedObjectContext = self.managedObjectContext;
+        checkinvc.venue = self.selectedVenue;
+        self.selectedLocation = [[CLLocation alloc] initWithLatitude:(CLLocationDegrees)[self.selectedVenue.latitude doubleValue]
+                                                           longitude:(CLLocationDegrees)[self.selectedVenue.longitude doubleValue] ];
+        
+        
         
         //pass variables
-        nvc.coordinate = self.selectedLocation.coordinate;
-        nvc.location = self.selectedLocation;
+        checkinvc.coordinate = self.selectedLocation.coordinate;
+        checkinvc.location = self.selectedLocation;
     }
     
-    if ([segue.identifier isEqualToString:@"MapCheckIn"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        
-        CheckInViewController *controller = (CheckInViewController *)navigationController.topViewController;
-        controller.managedObjectContext = self.managedObjectContext;
-        
-        Venue *venue = [self.venueArray objectAtIndex:((UIButton *)sender).tag];
-        NSLog(@"selected venue:%@",venue.title);
-        //controller.travelogToEdit = travelog;
-    }
-    
-/**
-    if ([segue.identifier isEqualToString:@"CheckIn"]) {
-        UINavigationController *navigationcontroller = segue.destinationViewController;
-        CheckInViewController *controller = (CheckInViewController *)navigationcontroller.topViewController;
-        
-        //pass the core data elements
-        controller.managedObjectContext = self.managedObjectContext;
-        controller.venue = self.selectedVenue;
-        
-        //pass variables
-        controller.coordinate = self.selectedLocation.coordinate;
-        controller.location = self.selectedLocation;
-    }
-**/
-
-
 }
 
 //because the segue is not connected to any particular control inteh view controller, we haveto
@@ -277,7 +262,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 {
     //because MKAnnotation is a protocol, there are many objects it contains
     //ie the blue dot that represent the users current location
-    //so we use isKindOdClass to determine whether teh annotation is a location object, is so we continue
+    //so we use isKindOdClass to determine whether teh annotation is a location object, if so we continue
     if ([annotation isKindOfClass:[Venue class]]) {
         
         //reuse an annotation view object and create pins
@@ -294,7 +279,6 @@ CLGeocoder *geocoder; //object that performs the geocode
             lbl.backgroundColor = [UIColor clearColor];
             lbl.textColor = [UIColor blueColor];
             [lbl setFont:[UIFont systemFontOfSize:11]];
-            //lbl.alpha = 0.5;
             lbl.tag = 42;
             [annotationView addSubview:lbl];
             
@@ -304,32 +288,8 @@ CLGeocoder *geocoder; //object that performs the geocode
             annotationView.frame = lbl.frame;
             annotationView.pinColor = MKPinAnnotationColorGreen;
             
-            //(NSString *) tagName = travelogToEdit.tag;
-            
-            //if (travelogs.tags) {
-            //    <#statements#>
-            //}
-            
-            //for (int i = 0; i < [travelogs count]; i++) {
-            
-            //MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-            //point = travelogs;
-            //point =[travelogs lastObject];
-            //point.title = @"Title";
-            //point.subtitle = @"subTitle";
-            
-            //if ([point.subtitle isEqualToString:@"Bar"])
-            //{
-            //annotationView.image = [UIImage imageNamed:@"house.png"];
-            
-            //}
-            
-            //}
-            
-            
             //cerate a disclosure button and hook up a touch up inside event with a showtagsdetails method
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//            [rightButton addTarget:self action:@selector(ShowtagDetails:) forControlEvents:UIControlEventTouchUpInside];
             annotationView.rightCalloutAccessoryView = rightButton;
         }
         
@@ -455,5 +415,13 @@ CLGeocoder *geocoder; //object that performs the geocode
     
 }
 
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view
+calloutAccessoryControlTapped:(UIControl *)control
+{
+    self.selectedVenue = (Venue *) view.annotation;
+    NSLog(@"selected venue:%@",view.annotation);
+    [self performSegueWithIdentifier:@"CheckIn" sender:self];
+
+}
 
 @end

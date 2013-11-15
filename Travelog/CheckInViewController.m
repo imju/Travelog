@@ -307,13 +307,8 @@ UIImagePickerController *imagePicker;
         
     }else{
         self.addressLabel.text = @"No Address Found";
-        self.titleTextField.text = @"Enter yout title";
+        self.titleTextField.text = @"Enter your title";
     }
-    
-    //self.titleLabel
-//    if (self.venue && self.venue.title){
-//        self.titleField.text = self.venue.title;
-//    }
     
     self.dateLabel.text = [self formatDate: date];
     
@@ -393,6 +388,13 @@ UIImagePickerController *imagePicker;
     [mapItem openInMapsWithLaunchOptions:options];
 }
 
+#pragma mark UITextFieldDelegate
+-(void)textDidBeginEditing:(UITextField *)textField{
+        NSLog(@"textfield identified:%@", textField.text);
+
+        if ([textField.text isEqualToString:@"Enter your title"])
+            textField.text = @"";
+}
 
 - (IBAction)done:(id)sender
 {
