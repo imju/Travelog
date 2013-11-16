@@ -37,7 +37,7 @@ UIImagePickerController *imagePicker;
 //set the initial value of travelogNote
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
-    if ((self = [super initWithCoder:aDecoder])) {
+    if (self = [super initWithCoder:aDecoder]) {
         travelNote = @"";
         tagName = @"Other";
         date = [NSDate date];
@@ -255,13 +255,6 @@ UIImagePickerController *imagePicker;
         self.tagImageView.image  = [UIImage imageNamed:@"other.png"];
     }
 
-    
-    
-    
-    
-    //get the long lat
-    //[NSString stringWithFormat:@"%.8f", self.coordinate.latitude];
-    //[NSString stringWithFormat:@"%.8f", self.coordinate.longitude];
     
     if (self.placemark)
     {

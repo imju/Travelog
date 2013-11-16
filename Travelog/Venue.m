@@ -12,15 +12,29 @@
 
 @implementation Venue : RestObject
 
-@synthesize venueId,title,subtitle,address,latitude,longitude,distance,coordinate;
+@synthesize venueId,title,name,subtitle,address,latitude,longitude,distance,coordinate;
 
 
-//- (NSString *)venueId {
-//    if (self.venueId)
-//        return self.venueId;
-//    self.venueId = [self.data valueOrNilForKeyPath:@"id"];
-//    return self.venueId;
-//}
+
+- (id)initWithPlaceName:(NSString *)pname
+           address:(NSString *)paddress
+          latitude:(NSNumber *)platitude
+         longitude:(NSNumber *)plongitude
+          distance:(NSNumber *)pdistance
+         placemark:(CLPlacemark *)pplacemark
+{
+    if (self = [super init]) {
+        self.name = pname;
+        self.address = paddress;
+        self.latitude = platitude;
+        self.longitude = plongitude;
+        self.distance = pdistance;
+        self.coordinate = CLLocationCoordinate2DMake([platitude doubleValue], [plongitude doubleValue]);
+        self.placemark = pplacemark;
+    }
+  
+    return self;
+}
 
 - (NSString *)title {
     return self.name;
@@ -30,9 +44,6 @@
     return self.address;
 }
 
-//-(void)setaddress(NSString *addressTxt) {
-//    //
-//}
 
 //-(NSString *)address {
 //    NSDictionary *location = (NSDictionary *)[self.data valueOrNilForKeyPath:@"location"];

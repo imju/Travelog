@@ -125,17 +125,9 @@ CLGeocoder *geocoder; //object that performs the geocode
 
                                                      //self.venueArray = [Venue venuesWithArray:items];
                                                      // sort by distance
-                                                     NSMutableArray *venues = [Venue venuesWithArray:items];
-                                                     BOOL locationMatched = false;
+                                                     __block NSArray *venues = [Venue venuesWithArray:items];
+
                                                      
-                                                     for (Venue *venue in venues) {
-                                                         if (venue.distance == 0)
-                                                             locationMatched = true;
-                                                     }
-                                                     
-                                                     if (!locationMatched){
-                                                         
-                                                     }
                                                      
                                                      //if first item 4sq list already has 0 in distance then no sort because
                                                      //the more reliable location is given by 4sq
@@ -150,6 +142,63 @@ CLGeocoder *geocoder; //object that performs the geocode
 //                                                                         return [first compare:second];
 //                                                         }];
 //                                                     }
+                                                     
+                                                     // adding current location on top
+                                                     BOOL locationMatched = false;
+                                                     
+                                                     for (Venue *venue in venues) {
+                                                         if (venue.distance == 0)
+                                                             locationMatched = true;
+                                                     }
+                                                     
+                                                     if (!locationMatched){
+                                                         
+                                                         if(!geocoder)
+                                                         {
+                                                             geocoder = [[CLGeocoder alloc] init];
+                                                         }
+                                                         [geocoder reverseGeocodeLocation:self.location
+                                                                        completionHandler:^(NSArray * placemarksArray, NSError *error)
+                                                          {
+                                                              CLPlacemark *placemark = nil;
+                                                              NSString *address = nil;
+                                                              
+                                                              NSLog(@"GeoCode Called: %@, error: %@", placemarksArray, error);
+                                                              
+                                                              if (error){
+                                                                  NSLog(@"Geocode failed with error: %@", error);
+                                                                  return;
+                                                                  
+                                                              }
+                                                              //reverse geocode found and set into placemark array object
+                                                              if (error == nil && [placemarksArray count] > 0) {
+                                                                  placemark = [placemarksArray lastObject];
+                                                                  NSLog(@"placemark address: %@", [self stringFromPlacemark:placemark]);
+                                                                  address = [self stringFromPlacemark:placemark];
+                                                              }
+                                                              //if there is an error
+                                                              else{
+                                                                  placemark = nil;
+                                                              }
+                                                              
+                                                              Venue *venue = [[Venue alloc] initWithPlaceName:placemark.name
+                                                                                                      address:address
+                                                                                                     latitude:(NSNumber *)[NSNumber numberWithDouble:self.location.coordinate.latitude]
+                                                                                                    longitude:(NSNumber *)[NSNumber numberWithDouble:self.location.coordinate.longitude]
+                                                                                                     distance:(NSNumber *)[NSNumber numberWithInt:0]
+                                                                                                    placemark:placemark];
+                                                              NSMutableArray *newVenues= [[NSMutableArray alloc] initWithArray:venues];
+                                                              [newVenues insertObject:venue atIndex:0];
+                                                              self.venueArray = [[NSArray alloc] initWithArray:newVenues];
+                                                              [self.nearbyVenueTableView reloadData];
+                                                              [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
+                                                              int i = 1;
+                                                              for (Venue *venue in self.venueArray) {
+                                                                  venue.index = [NSNumber numberWithInt:i++];
+                                                              }
+                                                              
+                                                          }];
+                                                     }
 
                                                      self.venueArray = venues; // no sorting
 
@@ -165,15 +214,43 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      NSLog(@"failure %@", error);
 
                                                  }];
-    
-
-}
+    }
 
 
+     - (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
+    {
+        //subThoroughfare - house number
+        //thoroughfare - street name
+        //locality - city
+        //administrativeArea - state/province
+        
+        return [NSString stringWithFormat:@"%@ %@, %@, %@ %@, %@",
+                thePlacemark.subThoroughfare, thePlacemark.thoroughfare,
+                thePlacemark.locality, thePlacemark.administrativeArea,
+                thePlacemark.postalCode, thePlacemark.country];
+        
+        /*NSMutableString *line1 = [NSMutableString stringWithCapacity:100];
+         [self addText:thePlacemark.subThoroughfare toLine:line1 withSeparator:@" "];
+         [self addText:thePlacemark.thoroughfare toLine:line1 withSeparator:@" "];
+         
+         NSMutableString *line2 = [NSMutableString stringWithCapacity:100];
+         [self addText:thePlacemark.locality toLine:line2 withSeparator:@" "];
+         [self addText:thePlacemark.administrativeArea toLine:line2 withSeparator:@" "];
+         [self addText:thePlacemark.postalCode toLine:line2 withSeparator:@" "];
+         
+         
+         [line1 appendString:@"\n"];
+         [line1 appendString:line2];
+         
+         return line1;*/
+        
+    }
+
+                                                     
 - (IBAction)upadateLocationButton:(id)sender
 {
-    [self updateLocations];
     [self fetchData];
+    [self updateLocations];
 }
 
 
@@ -247,13 +324,6 @@ CLGeocoder *geocoder; //object that performs the geocode
     
 }
 
-//because the segue is not connected to any particular control inteh view controller, we haveto
-//trigger manually, we send along teh button as teh sender
-- (void)showtagDetails:(UIButton *)button
-{
-    [self performSegueWithIdentifier:@"MapCheckIn" sender:button];
-}
-
 
 
 #pragma mark - MKMapviewDelegate
@@ -288,7 +358,7 @@ CLGeocoder *geocoder; //object that performs the geocode
             annotationView.frame = lbl.frame;
             annotationView.pinColor = MKPinAnnotationColorGreen;
             
-            //cerate a disclosure button and hook up a touch up inside event with a showtagsdetails method
+            //create a disclosure button and hook up a touch up inside event with a showtagsdetails method
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             annotationView.rightCalloutAccessoryView = rightButton;
         }
@@ -334,9 +404,8 @@ CLGeocoder *geocoder; //object that performs the geocode
     }
     if (self.prevVenueArray!=nil && self.venueArray == nil) {
         NSLog(@"Error: %@", error);
-        //abort();
+        return;
     }
-    
     //we adding pins on the map
     if (self.prevVenueArray != nil) {
         [self.mapView removeAnnotations:self.prevVenueArray];
@@ -423,5 +492,7 @@ calloutAccessoryControlTapped:(UIControl *)control
     [self performSegueWithIdentifier:@"CheckIn" sender:self];
 
 }
+                                                     
+                                                     
 
 @end
