@@ -195,31 +195,7 @@
                                                         ];
             
             
-            
-            //(NSString *) tagName = travelogToEdit.tag;
-            
-            //if (travelogs.tags) {
-            //    <#statements#>
-            //}
-            
-            //for (int i = 0; i < [travelogs count]; i++) {
-
-                //MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-            //point = travelogs;
-            //point =[travelogs lastObject];
-                //point.title = @"Title";
-                //point.subtitle = @"subTitle";
-                
-                //if ([point.subtitle isEqualToString:@"Bar"])
-                //{
-                    //annotationView.image = [UIImage imageNamed:@"house.png"];
-
-                //}
-                
-            //}
-
-            
-            //cerate a disclosure button and hook up a touch up inside event with a showtagsdetails method
+            //create a disclosure button and hook up a touch up inside event with a showtagsdetails method
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:self action:@selector(ShowtagDetails:) forControlEvents:UIControlEventTouchUpInside];
             annotationView.rightCalloutAccessoryView = rightButton;

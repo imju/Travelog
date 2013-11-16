@@ -20,8 +20,16 @@
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) NSNumber *index;
+@property (nonatomic, strong) CLPlacemark *placemark; //address
+
 
 + (NSMutableArray *)venuesWithArray:(NSArray *)array;
 
+- (id)initWithPlaceName:(NSString *)pname
+                address:(NSString *)paddress
+               latitude:(NSNumber *)platitude
+              longitude:(NSNumber *)plongitude
+               distance:(NSNumber *)pdistance
+              placemark:(CLPlacemark *)pplacemark;
 
 @end
