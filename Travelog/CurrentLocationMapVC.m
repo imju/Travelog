@@ -393,7 +393,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (void)connectionError:(NSError *)error {
     NSLog(@"connectionError:%@", error);
     [[[UIAlertView alloc] initWithTitle:@"Travelog"
-                                message:@"Error on Connecting to the Internet"
+                                message:@"Error on Connecting to Internet"
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil, nil] show];
