@@ -210,9 +210,8 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                     // [self.mapView addAnnotations:venues];
                                                      
                                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                     // Do nothing
-                                                     NSLog(@"failure %@", error);
-
+                                                     // send alert
+                                                     [self connectionError:error];
                                                  }];
     }
 
@@ -247,10 +246,9 @@ CLGeocoder *geocoder; //object that performs the geocode
     }
 
                                                      
-- (IBAction)upadateLocationButton:(id)sender
+- (IBAction)updateLocationButton:(id)sender
 {
-    [self fetchData];
-    [self updateLocations];
+	[self.locationController.locationManager startUpdatingLocation];
 }
 
 
@@ -387,6 +385,15 @@ CLGeocoder *geocoder; //object that performs the geocode
     NSLog(@"locationError:%@", error);
     [[[UIAlertView alloc] initWithTitle:@"Travelog"
                                 message:@"Error on Getting Location"
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil, nil] show];
+}
+
+- (void)connectionError:(NSError *)error {
+    NSLog(@"connectionError:%@", error);
+    [[[UIAlertView alloc] initWithTitle:@"Travelog"
+                                message:@"Error on Connecting to the Internet"
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil, nil] show];
