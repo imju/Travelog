@@ -81,6 +81,7 @@ CLGeocoder *geocoder; //object that performs the geocode
    //kick off location manager
     self.locationController = [[CoreLocationController alloc] init];
 	self.locationController.delegate = self;
+    self.locationController.isUpdating = YES;
 	[self.locationController.locationManager startUpdatingLocation];
     
     
@@ -249,6 +250,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 {
     //Enable location manager monitoring
     self.mapView.showsUserLocation = YES;
+    self.locationController.isUpdating = YES;
 	[self.locationController.locationManager startUpdatingLocation];
 }
 
