@@ -205,9 +205,8 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      //now reloading data
                                                      [self.nearbyVenueTableView reloadData];
                                                      [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
-
-                                                     //add annotation to map
-                                                    // [self.mapView addAnnotations:venues];
+                                                     //disable location manager monitoring
+                                                     self.mapView.showsUserLocation = NO;
                                                      
                                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                      // send alert
@@ -248,6 +247,8 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      
 - (IBAction)updateLocationButton:(id)sender
 {
+    //Enable location manager monitoring
+    self.mapView.showsUserLocation = YES;
 	[self.locationController.locationManager startUpdatingLocation];
 }
 
