@@ -271,18 +271,9 @@ CLGeocoder *geocoder; //object that performs the geocode
     NSString *distanceString = [NSString stringWithFormat:@"%.1f ml", [venue.distance floatValue]];
     
     //[cell.venueNameLabel setText:[NSString stringWithFormat:@"%@. %@", venue.index, venue.name]];
-    [cell.distanceLabel  setText:venue.distance.description];
-
-    UIFont *distanceFont = [UIFont fontWithName:@"helvetica" size:11.0 ];
-    NSDictionary *distancedict = [NSDictionary dictionaryWithObject: distanceFont forKey:NSFontAttributeName];
-    NSMutableAttributedString *distanceAttrString = [[NSMutableAttributedString alloc] initWithString:distanceString attributes:distancedict];
-    cell.distanceLabel.attributedText = distanceAttrString;
-    [cell.distanceLabel setTextColor:UIColorFromRGB(0x66CCFF)];
-    
-    UIFont *venueArialFont = [UIFont fontWithName:@"helvetica" size:15.0];
-    NSDictionary *venueArialdict = [NSDictionary dictionaryWithObject: venueArialFont forKey:NSFontAttributeName];
-    NSMutableAttributedString *venueAttrString = [[NSMutableAttributedString alloc] initWithString:venueString attributes: venueArialdict];
-    cell.venueNameLabel.attributedText = venueAttrString;
+    [cell.distanceLabel  setText:distanceString];
+    [cell.venueNameLabel setText:venueString];
+    [cell.addressLabel setText:venue.address];
 
     return cell;
 }
