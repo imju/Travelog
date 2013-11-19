@@ -386,7 +386,7 @@
                                 <action selector="cancel:" destination="aG2-fD-IgR" id="MGv-x8-lxG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Check In!" id="g4B-TJ-hqG">
+                        <barButtonItem key="rightBarButtonItem" title="Pop In!" id="g4B-TJ-hqG">
                             <connections>
                                 <action selector="done:" destination="aG2-fD-IgR" id="r6b-Ku-bvW"/>
                             </connections>
@@ -398,7 +398,7 @@
                         <outlet property="imageView" destination="9LT-oe-77F" id="mSf-J9-xCh"/>
                         <outlet property="photoLabel" destination="wjp-Qi-tRX" id="du2-JY-KSh"/>
                         <outlet property="sendMailButton" destination="C6M-Vt-RXZ" id="Nd8-cs-bXY"/>
-                        <outlet property="sendTextButton" destination="RrW-VG-tgt" id="VXm-8f-okp"/>
+                        <outlet property="sendTextButton" destination="RrW-VG-tgt" id="Ggc-3S-rFR"/>
                         <outlet property="tagImageView" destination="PpF-BI-bPe" id="M6d-HI-hcC"/>
                         <outlet property="tagsLabel" destination="xQv-2g-c9b" id="sdn-w9-myl"/>
                         <outlet property="titleTextField" destination="Ova-zF-pch" id="o3B-RB-933"/>
@@ -478,7 +478,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Travelog" id="63L-iE-g9J">
+                    <navigationItem key="navigationItem" title="Travelpop" id="63L-iE-g9J">
                         <barButtonItem key="rightBarButtonItem" title="Update" id="DWA-t3-nX7">
                             <connections>
                                 <action selector="updateLocationButton:" destination="IFb-gu-goA" id="6Oh-7Z-5Yo"/>

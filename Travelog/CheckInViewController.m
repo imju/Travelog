@@ -404,7 +404,7 @@ UIImagePickerController *imagePicker;
         travelog = self.travelogToEdit;
     }
     else{
-        hudView.text = @"Checked In!";
+        hudView.text = @"Popped In!";
         travelog = [NSEntityDescription insertNewObjectForEntityForName:@"Travelog" inManagedObjectContext:self.managedObjectContext];
         
         //set the location of photo id to -1 to avoid an overite of the image file
@@ -448,13 +448,6 @@ UIImagePickerController *imagePicker;
         NSLog(@"Error: %@", error);
         abort();
     }
-    
-    /*
-    //adding a head up display HUD
-    HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
-    hudView.text = @"Checked In!";
-    */
-    
     
     //close the screen after animating for .6secs
     [self performSelector:@selector(closeScreen) withObject:nil afterDelay:0.6];
@@ -753,10 +746,10 @@ UIImagePickerController *imagePicker;
         MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
         picker.mailComposeDelegate = self;
         
-        [picker setSubject:@"Hello from Travelog!"];
+        [picker setSubject:@"Hello from Travelpop!"];
         
         // Fill out the email body text
-        NSMutableString *emailBody =[NSMutableString stringWithString: @"My TravelsNotes!!\n\n"];
+        NSMutableString *emailBody =[NSMutableString stringWithString: @"My Travelpop!!\n\n"];
         
         NSString *travelnotes=[NSString stringWithFormat:@"\nNotes: %@",self.travelnotesTextView.text];
         NSString *tag=[NSString stringWithFormat:@"\n\nTag: %@",self.tagsLabel.text];
@@ -776,7 +769,7 @@ UIImagePickerController *imagePicker;
     else
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                        message:@"Your device doesn't support the composer sheet"
+                                                        message:@"Your device doesn't support the composer"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
@@ -797,7 +790,7 @@ UIImagePickerController *imagePicker;
         MFMessageComposeViewController *messageVC = [[MFMessageComposeViewController alloc] init];
         messageVC.messageComposeDelegate = self;
         
-        NSMutableString *smsString =[NSMutableString stringWithString: @"My TravelsNotes!!\n\n"];
+        NSMutableString *smsString =[NSMutableString stringWithString: @"My Travelpop!!\n\n"];
         NSString *travelnotes=[NSString stringWithFormat:@"Notes: %@",self.travelnotesTextView.text];
         NSString *address=[NSString stringWithFormat:@"\n\n%@",self.addressLabel.text];
         NSString *dataString=[NSString stringWithFormat:@"%@%@",travelnotes,address];
