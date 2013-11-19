@@ -12,11 +12,12 @@
 @interface CoreLocationController()
 
 @property (weak, nonatomic)CLLocation          *prevLocation;
+
+
 - (void)stopLocationManager;
 
 @end
 
-BOOL isUpdating;
 
 @implementation CoreLocationController
 
@@ -26,16 +27,19 @@ BOOL isUpdating;
 		self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
 		self.locationManager.delegate = self;
-        isUpdating = NO;
+        self.isUpdating = NO;
 	}
 	return self;
 }
 
 
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     CLLocation *newLocation = [locations lastObject];
     CLLocation *oldLocation;
-    isUpdating = YES;
+    
+    if (!self.isUpdating)
+        return;
 
     if (locations.count > 1) {
         oldLocation = [locations objectAtIndex:locations.count-2];
@@ -43,13 +47,17 @@ BOOL isUpdating;
         oldLocation = nil;
     }
     NSLog(@"didUpdateToLocation %@ from %@", newLocation, oldLocation);
+
     //if the time the location is determined is gerater than 5secs
-    
-    if ([newLocation.timestamp timeIntervalSinceNow] < -5.0) {
+    double interval = [newLocation.timestamp timeIntervalSinceNow];
+    if (interval < -5.0) {
+
         //then this is a cached object so dont run a new location fix
         return;
     }
-    
+
+    NSLog(@"-----------successful interval %f", interval);
+
     if (newLocation.horizontalAccuracy < 0) {
         return;
     }
@@ -60,16 +68,18 @@ BOOL isUpdating;
         distance = [newLocation distanceFromLocation:self.prevLocation];
     }
     
+    NSLog(@"self.prevLocation.horizontalAccuracy:%f",self.prevLocation.horizontalAccuracy );
+    NSLog(@"newLocation.horezontalAccuracy:%f",newLocation.horizontalAccuracy );
     
     //determine if the new reading is more accurate than the old reading and check if we already have a location reading
-    if ( self.prevLocation == nil || self.prevLocation.horizontalAccuracy > newLocation.horizontalAccuracy) {
+    if ( self.prevLocation == nil || self.prevLocation.horizontalAccuracy >= newLocation.horizontalAccuracy) {
         
        //this clear out the old error state, if we recieve a valid coordinate and keep looking for accurate location
 //        lastLocationError = nil;
         self.prevLocation = newLocation;
         [self.delegate update:newLocation];
 
-        //if the new location is better than teh old location then stop looking
+        //if the new location is better than the old location then stop looking
         if (newLocation.horizontalAccuracy <= self.locationManager.desiredAccuracy) {
             
            // NSLog(@"***Search Done!");
@@ -93,11 +103,11 @@ BOOL isUpdating;
         
         //check to see if its a YES or NO
         //if NO then the location manager is not active, so dont stop it
-        if (isUpdating) {
+        if (self.isUpdating) {
             [self.delegate fetchData];
             [self.locationManager stopUpdatingLocation];
-            self.locationManager.delegate = nil;
-            isUpdating = NO;
+            //self.locationManager.delegate = nil;
+            self.isUpdating = NO;
         }
 }
 

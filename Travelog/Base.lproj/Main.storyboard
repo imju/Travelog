@@ -481,7 +481,7 @@
                     <navigationItem key="navigationItem" title="Travelog" id="63L-iE-g9J">
                         <barButtonItem key="rightBarButtonItem" title="Update" id="DWA-t3-nX7">
                             <connections>
-                                <action selector="upadateLocationButton:" destination="IFb-gu-goA" id="eth-3n-22n"/>
+                                <action selector="updateLocationButton:" destination="IFb-gu-goA" id="6Oh-7Z-5Yo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -534,6 +534,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QN3-0d-7Jh"/>
+        <segue reference="5V3-qO-VZe"/>
     </inferredMetricsTieBreakers>
 </document>

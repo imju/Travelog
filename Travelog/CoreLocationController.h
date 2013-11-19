@@ -19,6 +19,7 @@
 @interface CoreLocationController : NSObject <CLLocationManagerDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic)BOOL                         isUpdating;
 @property (nonatomic, retain) id delegate;
 
 @end

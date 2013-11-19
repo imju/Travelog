@@ -81,6 +81,7 @@ CLGeocoder *geocoder; //object that performs the geocode
    //kick off location manager
     self.locationController = [[CoreLocationController alloc] init];
 	self.locationController.delegate = self;
+    self.locationController.isUpdating = YES;
 	[self.locationController.locationManager startUpdatingLocation];
     
     
@@ -205,14 +206,12 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      //now reloading data
                                                      [self.nearbyVenueTableView reloadData];
                                                      [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
-
-                                                     //add annotation to map
-                                                    // [self.mapView addAnnotations:venues];
+                                                     //disable location manager monitoring
+                                                     self.mapView.showsUserLocation = NO;
                                                      
                                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                     // Do nothing
-                                                     NSLog(@"failure %@", error);
-
+                                                     // send alert
+                                                     [self connectionError:error];
                                                  }];
     }
 
@@ -247,10 +246,12 @@ CLGeocoder *geocoder; //object that performs the geocode
     }
 
                                                      
-- (IBAction)upadateLocationButton:(id)sender
+- (IBAction)updateLocationButton:(id)sender
 {
-    [self fetchData];
-    [self updateLocations];
+    //Enable location manager monitoring
+    self.mapView.showsUserLocation = YES;
+    self.locationController.isUpdating = YES;
+	[self.locationController.locationManager startUpdatingLocation];
 }
 
 
@@ -270,18 +271,9 @@ CLGeocoder *geocoder; //object that performs the geocode
     NSString *distanceString = [NSString stringWithFormat:@"%.1f ml", [venue.distance floatValue]];
     
     //[cell.venueNameLabel setText:[NSString stringWithFormat:@"%@. %@", venue.index, venue.name]];
-    [cell.distanceLabel  setText:venue.distance.description];
-
-    UIFont *distanceFont = [UIFont fontWithName:@"helvetica" size:11.0 ];
-    NSDictionary *distancedict = [NSDictionary dictionaryWithObject: distanceFont forKey:NSFontAttributeName];
-    NSMutableAttributedString *distanceAttrString = [[NSMutableAttributedString alloc] initWithString:distanceString attributes:distancedict];
-    cell.distanceLabel.attributedText = distanceAttrString;
-    [cell.distanceLabel setTextColor:UIColorFromRGB(0x66CCFF)];
-    
-    UIFont *venueArialFont = [UIFont fontWithName:@"helvetica" size:15.0];
-    NSDictionary *venueArialdict = [NSDictionary dictionaryWithObject: venueArialFont forKey:NSFontAttributeName];
-    NSMutableAttributedString *venueAttrString = [[NSMutableAttributedString alloc] initWithString:venueString attributes: venueArialdict];
-    cell.venueNameLabel.attributedText = venueAttrString;
+    [cell.distanceLabel  setText:distanceString];
+    [cell.venueNameLabel setText:venueString];
+    [cell.addressLabel setText:venue.address];
 
     return cell;
 }
@@ -387,6 +379,15 @@ CLGeocoder *geocoder; //object that performs the geocode
     NSLog(@"locationError:%@", error);
     [[[UIAlertView alloc] initWithTitle:@"Travelog"
                                 message:@"Error on Getting Location"
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil, nil] show];
+}
+
+- (void)connectionError:(NSError *)error {
+    NSLog(@"connectionError:%@", error);
+    [[[UIAlertView alloc] initWithTitle:@"Travelog"
+                                message:@"Error on Connecting to Internet"
                                delegate:nil
                       cancelButtonTitle:@"OK"
                       otherButtonTitles:nil, nil] show];
