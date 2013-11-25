@@ -10,12 +10,10 @@
 #import <MapKit/MKMapView.h>
 #import <MapKit/MKUserLocation.h>
 #import "VenueCell.h"
-//#import "CheckInVC.h"
 #import "CheckInViewController.h"
 #import "Travelog.h"
 
 #define METERS_PER_MILE 1609.344
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 NSString *const LocationChangedNotification=@"LocationChangedNotification";
 
 @interface CurrentLocationMapVC ()
@@ -377,7 +375,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 - (void)locationError:(NSError *)error {
     NSLog(@"locationError:%@", error);
-    [[[UIAlertView alloc] initWithTitle:@"Travelog"
+    [[[UIAlertView alloc] initWithTitle:@"Travelpop"
                                 message:@"Error on Getting Location"
                                delegate:nil
                       cancelButtonTitle:@"OK"
@@ -386,7 +384,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 - (void)connectionError:(NSError *)error {
     NSLog(@"connectionError:%@", error);
-    [[[UIAlertView alloc] initWithTitle:@"Travelog"
+    [[[UIAlertView alloc] initWithTitle:@"Travelpop"
                                 message:@"Error on Connecting to Internet"
                                delegate:nil
                       cancelButtonTitle:@"OK"
