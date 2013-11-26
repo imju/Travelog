@@ -1,6 +1,6 @@
 //
-//  DBParalaxMapTableView.h
-//  DBParallaxMapTableView
+//  DBMapTableView.h
+//  DBMapTableView
 //
 //  Created by Daniel Bowden on 12/09/13.
 //  Copyright (c) 2013 Daniel Bowden. All rights reserved.

@@ -11,7 +11,7 @@
 
 
 
-@interface CurrentLocationMapVC : UIViewController<CoreLocationControllerDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, MKMapViewDelegate>
+@interface CurrentLocationMapVC : UITableViewController<CoreLocationControllerDelegate, UITextFieldDelegate, MKMapViewDelegate>
 //Core Data
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

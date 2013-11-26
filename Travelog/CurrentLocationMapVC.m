@@ -15,6 +15,7 @@
 
 #define METERS_PER_MILE 1609.344
 NSString *const LocationChangedNotification=@"LocationChangedNotification";
+CGFloat const kImageOriginHeight = 240.f;
 
 @interface CurrentLocationMapVC ()
 
@@ -22,8 +23,8 @@ NSString *const LocationChangedNotification=@"LocationChangedNotification";
 @property (strong, nonatomic)CLLocation *location;
 @property (strong, nonatomic)CLLocation *selectedLocation;
 @property (strong, nonatomic)Venue *selectedVenue;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UITableView *nearbyVenueTableView;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *venueArray;
 @property (strong, nonatomic) NSArray *prevVenueArray;
 
@@ -47,7 +48,10 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder])) {
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextDidChange:) name:LocationChangedNotification object:self];
+        self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, -kImageOriginHeight, self.tableView.frame.size.width, kImageOriginHeight)];
+
     }
     
     return self;
@@ -66,22 +70,46 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.nearbyVenueTableView.delegate = self;
-    self.nearbyVenueTableView.dataSource = self;
-    self.nearbyVenueTableView.tableHeaderView = nil;
+    
+    
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableHeaderView = nil;
+    //UILabel *labelView = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 200, 20)];
+    //labelView.text = @"TEST";
+
+    [self.tableView addSubview:self.mapView];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(kImageOriginHeight,0,0,0);
     
     //setting self as mapview delegate necessary for annotation
     self.mapView.delegate = self;
     
     //register custom cell
     UINib *venueCell = [UINib nibWithNibName:@"VenueCell" bundle:nil];
-    [self.nearbyVenueTableView registerNib:venueCell forCellReuseIdentifier:@"VenueCell"];
+    [self.tableView registerNib:venueCell forCellReuseIdentifier:@"VenueCell"];
    //kick off location manager
     self.locationController = [[CoreLocationController alloc] init];
 	self.locationController.delegate = self;
     self.locationController.isUpdating = YES;
 	[self.locationController.locationManager startUpdatingLocation];
     
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat yOffset = scrollView.contentOffset.y;
+    if (yOffset < -kImageOriginHeight){
+        CGRect f = self.mapView.frame;
+        f.origin.y = yOffset;
+        f.size.height = -yOffset;
+        self.mapView.frame = f;
+    }
     
 }
 
@@ -189,7 +217,7 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                               NSMutableArray *newVenues= [[NSMutableArray alloc] initWithArray:venues];
                                                               [newVenues insertObject:venue atIndex:0];
                                                               self.venueArray = [[NSArray alloc] initWithArray:newVenues];
-                                                              [self.nearbyVenueTableView reloadData];
+                                                              [self.tableView reloadData];
                                                               [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
                                                               int i = 1;
                                                               for (Venue *venue in self.venueArray) {
@@ -202,7 +230,7 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      self.venueArray = venues; // no sorting
 
                                                      //now reloading data
-                                                     [self.nearbyVenueTableView reloadData];
+                                                     [self.tableView reloadData];
                                                      [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
                                                      //disable location manager monitoring
                                                      self.mapView.showsUserLocation = NO;
