@@ -10,6 +10,8 @@
 #import "HudView.h"
 #import "Travelog.h" //Core Data
 #import "UIImage+Resize.h"
+#import "FBDialogs.h"
+#import "CLPlacemark+AddressDisplay.h"
 
 
 @interface CheckInViewController ()
@@ -115,35 +117,6 @@ UIImagePickerController *imagePicker;
     }
 }
 
-- (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
-{
-    //subThoroughfare - house number
-    //thoroughfare - street name
-    //locality - city
-    //administrativeArea - state/province
-    
-    return [NSString stringWithFormat:@"%@ %@, %@, %@ %@, %@",
-            self.placemark.subThoroughfare, self.placemark.thoroughfare,
-            self.placemark.locality, self.placemark.administrativeArea,
-            self.placemark.postalCode, self.placemark.country];
-    
-    /*NSMutableString *line1 = [NSMutableString stringWithCapacity:100];
-    [self addText:thePlacemark.subThoroughfare toLine:line1 withSeparator:@" "];
-    [self addText:thePlacemark.thoroughfare toLine:line1 withSeparator:@" "];
-    
-    NSMutableString *line2 = [NSMutableString stringWithCapacity:100];
-    [self addText:thePlacemark.locality toLine:line2 withSeparator:@" "];
-    [self addText:thePlacemark.administrativeArea toLine:line2 withSeparator:@" "];
-    [self addText:thePlacemark.postalCode toLine:line2 withSeparator:@" "];
-    
-    
-    [line1 appendString:@"\n"];
-    [line1 appendString:line2];
-    
-    return line1;*/
-
-}
-
 - (NSString *)formatDate:(NSDate *)theDate
 {
     //lazy loading of NSFormatter to avoid battery drain as its expensive object to create
@@ -210,55 +183,11 @@ UIImagePickerController *imagePicker;
     self.tagsLabel.text = tagName;
     self.titleTextField.text = title;
     
-    
-    //tag Images
-    if ([tagName  isEqual: @"Events"]) {
-        self.tagImageView.image  = [UIImage imageNamed:@"events.png"];
-    }
-    else if ([tagName  isEqual: @"House"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"house.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Restaurant"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"restaurant.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Travel"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"travel.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Office"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"office.png"];
-    }
-    
-    else if ([tagName  isEqual: @"People"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"people.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Nature"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"nature.png"];
-    }
-    
-    else if ([tagName  isEqual: @"Shopping"])
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"shopping.png"];
-    }
-    
-    else
-    {
-        self.tagImageView.image  = [UIImage imageNamed:@"other.png"];
-    }
-
+    self.tagImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[tagName lowercaseString]]];
     
     if (self.placemark)
     {
-        self.addressLabel.text = [self stringFromPlacemark:self.placemark];
+        self.addressLabel.text = [self.placemark addressDisplay];
     }
     else if (self.location )
     {
@@ -282,8 +211,7 @@ UIImagePickerController *imagePicker;
              //reverse geocode found and set into placemark array object
              if (error == nil && [placemarksArray count] > 0) {
                  self.placemark = [placemarksArray lastObject];
-                 NSLog(@"placemark address: %@", [self stringFromPlacemark:self.placemark]);
-                 self.addressLabel.text = [self stringFromPlacemark:self.placemark];
+                 self.addressLabel.text = [self.placemark addressDisplay];
              }
              //if there is an error
              else{
@@ -407,7 +335,7 @@ UIImagePickerController *imagePicker;
         hudView.text = @"Popped In!";
         travelog = [NSEntityDescription insertNewObjectForEntityForName:@"Travelog" inManagedObjectContext:self.managedObjectContext];
         
-        //set the location of photo id to -1 to avoid an overite of the image file
+        //set the location of photo id to -1 to avoid an overwrite of the image file
         travelog.photoId = [NSNumber numberWithInt:-1];
     }
     
@@ -432,7 +360,7 @@ UIImagePickerController *imagePicker;
         
         UIImage *croppedImage = [imageToCrop crop:cropRect];
         
-        //if the photo exsit we keep the same ID and ovverite the exsiting file
+        //if the photo exsit we keep the same ID and overwrite the exsiting file
         //convert the file to PNG
         //NSData *data = UIImagePNGRepresentation(image);
         NSData *data = UIImagePNGRepresentation(croppedImage);
@@ -442,7 +370,7 @@ UIImagePickerController *imagePicker;
         }
     }
     
-    //save the travelog context to core date
+    //save the travelog context to core data
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Error: %@", error);
@@ -633,53 +561,7 @@ UIImagePickerController *imagePicker;
     tagName = TagName;
     self.tagsLabel.text = tagName;
     
-    //Refracor code Very Inneficent
-    //tag Images
-    //if ([travelogToEdit.tagSet containsObject:tagName]){
     self.tagImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[tagName lowercaseString]]];
-//    if ([tagName  isEqual: @"Events"]) {
-//        self.tagImageView.image  = [UIImage imageNamed:@"events.png"];
-//    }
-//    else if ([tagName  isEqual: @"House"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"house.png"];
-//    }
-//    
-//    else if ([tagName  isEqual: @"Restaurant"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"restaurant.png"];
-//    }
-//    
-//    else if ([tagName  isEqual: @"Travel"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"travel.png"];
-//    }
-//    
-//    else if ([tagName  isEqual: @"Office"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"office.png"];
-//    }
-//    
-//    else if ([tagName  isEqual: @"People"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"people.png"];
-//    }
-//    
-//    else if ([tagName  isEqual: @"Nature"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"nature.png"];
-//    }
-//    
-//    else if ([tagName  isEqual: @"Shopping"])
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"shopping.png"];
-//    }
-//    
-//    else
-//    {
-//        self.tagImageView.image  = [UIImage imageNamed:@"other.png"];
-//    }
-    
     
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -804,6 +686,45 @@ UIImagePickerController *imagePicker;
         messageVC.body = smsString;
         [self presentViewController:messageVC animated:YES completion:nil];
     }
+}
+
+- (IBAction)postFacebookStatus:(id)sender {
+    id<FBGraphObject> travelObject =
+    [FBGraphObject openGraphObjectForPostWithType:@"travelpop:pop"
+                                            title:self.travelnotesTextView.text
+                                            image:nil
+                                              url:nil
+                                      description:self.travelnotesTextView.text];
+    
+    id<FBOpenGraphAction> cookAction = (id<FBOpenGraphAction>)[FBGraphObject graphObject];
+    [cookAction setObject:travelObject forKey:@"pop"];
+    
+    [FBDialogs presentShareDialogWithOpenGraphAction:cookAction
+                                          actionType:@"travelpop:pop"
+                                 previewPropertyName:@"pop"
+                                             handler:^(FBAppCall *call, NSDictionary *results, NSError *error) {
+                                                 if(error) {
+                                                     NSLog(@"Error: %@", error.description);
+                                                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                     message:@"Not able to post to Facebook"
+                                                                                                    delegate:nil
+                                                                                           cancelButtonTitle:@"OK"
+                                                                                           otherButtonTitles:nil];
+                                                     [alert show];
+
+                                                 } else {
+                                                     NSLog(@"Success!");
+                                                 }
+                                             }];
+}
+
+- (IBAction)twitMsg:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Twit"
+                                                    message:@"Twit Note"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result

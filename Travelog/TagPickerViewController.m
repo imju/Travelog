@@ -63,75 +63,9 @@
     
     NSString *tagName = [tags objectAtIndex:indexPath.row];
     cell.textLabel.text = tagName;
-    
-    
-    if ([tagName  isEqual: @"Events"]) {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"events.png"];
-        cell.imageView.image = imgView.image;
-    }
-    else if ([tagName  isEqual: @"House"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"house.png"];
-        cell.imageView.image = imgView.image;
-    }
-    
-    else if ([tagName  isEqual: @"Restaurant"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"restaurant.png"];
-        cell.imageView.image = imgView.image;
-
-    }
-    
-    else if ([tagName  isEqual: @"Travel"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"travel.png"];
-        cell.imageView.image = imgView.image;
-
-    }
-    
-    else if ([tagName  isEqual: @"Office"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"office.png"];
-        cell.imageView.image = imgView.image;
-
-    }
-    
-    else if ([tagName  isEqual: @"People"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"people.png"];
-        cell.imageView.image = imgView.image;
-
-    }
-    
-    else if ([tagName  isEqual: @"Nature"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"nature.png"];
-        cell.imageView.image = imgView.image;
-
-    }
-    
-    else if ([tagName  isEqual: @"Shopping"])
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"shopping.png"];
-        cell.imageView.image = imgView.image;
-
-    }
-    
-    else
-    {
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-        imgView.image = [UIImage imageNamed:@"other.png"];
-        cell.imageView.image = imgView.image;
-
-    }
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[tagName lowercaseString]]];
+    cell.imageView.image = imgView.image;
     
    
     

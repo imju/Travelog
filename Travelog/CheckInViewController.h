@@ -42,5 +42,8 @@
 - (IBAction)getDirections:(id)sender;
 - (IBAction)openMail:(id)sender;
 - (IBAction)openText:(id)sender;
+- (IBAction)postFacebookStatus:(id)sender;
+- (IBAction)twitMsg:(id)sender;
+
 
 @end

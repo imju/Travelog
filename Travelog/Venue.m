@@ -44,54 +44,11 @@
     return self.address;
 }
 
-
-//-(NSString *)address {
-//    NSDictionary *location = (NSDictionary *)[self.data valueOrNilForKeyPath:@"location"];
-//    NSString *addressdata = [location objectForKey:@"address"];
-//    NSString *city = [location objectForKey:@"city"];
-//    self.address = [NSString stringWithFormat:@"%@ %@", addressdata, city ];
-//    return self.address;
-//
-//}
-
-//-(NSNumber *)latitude {
-//    //NSDictionary *location = (NSDictionary *)[self.data valueOrNilForKeyPath:@"location"];
-//    //self.latitude = (NSNumber *)[location objectForKey:@"lat"];
-//    return self.latitude;
-//}
-//
-//-(NSNumber *)longitude {
-//    //NSDictionary *location = (NSDictionary *)[self.data valueOrNilForKeyPath:@"location"];
-//    //self.longitude = (NSNumber *)[location objectForKey:@"lng"];
-//    return self.longitude;
-//}
-
-//- (CLLocationCoordinate2D)coordinate
-//{
-//    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
-//}
-
-//-(NSNumber *)distance {
-//    NSDictionary *location = (NSDictionary *)[self.data valueOrNilForKeyPath:@"location"];
-//    self.distance = [location objectForKey:@"distance"];
-//    return self.distance;
-//    
-//}
-//
-//-(NSString *)url{
-//    self.url = [self.data valueOrNilForKeyPath:@"url"];
-//    return self.url;
-//}
-
-//-(NSString *)description{
-//    self.description = [self.data valueOrNilForKeyPath:@"description"];
-//    return self.description;
-//}
-
-
 + (NSMutableArray *)venuesWithArray:(NSArray *)array
 {
    NSMutableArray *venues = [[NSMutableArray alloc] init];
+   NSString *city = @"";
+   NSString *state = @"";
     int index =0;
     for (NSDictionary *params in array) {
         NSDictionary *venueDic = params;
@@ -104,12 +61,35 @@
         venue.latitude = (NSNumber *)[location objectForKey:@"lat"];
         venue.longitude =(NSNumber *)[location objectForKey:@"lng"];
         venue.distance = [NSNumber numberWithDouble:[(NSNumber *)[location objectForKey:@"distance"] doubleValue]/METERS_PER_MILE];
+        venue.address = @"";
         
         if ([location objectForKey:@"address"]){
-          venue.address = [NSString stringWithFormat:@"%@ %@", [location objectForKey:@"address"], [location objectForKey:@"city"]];
-        }else{
-          venue.address = [location objectForKey:@"city"];
+            NSString *addr = [venue.address stringByAppendingString:[location objectForKey:@"address"]];
+            NSLog(@"addr:%@",addr);
+            venue.address = addr;
         }
+        if ([location objectForKey:@"city"]){
+            city = [location objectForKey:@"city"];
+            if ([venue.address length]>0)
+               venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"city"]];
+            else
+               venue.address = [location objectForKey:@"city"];
+        }
+        if ([location objectForKey:@"state"]){
+            state = [location objectForKey:@"state"];
+            if ([venue.address length]>0)
+               venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"state"]];
+            else
+               venue.address = [location objectForKey:@"state"];
+        }
+
+        if ([location objectForKey:@"country"]){
+            if ([venue.address length]>0)
+                venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"country"]];
+            else // add cached city and state with country
+                venue.address = [NSString stringWithFormat:@"%@ %@ %@", city, state,[location objectForKey:@"country"]];
+        }
+
         venue.coordinate = CLLocationCoordinate2DMake([venue.latitude doubleValue], [venue.longitude doubleValue]);
         venue.index = [[NSNumber alloc ] initWithInt:++index];
  

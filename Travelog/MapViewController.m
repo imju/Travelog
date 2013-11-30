@@ -54,6 +54,8 @@
 {
     [super viewDidLoad];
     [self updateLocations];
+
+    self.mapView.showsUserLocation = NO;
     
     if ([travelogs count] > 0) {
         [self showTags];
