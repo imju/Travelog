@@ -43,7 +43,6 @@
 		456D8E15182DDCD600DD5479 /* camera-select.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8E14182DDCD600DD5479 /* camera-select.png */; };
 		45713ADA1831BC4B00A8A885 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45713AD91831BC4B00A8A885 /* SystemConfiguration.framework */; };
 		45713ADC1831BC5800A8A885 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45713ADB1831BC5800A8A885 /* MobileCoreServices.framework */; };
-		45EA63D918439FD1009BBB23 /* DBMapTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EA63D818439FD1009BBB23 /* DBMapTableView.m */; };
 		8A01A37F18189666005A2A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
 		8A01A38118189666005A2A70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38018189666005A2A70 /* CoreGraphics.framework */; };
 		8A01A38318189666005A2A70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
@@ -135,8 +134,6 @@
 		456D8E14182DDCD600DD5479 /* camera-select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-select.png"; path = "Travelog/images/camera-select.png"; sourceTree = "<group>"; };
 		45713AD91831BC4B00A8A885 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		45713ADB1831BC5800A8A885 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		45EA63D718439FD1009BBB23 /* DBMapTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMapTableView.h; sourceTree = "<group>"; };
-		45EA63D818439FD1009BBB23 /* DBMapTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMapTableView.m; sourceTree = "<group>"; };
 		6D875F55ED86444FBE9EBF1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759EECECBE1C4F748E0E6315 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8A01A37B18189666005A2A70 /* Travelpop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelpop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -429,8 +426,6 @@
 		8AFFBA2D182318CE00BAB4FF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				45EA63D718439FD1009BBB23 /* DBMapTableView.h */,
-				45EA63D818439FD1009BBB23 /* DBMapTableView.m */,
 				456D8DC9182DD2CB00DD5479 /* CoreLocationController.h */,
 				456D8DCA182DD2CB00DD5479 /* CoreLocationController.m */,
 				456D8DCC182DD2E400DD5479 /* NSDictionary+CPAdditions.h */,
@@ -611,7 +606,6 @@
 				456D8DDD182DD3F600DD5479 /* Travelog.m in Sources */,
 				8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */,
 				8AFFB9EC181F093600BAB4FF /* HudView.m in Sources */,
-				45EA63D918439FD1009BBB23 /* DBMapTableView.m in Sources */,
 				8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */,
 				8A01A38B18189666005A2A70 /* main.m in Sources */,
 				456D8DC7182DD28A00DD5479 /* FourSquareOauth.m in Sources */,
