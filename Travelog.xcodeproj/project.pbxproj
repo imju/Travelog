@@ -65,7 +65,6 @@
 		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
 		8A574CE4182DED4E009EA870 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE3182DED4E009EA870 /* Default.png */; };
 		8A574CE7182DF449009EA870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE5182DF449009EA870 /* Main.storyboard */; };
-		8A7CAC3D1829995100A2653C /* Time Machine.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8A7CAC3C1829995100A2653C /* Time Machine.icns */; };
 		8AFFB9E6181EC0D000BAB4FF /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */; };
 		8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E8181EE7CA00BAB4FF /* TagPickerViewController.m */; };
 		8AFFB9EC181F093600BAB4FF /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9EB181F093600BAB4FF /* HudView.m */; };
@@ -168,7 +167,6 @@
 		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
 		8A574CE3182DED4E009EA870 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Travelog/images/Default.png; sourceTree = "<group>"; };
 		8A574CE6182DF449009EA870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Travelog/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8A7CAC3C1829995100A2653C /* Time Machine.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Time Machine.icns"; sourceTree = "<group>"; };
 		8AFFB9E4181EC0D000BAB4FF /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		8AFFB9E7181EE7CA00BAB4FF /* TagPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerViewController.h; sourceTree = "<group>"; };
@@ -359,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				8A574CE3182DED4E009EA870 /* Default.png */,
-				8A7CAC3C1829995100A2653C /* Time Machine.icns */,
 			);
 			name = startupAppIcon;
 			sourceTree = "<group>";
@@ -550,7 +547,6 @@
 				456D8DE5182DD43500DD5479 /* VenueCell.xib in Resources */,
 				456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */,
 				8A01A38918189666005A2A70 /* InfoPlist.strings in Resources */,
-				8A7CAC3D1829995100A2653C /* Time Machine.icns in Resources */,
 				456D8E00182DDBF400DD5479 /* nature.png in Resources */,
 				456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */,
 				456D8E13182DDCC600DD5479 /* tag.png in Resources */,
