@@ -65,11 +65,6 @@
 		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
 		8A574CE4182DED4E009EA870 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE3182DED4E009EA870 /* Default.png */; };
 		8A574CE7182DF449009EA870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE5182DF449009EA870 /* Main.storyboard */; };
-		8AB1A095184E5BC900DA7149 /* photo 1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AB1A090184E5BC900DA7149 /* photo 1.PNG */; };
-		8AB1A096184E5BC900DA7149 /* photo 2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AB1A091184E5BC900DA7149 /* photo 2.PNG */; };
-		8AB1A097184E5BC900DA7149 /* photo 3.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AB1A092184E5BC900DA7149 /* photo 3.PNG */; };
-		8AB1A098184E5BC900DA7149 /* photo 4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AB1A093184E5BC900DA7149 /* photo 4.PNG */; };
-		8AB1A099184E5BC900DA7149 /* photo 5.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8AB1A094184E5BC900DA7149 /* photo 5.PNG */; };
 		8AFFB9E6181EC0D000BAB4FF /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */; };
 		8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9E8181EE7CA00BAB4FF /* TagPickerViewController.m */; };
 		8AFFB9EC181F093600BAB4FF /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFB9EB181F093600BAB4FF /* HudView.m */; };
@@ -172,11 +167,6 @@
 		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
 		8A574CE3182DED4E009EA870 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Travelog/images/Default.png; sourceTree = "<group>"; };
 		8A574CE6182DF449009EA870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Travelog/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8AB1A090184E5BC900DA7149 /* photo 1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo 1.PNG"; sourceTree = "<group>"; };
-		8AB1A091184E5BC900DA7149 /* photo 2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo 2.PNG"; sourceTree = "<group>"; };
-		8AB1A092184E5BC900DA7149 /* photo 3.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo 3.PNG"; sourceTree = "<group>"; };
-		8AB1A093184E5BC900DA7149 /* photo 4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo 4.PNG"; sourceTree = "<group>"; };
-		8AB1A094184E5BC900DA7149 /* photo 5.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo 5.PNG"; sourceTree = "<group>"; };
 		8AFFB9E4181EC0D000BAB4FF /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		8AFFB9E5181EC0D000BAB4FF /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		8AFFB9E7181EE7CA00BAB4FF /* TagPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerViewController.h; sourceTree = "<group>"; };
@@ -225,7 +215,6 @@
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
-				8AB1A08F184E5BC900DA7149 /* ReadmeImages */,
 				8A08AE3A182C1B9C00F61EE8 /* API */,
 				8AFFBA2D182318CE00BAB4FF /* Utils */,
 				8A08AE30182C195E00F61EE8 /* Model */,
@@ -381,18 +370,6 @@
 				456D8DF7182DDBF400DD5479 /* places.png */,
 			);
 			name = UISegmentIcon;
-			sourceTree = "<group>";
-		};
-		8AB1A08F184E5BC900DA7149 /* ReadmeImages */ = {
-			isa = PBXGroup;
-			children = (
-				8AB1A090184E5BC900DA7149 /* photo 1.PNG */,
-				8AB1A091184E5BC900DA7149 /* photo 2.PNG */,
-				8AB1A092184E5BC900DA7149 /* photo 3.PNG */,
-				8AB1A093184E5BC900DA7149 /* photo 4.PNG */,
-				8AB1A094184E5BC900DA7149 /* photo 5.PNG */,
-			);
-			path = ReadmeImages;
 			sourceTree = "<group>";
 		};
 		8AFFB9F2181F141D00BAB4FF /* HudImages */ = {
@@ -553,12 +530,9 @@
 				456D8E07182DDBF400DD5479 /* shopping.png in Resources */,
 				456D8E02182DDBF400DD5479 /* other.png in Resources */,
 				456D8E04182DDBF400DD5479 /* peopleOther.png in Resources */,
-				8AB1A098184E5BC900DA7149 /* photo 4.PNG in Resources */,
 				456D8E06182DDBF400DD5479 /* restaurant.png in Resources */,
-				8AB1A096184E5BC900DA7149 /* photo 2.PNG in Resources */,
 				8A574CE2182DED2A009EA870 /* camera.png in Resources */,
 				8A574CE7182DF449009EA870 /* Main.storyboard in Resources */,
-				8AB1A095184E5BC900DA7149 /* photo 1.PNG in Resources */,
 				456D8DFA182DDBF400DD5479 /* events.png in Resources */,
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
@@ -568,7 +542,6 @@
 				45ACC095184AB433001D9D2E /* twitter.png in Resources */,
 				456D8E0B182DDC2200DD5479 /* travel.png in Resources */,
 				456D8E05182DDBF400DD5479 /* places.png in Resources */,
-				8AB1A099184E5BC900DA7149 /* photo 5.PNG in Resources */,
 				8A01A39A18189666005A2A70 /* Images.xcassets in Resources */,
 				456D8E0A182DDC2200DD5479 /* transportation.png in Resources */,
 				456D8DE5182DD43500DD5479 /* VenueCell.xib in Resources */,
@@ -576,7 +549,6 @@
 				8A01A38918189666005A2A70 /* InfoPlist.strings in Resources */,
 				456D8E00182DDBF400DD5479 /* nature.png in Resources */,
 				456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */,
-				8AB1A097184E5BC900DA7149 /* photo 3.PNG in Resources */,
 				456D8E13182DDCC600DD5479 /* tag.png in Resources */,
 				456D8E15182DDCD600DD5479 /* camera-select.png in Resources */,
 				456D8E01182DDBF400DD5479 /* office.png in Resources */,
