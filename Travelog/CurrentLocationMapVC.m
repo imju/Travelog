@@ -10,13 +10,13 @@
 #import <MapKit/MKMapView.h>
 #import <MapKit/MKUserLocation.h>
 #import "VenueCell.h"
-//#import "CheckInVC.h"
 #import "CheckInViewController.h"
 #import "Travelog.h"
+#import "CLPlacemark+AddressDisplay.h"
 
 #define METERS_PER_MILE 1609.344
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 NSString *const LocationChangedNotification=@"LocationChangedNotification";
+CGFloat const kImageOriginHeight = 240.f;
 
 @interface CurrentLocationMapVC ()
 
@@ -24,8 +24,8 @@ NSString *const LocationChangedNotification=@"LocationChangedNotification";
 @property (strong, nonatomic)CLLocation *location;
 @property (strong, nonatomic)CLLocation *selectedLocation;
 @property (strong, nonatomic)Venue *selectedVenue;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UITableView *nearbyVenueTableView;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *venueArray;
 @property (strong, nonatomic) NSArray *prevVenueArray;
 
@@ -49,7 +49,10 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder])) {
+        
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contextDidChange:) name:LocationChangedNotification object:self];
+        self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, -kImageOriginHeight, self.tableView.frame.size.width, kImageOriginHeight)];
+
     }
     
     return self;
@@ -68,22 +71,46 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.nearbyVenueTableView.delegate = self;
-    self.nearbyVenueTableView.dataSource = self;
-    self.nearbyVenueTableView.tableHeaderView = nil;
+    
+    
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.tableHeaderView = nil;
+    //UILabel *labelView = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 200, 20)];
+    //labelView.text = @"TEST";
+
+    [self.tableView addSubview:self.mapView];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(kImageOriginHeight,0,0,0);
     
     //setting self as mapview delegate necessary for annotation
     self.mapView.delegate = self;
     
     //register custom cell
     UINib *venueCell = [UINib nibWithNibName:@"VenueCell" bundle:nil];
-    [self.nearbyVenueTableView registerNib:venueCell forCellReuseIdentifier:@"VenueCell"];
+    [self.tableView registerNib:venueCell forCellReuseIdentifier:@"VenueCell"];
    //kick off location manager
     self.locationController = [[CoreLocationController alloc] init];
 	self.locationController.delegate = self;
     self.locationController.isUpdating = YES;
 	[self.locationController.locationManager startUpdatingLocation];
     
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat yOffset = scrollView.contentOffset.y;
+    if (yOffset < -kImageOriginHeight){
+        CGRect f = self.mapView.frame;
+        f.origin.y = yOffset;
+        f.size.height = -yOffset;
+        self.mapView.frame = f;
+    }
     
 }
 
@@ -129,26 +156,11 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      __block NSArray *venues = [Venue venuesWithArray:items];
 
                                                      
-                                                     
-                                                     //if first item 4sq list already has 0 in distance then no sort because
-                                                     //the more reliable location is given by 4sq
-//                                                     if (((Venue *)venues[0]).distance==0)
-//                                                     {
-//                                                         self.venueArray = venues;
-//                                                    }else{ //otherwise based on distance sort
-//                                                       self.venueArray = [[Venue venuesWithArray:items]
-//                                                                         sortedArrayUsingComparator:^ NSComparisonResult(id a, id b) {
-//                                                                            NSNumber *first = [(Venue *)a distance];
-//                                                                            NSNumber *second = [(Venue *)b distance];
-//                                                                         return [first compare:second];
-//                                                         }];
-//                                                     }
-                                                     
                                                      // adding current location on top
                                                      BOOL locationMatched = false;
                                                      
                                                      for (Venue *venue in venues) {
-                                                         if (venue.distance == 0)
+                                                         if (venue.distance.doubleValue < 0.0001)
                                                              locationMatched = true;
                                                      }
                                                      
@@ -174,8 +186,7 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                               //reverse geocode found and set into placemark array object
                                                               if (error == nil && [placemarksArray count] > 0) {
                                                                   placemark = [placemarksArray lastObject];
-                                                                  NSLog(@"placemark address: %@", [self stringFromPlacemark:placemark]);
-                                                                  address = [self stringFromPlacemark:placemark];
+                                                                  address = [placemark addressDisplay];
                                                               }
                                                               //if there is an error
                                                               else{
@@ -191,7 +202,7 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                               NSMutableArray *newVenues= [[NSMutableArray alloc] initWithArray:venues];
                                                               [newVenues insertObject:venue atIndex:0];
                                                               self.venueArray = [[NSArray alloc] initWithArray:newVenues];
-                                                              [self.nearbyVenueTableView reloadData];
+                                                              [self.tableView reloadData];
                                                               [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
                                                               int i = 1;
                                                               for (Venue *venue in self.venueArray) {
@@ -204,7 +215,7 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      self.venueArray = venues; // no sorting
 
                                                      //now reloading data
-                                                     [self.nearbyVenueTableView reloadData];
+                                                     [self.tableView reloadData];
                                                      [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
                                                      //disable location manager monitoring
                                                      self.mapView.showsUserLocation = NO;
@@ -213,36 +224,6 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      // send alert
                                                      [self connectionError:error];
                                                  }];
-    }
-
-
-     - (NSString *)stringFromPlacemark:(CLPlacemark *)thePlacemark
-    {
-        //subThoroughfare - house number
-        //thoroughfare - street name
-        //locality - city
-        //administrativeArea - state/province
-        
-        return [NSString stringWithFormat:@"%@ %@, %@, %@ %@, %@",
-                thePlacemark.subThoroughfare, thePlacemark.thoroughfare,
-                thePlacemark.locality, thePlacemark.administrativeArea,
-                thePlacemark.postalCode, thePlacemark.country];
-        
-        /*NSMutableString *line1 = [NSMutableString stringWithCapacity:100];
-         [self addText:thePlacemark.subThoroughfare toLine:line1 withSeparator:@" "];
-         [self addText:thePlacemark.thoroughfare toLine:line1 withSeparator:@" "];
-         
-         NSMutableString *line2 = [NSMutableString stringWithCapacity:100];
-         [self addText:thePlacemark.locality toLine:line2 withSeparator:@" "];
-         [self addText:thePlacemark.administrativeArea toLine:line2 withSeparator:@" "];
-         [self addText:thePlacemark.postalCode toLine:line2 withSeparator:@" "];
-         
-         
-         [line1 appendString:@"\n"];
-         [line1 appendString:line2];
-         
-         return line1;*/
-        
     }
 
                                                      
@@ -255,7 +236,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 }
 
 
-#pragma mark - tableview delegate
+#pragma mark - Table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -267,18 +248,17 @@ CLGeocoder *geocoder; //object that performs the geocode
     VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VenueCell" forIndexPath:indexPath];
     
     Venue *venue = [self.venueArray objectAtIndex:indexPath.row];
-    NSString *venueString = [NSString stringWithFormat:@"%@. %@", venue.index, venue.name];
+    //NSString *venueString = [NSString stringWithFormat:@"%@. %@", venue.index, venue.name];
     NSString *distanceString = [NSString stringWithFormat:@"%.1f ml", [venue.distance floatValue]];
     
     //[cell.venueNameLabel setText:[NSString stringWithFormat:@"%@. %@", venue.index, venue.name]];
     [cell.distanceLabel  setText:distanceString];
-    [cell.venueNameLabel setText:venueString];
+    [cell.venueNameLabel setText:venue.name];
+    [cell.indexLabel setText:[NSString stringWithFormat:@"%@.",venue.index]];
     [cell.addressLabel setText:venue.address];
 
     return cell;
 }
-
-#pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -292,6 +272,23 @@ CLGeocoder *geocoder; //object that performs the geocode
     
 
 }
+
+//- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+//{
+//    if([view isKindOfClass:[UITableViewHeaderFooterView class]]){
+//        
+//        UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *) view;
+//        CALayer *headerBorder = [CALayer layer];
+//        headerBorder.delegate = self;
+//        headerBorder.backgroundColor = [UIColor greenColor].CGColor;
+//        headerBorder.frame = CGRectMake(tableViewHeaderFooterView.frame.origin.x,
+//                                        tableViewHeaderFooterView.frame.origin.y-10,
+//                                        tableViewHeaderFooterView.frame.size.width, 10);
+//        headerBorder.shadowRadius = 5.0;
+//
+//        [tableViewHeaderFooterView.layer addSublayer:headerBorder];
+//    }
+//}
 
 //send the long, lat, and address information to CheckInView
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -307,11 +304,13 @@ CLGeocoder *geocoder; //object that performs the geocode
         self.selectedLocation = [[CLLocation alloc] initWithLatitude:(CLLocationDegrees)[self.selectedVenue.latitude doubleValue]
                                                            longitude:(CLLocationDegrees)[self.selectedVenue.longitude doubleValue] ];
         
-        
-        
         //pass variables
         checkinvc.coordinate = self.selectedLocation.coordinate;
         checkinvc.location = self.selectedLocation;
+        
+        //if placemark exists
+        if (!self.selectedVenue.placemark)
+            checkinvc.placemark = self.selectedVenue.placemark;
     }
     
 }
@@ -377,7 +376,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 - (void)locationError:(NSError *)error {
     NSLog(@"locationError:%@", error);
-    [[[UIAlertView alloc] initWithTitle:@"Travelog"
+    [[[UIAlertView alloc] initWithTitle:@"Travelpop"
                                 message:@"Error on Getting Location"
                                delegate:nil
                       cancelButtonTitle:@"OK"
@@ -386,7 +385,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 - (void)connectionError:(NSError *)error {
     NSLog(@"connectionError:%@", error);
-    [[[UIAlertView alloc] initWithTitle:@"Travelog"
+    [[[UIAlertView alloc] initWithTitle:@"Travelpop"
                                 message:@"Error on Connecting to Internet"
                                delegate:nil
                       cancelButtonTitle:@"OK"
@@ -413,7 +412,6 @@ CLGeocoder *geocoder; //object that performs the geocode
     }
     // now setting new venue array to prev.
     self.prevVenueArray = self.venueArray;
-    //NSLog(@"1 venue coord: %@", ((Venue *)[self.venueArray objectAtIndex:0]).coordinate);
     [self.mapView addAnnotations:self.venueArray];
     
     MKCoordinateRegion region = [self regionForAnnotations:self.venueArray];
@@ -426,7 +424,6 @@ CLGeocoder *geocoder; //object that performs the geocode
 {
 	MKAnnotationView *annotationView = [views objectAtIndex:0];
 	id <MKAnnotation> annotation = [annotationView annotation];
-   // NSLog(@"annotation:%@",mp);
     //bring up index no. 1
     if ([annotation isKindOfClass:[Venue class]]){
         
@@ -486,10 +483,9 @@ CLGeocoder *geocoder; //object that performs the geocode
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view
-calloutAccessoryControlTapped:(UIControl *)control
+                      calloutAccessoryControlTapped:(UIControl *)control
 {
     self.selectedVenue = (Venue *) view.annotation;
-    NSLog(@"selected venue:%@",view.annotation);
     [self performSegueWithIdentifier:@"CheckIn" sender:self];
 
 }

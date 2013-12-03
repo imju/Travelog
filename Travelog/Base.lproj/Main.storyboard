@@ -369,6 +369,26 @@
                                                     <rect key="frame" x="289" y="12" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CKU-ku-r0T">
+                                                    <rect key="frame" x="117" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="facebook.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="postFacebookStatus:" destination="aG2-fD-IgR" eventType="touchUpInside" id="Mzu-p0-aAh"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kIt-q5-8zk">
+                                                    <rect key="frame" x="186" y="6" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="twitter.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="twitMsg:" destination="aG2-fD-IgR" eventType="touchUpInside" id="0Oe-Wc-dpJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -386,7 +406,7 @@
                                 <action selector="cancel:" destination="aG2-fD-IgR" id="MGv-x8-lxG"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Check In!" id="g4B-TJ-hqG">
+                        <barButtonItem key="rightBarButtonItem" title="Pop In!" id="g4B-TJ-hqG">
                             <connections>
                                 <action selector="done:" destination="aG2-fD-IgR" id="r6b-Ku-bvW"/>
                             </connections>
@@ -398,7 +418,7 @@
                         <outlet property="imageView" destination="9LT-oe-77F" id="mSf-J9-xCh"/>
                         <outlet property="photoLabel" destination="wjp-Qi-tRX" id="du2-JY-KSh"/>
                         <outlet property="sendMailButton" destination="C6M-Vt-RXZ" id="Nd8-cs-bXY"/>
-                        <outlet property="sendTextButton" destination="RrW-VG-tgt" id="VXm-8f-okp"/>
+                        <outlet property="sendTextButton" destination="RrW-VG-tgt" id="Ggc-3S-rFR"/>
                         <outlet property="tagImageView" destination="PpF-BI-bPe" id="M6d-HI-hcC"/>
                         <outlet property="tagsLabel" destination="xQv-2g-c9b" id="sdn-w9-myl"/>
                         <outlet property="titleTextField" destination="Ova-zF-pch" id="o3B-RB-933"/>
@@ -452,33 +472,7 @@
         <scene sceneID="1T4-4c-L0I">
             <objects>
                 <viewController title="First" id="IFb-gu-goA" customClass="CurrentLocationMapVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PeP-Vc-MD7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="vko-VJ-K1Y">
-                                <rect key="frame" x="0.0" y="65" width="320" height="271"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sZl-gc-xkS">
-                                <rect key="frame" x="-4" y="336" width="328" height="182"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vCh-sh-9ji" customClass="VenueCell">
-                                        <rect key="frame" x="0.0" y="22" width="328" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vCh-sh-9ji" id="kxM-Vh-12u">
-                                            <rect key="frame" x="0.0" y="0.0" width="328" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Travelog" id="63L-iE-g9J">
+                    <navigationItem key="navigationItem" title="Travelpop" id="63L-iE-g9J">
                         <barButtonItem key="rightBarButtonItem" title="Update" id="DWA-t3-nX7">
                             <connections>
                                 <action selector="updateLocationButton:" destination="IFb-gu-goA" id="6Oh-7Z-5Yo"/>
@@ -486,8 +480,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="vko-VJ-K1Y" id="Blq-qO-5rr"/>
-                        <outlet property="nearbyVenueTableView" destination="sZl-gc-xkS" id="EXd-ej-4LZ"/>
                         <segue destination="aG2-fD-IgR" kind="push" identifier="CheckIn" id="5V3-qO-VZe"/>
                     </connections>
                 </viewController>
@@ -520,6 +512,7 @@
         <image name="camera.png" width="30" height="30"/>
         <image name="email.png" width="30" height="30"/>
         <image name="events.png" width="32" height="37"/>
+        <image name="facebook.png" width="32" height="32"/>
         <image name="food.png" width="16" height="16"/>
         <image name="fun.png" width="16" height="16"/>
         <image name="map-pin.png" width="30" height="30"/>
@@ -527,6 +520,7 @@
         <image name="peopleOther.png" width="16" height="16"/>
         <image name="places.png" width="16" height="16"/>
         <image name="tag.png" width="30" height="30"/>
+        <image name="twitter.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
