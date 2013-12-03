@@ -2,7 +2,7 @@ TravelPop - Document Your Dreams
 ===
 
 This app allows you to document places you have been. You can take pictures, add Tags and share with family and friends
-Add Image to highlight App Here
+##Add Image to highlight App Here
 [alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/1.png)
 
 Built Travelpop as a part of the IOS CodePath Bootcamp. Released on the IOS App Store.
@@ -19,7 +19,7 @@ Built Travelpop as a part of the IOS CodePath Bootcamp. Released on the IOS App 
 [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ##Building Guide
-The build requires XCode 4.5 and above to run. in addition you will also need to set a manual location on your simulator.
+The build requires XCode 4.5 and SDK 5.0 and above to run. in addition you will also need to set a manual location on your simulator.
 
 ##Acknowledgements (Libraries Used, People Contributed)
 Opens source libraries such as AFNetworking and CocoaPods used in the development of this app.
