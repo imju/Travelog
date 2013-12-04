@@ -31,15 +31,15 @@ Please fork this repository and contribute back using [pull requests](https://gi
 Any contributions, large or small, major features, bug fixes, additional language translations, unit/integration tests are welcomed and appreciated but will be thoroughly reviewed and discussed.
 
 
-![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/1.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/2.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/3.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/4.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/5.png)
+![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/1.png) <br/>
+![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/2.png) <br/>
+![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/3.png) <br/>
+![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/4.png) <br/>
+![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/5.png)
 
-
+#This is a test of tables
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| ![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/1.png)      | right-aligned | ![alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/2.png)  |
+| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/1.png)      | right-aligned | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/2.png)  |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |

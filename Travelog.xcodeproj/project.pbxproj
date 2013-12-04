@@ -785,6 +785,7 @@
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
 				PRODUCT_NAME = Travelpop;
+				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -800,6 +801,7 @@
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
 				PRODUCT_NAME = Travelpop;
+				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
