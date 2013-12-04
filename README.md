@@ -40,6 +40,6 @@ Any contributions, large or small, major features, bug fixes, additional languag
 #This is a test of tables
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.png)      | right-aligned | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 2.png)  |
+| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)      | right-aligned | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)  |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
