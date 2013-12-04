@@ -3,9 +3,9 @@ TravelPop - Document Your Dreams
 
 This app allows you to document places you have been. You can take pictures, add Tags and share with family and friends
 ##Add Image to highlight App Here
-[alt tag](https://raw.github.com/imju/Travelog/ReadmeImages/1.png)
+[alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)
 
-Built Travelpop as a part of the IOS CodePath Bootcamp. Released on the IOS App Store.
+Built Travelpop as a part of the [IOS CodePath Bootcamp](#). Released on the [IOS App Store](#).
 
 ##Features
 - app determines your address
@@ -31,15 +31,6 @@ Please fork this repository and contribute back using [pull requests](https://gi
 Any contributions, large or small, major features, bug fixes, additional language translations, unit/integration tests are welcomed and appreciated but will be thoroughly reviewed and discussed.
 
 
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 2.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 3.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 4.png) <br/>
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 5.png)
-
-#This is a test of tables
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)      | right-aligned | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)  |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)      |  | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 2.PNG)  |
+| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 3.PNG)      |  | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 4.PNG)  |
+| ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 5.PNG)      |  
