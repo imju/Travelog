@@ -5,7 +5,7 @@ This app allows you to document places you have been. You can take pictures, add
 ##Add Image to highlight App Here
 [alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)
 
-Built Travelpop as a part of the [IOS CodePath Bootcamp](#). Released on the [IOS App Store](#).
+Built Travelpop as a part of the [IOS CodePath Bootcamp](http://thecodepath.com/androidbootcamp). Released on the [IOS App Store (Coming Soon)](#).
 
 ##Features
 - app determines your address
@@ -29,6 +29,9 @@ Opens source libraries such as AFNetworking and CocoaPods used in the developmen
 Please fork this repository and contribute back using [pull requests](https://github.com/imju/Travelog/pulls).
 
 Any contributions, large or small, major features, bug fixes, additional language translations, unit/integration tests are welcomed and appreciated but will be thoroughly reviewed and discussed.
+
+[alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)
+[alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 2.PNG)
 
 
 | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)      |  | ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 2.PNG)  |
