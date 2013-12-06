@@ -30,8 +30,5 @@ Please fork this repository and contribute back using [pull requests](https://gi
 
 Any contributions, large or small, major features, bug fixes, additional language translations, unit/integration tests are welcomed and appreciated but will be thoroughly reviewed and discussed.
 
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 1.PNG)
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 2.PNG)
 ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 3.PNG) 
 ![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 4.PNG) 
-![alt tag](https://raw.github.com/imju/Travelog/master/ReadmeImages/photo 5.PNG) 
