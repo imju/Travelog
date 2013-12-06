@@ -2,8 +2,8 @@ TravelPop - Document Your Dreams
 ===
 
 This app allows you to document places you have been. You can take pictures, add Tags and share with family and friends.
-##Add Image to highlight App Here
-![alt tag](https://raw.github.com/imju/Travelog/master/Travelpop_150.png)
+##Travel Pop
+![alt tag](https://raw.github.com/imju/Travelog/master/main.png)
 
 Built Travelpop as a part of the [IOS CodePath Bootcamp](http://thecodepath.com/androidbootcamp). Released on the [IOS App Store (Coming Soon)](#).
 
