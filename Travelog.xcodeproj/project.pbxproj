@@ -60,6 +60,7 @@
 		8A01A3AD18189666005A2A70 /* TravelogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A01A3AC18189666005A2A70 /* TravelogTests.m */; };
 		8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */; };
 		8A0C688B1819B5D60057E670 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C688A1819B5D60057E670 /* CoreLocation.framework */; };
+		8A2BFA8818528C3C0079AFB7 /* Travelpop_150.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */; };
 		8A41EB36182780D4007B6E9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB35182780D4007B6E9E /* AddressBook.framework */; };
 		8A41EB4C182865F6007B6E9E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB4B182865F6007B6E9E /* MessageUI.framework */; };
 		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
@@ -167,6 +168,7 @@
 		8A08AE4D182C1FE500F61EE8 /* CurrentLocationMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationMapVC.h; sourceTree = "<group>"; };
 		8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationMapVC.m; sourceTree = "<group>"; };
 		8A0C688A1819B5D60057E670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Travelpop_150.png; sourceTree = "<group>"; };
 		8A41EB35182780D4007B6E9E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8A41EB4B182865F6007B6E9E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
+				8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */,
 				8AB1A09A184E672A00DA7149 /* ReadmeImages */,
 				8A08AE3A182C1B9C00F61EE8 /* API */,
 				8AFFBA2D182318CE00BAB4FF /* Utils */,
@@ -563,6 +566,7 @@
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
 				8A574CE4182DED4E009EA870 /* Default.png in Resources */,
+				8A2BFA8818528C3C0079AFB7 /* Travelpop_150.png in Resources */,
 				456D8DFC182DDBF400DD5479 /* fun.png in Resources */,
 				456D8DFE182DDBF400DD5479 /* map-pin.png in Resources */,
 				45ACC095184AB433001D9D2E /* twitter.png in Resources */,
