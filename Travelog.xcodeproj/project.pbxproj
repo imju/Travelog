@@ -60,6 +60,8 @@
 		8A01A3AD18189666005A2A70 /* TravelogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A01A3AC18189666005A2A70 /* TravelogTests.m */; };
 		8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */; };
 		8A0C688B1819B5D60057E670 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C688A1819B5D60057E670 /* CoreLocation.framework */; };
+		8A2BFA8818528C3C0079AFB7 /* Travelpop_150.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */; };
+		8A2BFA8A185290BD0079AFB7 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BFA89185290BD0079AFB7 /* main.png */; };
 		8A41EB36182780D4007B6E9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB35182780D4007B6E9E /* AddressBook.framework */; };
 		8A41EB4C182865F6007B6E9E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB4B182865F6007B6E9E /* MessageUI.framework */; };
 		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
@@ -165,6 +167,8 @@
 		8A08AE4D182C1FE500F61EE8 /* CurrentLocationMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationMapVC.h; sourceTree = "<group>"; };
 		8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationMapVC.m; sourceTree = "<group>"; };
 		8A0C688A1819B5D60057E670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Travelpop_150.png; sourceTree = "<group>"; };
+		8A2BFA89185290BD0079AFB7 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		8A41EB35182780D4007B6E9E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8A41EB4B182865F6007B6E9E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
@@ -219,6 +223,9 @@
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
+				8A2BFA89185290BD0079AFB7 /* main.png */,
+				8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */,
+				8AB1A09A184E672A00DA7149 /* ReadmeImages */,
 				8A08AE3A182C1B9C00F61EE8 /* API */,
 				8AFFBA2D182318CE00BAB4FF /* Utils */,
 				8A08AE30182C195E00F61EE8 /* Model */,
@@ -376,6 +383,18 @@
 				456D8DF7182DDBF400DD5479 /* places.png */,
 			);
 			name = UISegmentIcon;
+			sourceTree = "<group>";
+		};
+		8AB1A09A184E672A00DA7149 /* ReadmeImages */ = {
+			isa = PBXGroup;
+			children = (
+				8AB1A09B184E672A00DA7149 /* photo 1.PNG */,
+				8AB1A09C184E672A00DA7149 /* photo 2.PNG */,
+				8AB1A09D184E672A00DA7149 /* photo 3.PNG */,
+				8AB1A09E184E672A00DA7149 /* photo 4.PNG */,
+				8AB1A09F184E672A00DA7149 /* photo 5.PNG */,
+			);
+			path = ReadmeImages;
 			sourceTree = "<group>";
 		};
 		8AFFB9F2181F141D00BAB4FF /* HudImages */ = {
@@ -538,18 +557,24 @@
 				456D8E07182DDBF400DD5479 /* shopping.png in Resources */,
 				456D8E02182DDBF400DD5479 /* other.png in Resources */,
 				456D8E04182DDBF400DD5479 /* peopleOther.png in Resources */,
+				8AB1A0A3184E672A00DA7149 /* photo 4.PNG in Resources */,
 				456D8E06182DDBF400DD5479 /* restaurant.png in Resources */,
+				8AB1A0A1184E672A00DA7149 /* photo 2.PNG in Resources */,
 				8A574CE2182DED2A009EA870 /* camera.png in Resources */,
 				8A574CE7182DF449009EA870 /* Main.storyboard in Resources */,
+				8AB1A0A0184E672A00DA7149 /* photo 1.PNG in Resources */,
 				456D8DFA182DDBF400DD5479 /* events.png in Resources */,
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
 				8A574CE4182DED4E009EA870 /* Default.png in Resources */,
+				8A2BFA8818528C3C0079AFB7 /* Travelpop_150.png in Resources */,
 				456D8DFC182DDBF400DD5479 /* fun.png in Resources */,
 				456D8DFE182DDBF400DD5479 /* map-pin.png in Resources */,
 				45ACC095184AB433001D9D2E /* twitter.png in Resources */,
+				8A2BFA8A185290BD0079AFB7 /* main.png in Resources */,
 				456D8E0B182DDC2200DD5479 /* travel.png in Resources */,
 				456D8E05182DDBF400DD5479 /* places.png in Resources */,
+				8AB1A0A4184E672A00DA7149 /* photo 5.PNG in Resources */,
 				8A01A39A18189666005A2A70 /* Images.xcassets in Resources */,
 				456D8E0A182DDC2200DD5479 /* transportation.png in Resources */,
 				456D8DE5182DD43500DD5479 /* VenueCell.xib in Resources */,
@@ -557,6 +582,7 @@
 				8A01A38918189666005A2A70 /* InfoPlist.strings in Resources */,
 				456D8E00182DDBF400DD5479 /* nature.png in Resources */,
 				456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */,
+				8AB1A0A2184E672A00DA7149 /* photo 3.PNG in Resources */,
 				456D8E13182DDCC600DD5479 /* tag.png in Resources */,
 				456D8E15182DDCD600DD5479 /* camera-select.png in Resources */,
 				456D8E01182DDBF400DD5479 /* office.png in Resources */,
@@ -795,6 +821,7 @@
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
 				PRODUCT_NAME = Travelpop;
+				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -810,6 +837,7 @@
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
 				PRODUCT_NAME = Travelpop;
+				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
