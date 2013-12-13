@@ -13,9 +13,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJy-UX-kna">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJy-UX-kna">
                         <rect key="frame" x="31" y="0.0" width="211" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <accessibility key="accessibilityConfiguration" label="venuetitle"/>
                         <attributedString key="attributedText">
                             <fragment content="Venue">
                                 <attributes>
@@ -27,28 +28,53 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=".5 ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-MO-M9m" userLabel="distance" colorLabel="IBBuiltInLabel-Blue">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".5 ml" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-MO-M9m" userLabel="distance" colorLabel="IBBuiltInLabel-Blue">
                         <rect key="frame" x="276" y="2" width="36" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <accessibility key="accessibilityConfiguration" label="distance"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="POI-eD-gSH"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.19215686269999999" green="0.52156862749999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-H6-HZZ">
-                        <rect key="frame" x="12" y="20" width="275" height="17"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-H6-HZZ">
+                        <rect key="frame" x="15" y="20" width="280" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <accessibility key="accessibilityConfiguration" label="address"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XES-MZ-9wD">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XES-MZ-9wD">
                         <rect key="frame" x="6" y="0.0" width="17" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <accessibility key="accessibilityConfiguration" label="index"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="17" id="LtQ-Cc-arV"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ru9-H6-HZZ" firstAttribute="leading" secondItem="l4H-6E-QVC" secondAttribute="leading" constant="15" id="23L-8P-3jh"/>
+                    <constraint firstAttribute="trailing" secondItem="ru9-H6-HZZ" secondAttribute="trailing" constant="25" id="6EO-sC-J77"/>
+                    <constraint firstItem="ru9-H6-HZZ" firstAttribute="top" secondItem="l4H-6E-QVC" secondAttribute="top" constant="20" symbolic="YES" id="Gtp-Io-Dbd"/>
+                    <constraint firstAttribute="bottom" secondItem="ru9-H6-HZZ" secondAttribute="bottom" id="IDj-TA-hNv"/>
+                    <constraint firstAttribute="bottom" secondItem="XES-MZ-9wD" secondAttribute="bottom" constant="16" id="KR8-yh-Dq8"/>
+                    <constraint firstItem="yJy-UX-kna" firstAttribute="baseline" secondItem="XES-MZ-9wD" secondAttribute="baseline" id="MhR-rw-g3S"/>
+                    <constraint firstAttribute="trailing" secondItem="Lgn-MO-M9m" secondAttribute="trailing" constant="8" id="N9X-DN-hsN"/>
+                    <constraint firstAttribute="bottom" secondItem="Lgn-MO-M9m" secondAttribute="bottom" constant="14" id="QOD-de-7my"/>
+                    <constraint firstItem="Lgn-MO-M9m" firstAttribute="top" secondItem="l4H-6E-QVC" secondAttribute="top" constant="2" id="X4M-vV-Mpg"/>
+                    <constraint firstItem="XES-MZ-9wD" firstAttribute="leading" secondItem="l4H-6E-QVC" secondAttribute="leading" constant="6" id="XmX-DT-cTO"/>
+                    <constraint firstItem="Lgn-MO-M9m" firstAttribute="leading" secondItem="yJy-UX-kna" secondAttribute="trailing" constant="34" id="eof-Mt-DZS"/>
+                    <constraint firstItem="yJy-UX-kna" firstAttribute="top" secondItem="XES-MZ-9wD" secondAttribute="top" id="oYu-gH-q8h"/>
+                    <constraint firstItem="XES-MZ-9wD" firstAttribute="top" secondItem="l4H-6E-QVC" secondAttribute="top" id="tGp-7V-Tl7"/>
+                    <constraint firstItem="yJy-UX-kna" firstAttribute="leading" secondItem="XES-MZ-9wD" secondAttribute="trailing" constant="8" symbolic="YES" id="uZi-rY-oE3"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressLabel" destination="ru9-H6-HZZ" id="LLv-6j-UWs"/>
