@@ -5,6 +5,6 @@ pod 'AFOAuth1Client'
 pod 'Facebook-iOS-SDK', '~>3.10.0'
 
 #Add Kiwi as an exclusive dependency for the testing target
-target :TravelogTests, :exclusive => true do
-   pod 'Kiwi'
-end
+#target :TravelogTests, :exclusive => true do
+#   pod 'Kiwi'
+#end
