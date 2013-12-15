@@ -149,7 +149,7 @@
 		6D875F55ED86444FBE9EBF1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759EECECBE1C4F748E0E6315 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		8428FE6B3AB34F519A602782 /* Pods-TravelogTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelogTests.xcconfig"; path = "Pods/Pods-TravelogTests.xcconfig"; sourceTree = "<group>"; };
-		8A01A37B18189666005A2A70 /* Travelpop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelpop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A01A37B18189666005A2A70 /* TravelPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A01A37E18189666005A2A70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A01A38018189666005A2A70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8A01A38218189666005A2A70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -247,7 +247,7 @@
 		8A01A37C18189666005A2A70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8A01A37B18189666005A2A70 /* Travelpop.app */,
+				8A01A37B18189666005A2A70 /* TravelPop.app */,
 				8A01A39F18189666005A2A70 /* TravelogTests.xctest */,
 			);
 			name = Products;
@@ -488,7 +488,7 @@
 			);
 			name = Travelog;
 			productName = Travelog;
-			productReference = 8A01A37B18189666005A2A70 /* Travelpop.app */;
+			productReference = 8A01A37B18189666005A2A70 /* TravelPop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A01A39E18189666005A2A70 /* TravelogTests */ = {
@@ -814,7 +814,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
-				PRODUCT_NAME = Travelpop;
+				PRODUCT_NAME = TravelPop;
 				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
 				WRAPPER_EXTENSION = app;
 			};
@@ -830,7 +830,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
-				PRODUCT_NAME = Travelpop;
+				PRODUCT_NAME = TravelPop;
 				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
 				WRAPPER_EXTENSION = app;
 			};
