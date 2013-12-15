@@ -189,9 +189,6 @@
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            //annotationView.animatesDrop = NO;
-            //annotationView.pinColor = MKPinAnnotationColorPurple;
-            NSLog(@"image file:%@", [NSString stringWithFormat:@"%@.png",((Travelog *)annotation).tag]);
             annotationView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",
                                                         [((Travelog *)annotation).tag lowercaseString]]
                                                         ];

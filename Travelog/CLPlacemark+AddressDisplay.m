@@ -42,12 +42,12 @@
         else
             address = self.administrativeArea;
     }
-    if (self.country){
-        if ([address length]>0)
-            address = [NSString stringWithFormat:@"%@ %@", address, self.country];
-        else
-            address = self.country;
-    }
+//    if (self.country){
+//        if ([address length]>0)
+//            address = [NSString stringWithFormat:@"%@ %@", address, self.country];
+//        else
+//            address = self.country;
+//    }
     return address;
 }
 

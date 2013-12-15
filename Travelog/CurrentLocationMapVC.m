@@ -25,7 +25,6 @@ CGFloat const kImageOriginHeight = 240.f;
 @property (strong, nonatomic)CLLocation *selectedLocation;
 @property (strong, nonatomic)Venue *selectedVenue;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *venueArray;
 @property (strong, nonatomic) NSArray *prevVenueArray;
 
@@ -77,8 +76,6 @@ CLGeocoder *geocoder; //object that performs the geocode
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.tableHeaderView = nil;
-    //UILabel *labelView = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 200, 20)];
-    //labelView.text = @"TEST";
 
     [self.tableView addSubview:self.mapView];
     
@@ -86,6 +83,7 @@ CLGeocoder *geocoder; //object that performs the geocode
     
     //setting self as mapview delegate necessary for annotation
     self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
     
     //register custom cell
     UINib *venueCell = [UINib nibWithNibName:@"VenueCell" bundle:nil];
@@ -134,8 +132,6 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 - (void)update:(CLLocation *)location {
     self.location = location;
-//    MKCoordinateRegion userLocation = MKCoordinateRegionMakeWithDistance(location.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
-//    [self.mapView setRegion:userLocation animated:YES];
     
     NSLog(@"after map update: latitude: %f longitude: %f", [location coordinate].latitude,[location coordinate].longitude);
     
@@ -248,10 +244,9 @@ CLGeocoder *geocoder; //object that performs the geocode
     VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VenueCell" forIndexPath:indexPath];
     
     Venue *venue = [self.venueArray objectAtIndex:indexPath.row];
-    //NSString *venueString = [NSString stringWithFormat:@"%@. %@", venue.index, venue.name];
+
     NSString *distanceString = [NSString stringWithFormat:@"%.1f ml", [venue.distance floatValue]];
     
-    //[cell.venueNameLabel setText:[NSString stringWithFormat:@"%@. %@", venue.index, venue.name]];
     [cell.distanceLabel  setText:distanceString];
     [cell.venueNameLabel setText:venue.name];
     [cell.indexLabel setText:[NSString stringWithFormat:@"%@.",venue.index]];
@@ -273,22 +268,6 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 }
 
-//- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
-//{
-//    if([view isKindOfClass:[UITableViewHeaderFooterView class]]){
-//        
-//        UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *) view;
-//        CALayer *headerBorder = [CALayer layer];
-//        headerBorder.delegate = self;
-//        headerBorder.backgroundColor = [UIColor greenColor].CGColor;
-//        headerBorder.frame = CGRectMake(tableViewHeaderFooterView.frame.origin.x,
-//                                        tableViewHeaderFooterView.frame.origin.y-10,
-//                                        tableViewHeaderFooterView.frame.size.width, 10);
-//        headerBorder.shadowRadius = 5.0;
-//
-//        [tableViewHeaderFooterView.layer addSublayer:headerBorder];
-//    }
-//}
 
 //send the long, lat, and address information to CheckInView
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -321,6 +300,10 @@ CLGeocoder *geocoder; //object that performs the geocode
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
+    if (annotation == mapView.userLocation)
+    {
+        return nil;
+    }
     //because MKAnnotation is a protocol, there are many objects it contains
     //ie the blue dot that represent the users current location
     //so we use isKindOdClass to determine whether teh annotation is a location object, if so we continue
@@ -338,16 +321,16 @@ CLGeocoder *geocoder; //object that performs the geocode
             
             UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(4, 2, 10, 10)] ;
             lbl.backgroundColor = [UIColor clearColor];
-            lbl.textColor = [UIColor blueColor];
+            lbl.textColor = [UIColor whiteColor];
             [lbl setFont:[UIFont systemFontOfSize:11]];
             lbl.tag = 42;
             [annotationView addSubview:lbl];
             
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            annotationView.animatesDrop = YES;
-            annotationView.frame = lbl.frame;
-            annotationView.pinColor = MKPinAnnotationColorGreen;
+            annotationView.image = [UIImage imageNamed:@"map_pin_home.png"];
+            //annotationView.frame = lbl.frame;
+            //annotationView.pinColor = MKPinAnnotationColorGreen;
             
             //create a disclosure button and hook up a touch up inside event with a showtagsdetails method
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
