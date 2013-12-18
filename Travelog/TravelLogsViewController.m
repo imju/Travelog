@@ -448,7 +448,6 @@
 
 
 - (IBAction)valueChanged:(UISegmentedControl *)sender {
-    NSLog(@"%li", (long)sender.selectedSegmentIndex);
     switch (self.segmentedControl.selectedSegmentIndex) {
         case 0:
             fetchedResultsController = self.allFetchedResultsController;
@@ -696,7 +695,6 @@
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
-    NSLog(@"*** controllerWillChangeContent");
     [self.tableView beginUpdates];
 }
 
@@ -709,22 +707,18 @@
 {
     switch (type) {
         case NSFetchedResultsChangeInsert:
-            NSLog(@"*** controllerDidChangeObject - NSFetchedResultsChangeInsert");
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case NSFetchedResultsChangeDelete:
-            NSLog(@"*** controllerDidChangeObject - NSFetchedResultsChangeDelete");
             [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case NSFetchedResultsChangeUpdate:
-            NSLog(@"*** controllerDidChangeObject - NSFetchedResultsChangeUpdate");
             [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
-            NSLog(@"*** controllerDidChangeObject - NSFetchedResultsChangeMove");
             [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
@@ -739,12 +733,10 @@
 {
     switch (type) {
         case NSFetchedResultsChangeInsert:
-            NSLog(@"*** controllerDidChangeSection - NSFetchedResultsChangeInsert");
             [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
             
         case NSFetchedResultsChangeDelete:
-            NSLog(@"*** controllerDidChangeSection - NSFetchedResultsChangeDelete");
             [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
@@ -752,7 +744,6 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    NSLog(@"*** controllerDidChangeContent");
     [self.tableView endUpdates];
 }
 

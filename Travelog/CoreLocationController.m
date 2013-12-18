@@ -46,7 +46,6 @@
     } else {
         oldLocation = nil;
     }
-    NSLog(@"didUpdateToLocation %@ from %@", newLocation, oldLocation);
 
     //if the time the location is determined is gerater than 5secs
     double interval = [newLocation.timestamp timeIntervalSinceNow];
@@ -56,7 +55,6 @@
         return;
     }
 
-    NSLog(@"-----------successful interval %f", interval);
 
     if (newLocation.horizontalAccuracy < 0) {
         return;
@@ -68,8 +66,6 @@
         distance = [newLocation distanceFromLocation:self.prevLocation];
     }
     
-    NSLog(@"self.prevLocation.horizontalAccuracy:%f",self.prevLocation.horizontalAccuracy );
-    NSLog(@"newLocation.horezontalAccuracy:%f",newLocation.horizontalAccuracy );
     
     //determine if the new reading is more accurate than the old reading and check if we already have a location reading
     if ( self.prevLocation == nil || self.prevLocation.horizontalAccuracy >= newLocation.horizontalAccuracy) {
@@ -82,7 +78,6 @@
         //if the new location is better than the old location then stop looking
         if (newLocation.horizontalAccuracy <= self.locationManager.desiredAccuracy) {
             
-           // NSLog(@"***Search Done!");
             [self stopLocationManager];
         }
         
@@ -90,7 +85,6 @@
         {
             NSTimeInterval timeInterval = [newLocation.timestamp timeIntervalSinceDate:self.prevLocation.timestamp];
             if (timeInterval > 10) {
-                NSLog(@"...Force done!");
                 [self stopLocationManager];
             }
         }

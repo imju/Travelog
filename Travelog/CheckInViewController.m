@@ -201,10 +201,7 @@ UIImagePickerController *imagePicker;
         [self.geocoder reverseGeocodeLocation:self.location
                             completionHandler:^(NSArray * placemarksArray, NSError *error)
          {
-             NSLog(@"GeoCode Called: %@, error: %@", placemarksArray, error);
-             
              if (error){
-                 NSLog(@"Geocode failed with error: %@", error);
                  return;
                  
              }
@@ -311,7 +308,6 @@ UIImagePickerController *imagePicker;
 
 #pragma mark UITextFieldDelegate
 -(void)textDidBeginEditing:(UITextField *)textField{
-        NSLog(@"textfield identified:%@", textField.text);
 
         if ([textField.text isEqualToString:@"Enter your title"])
             textField.text = @"";
@@ -320,8 +316,6 @@ UIImagePickerController *imagePicker;
 - (IBAction)done:(id)sender
 {
     
-    //NSLog(@"Notes '%@'", travelogNote);
-    //[self closeScreen];
     
     
     HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
@@ -393,8 +387,6 @@ UIImagePickerController *imagePicker;
         TagPickerViewController *controller = segue.destinationViewController;
         controller.delegate = self;
         controller.selectedTagName = tagName;
-        
-        //NSLog(@"%@", tagName);
     }
 }
 
@@ -524,9 +516,6 @@ UIImagePickerController *imagePicker;
 //this triggers events when a row is selected
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"section: %ld", (long)indexPath.section);
-    //NSLog(@"row: %ld", (long)indexPath.row);
-    
     
     if (indexPath.section == 0 && indexPath.row == 0)
     {
@@ -642,7 +631,6 @@ UIImagePickerController *imagePicker;
         
         NSString *lastTable=@"\n";
         [emailBody appendString:lastTable];
-        NSLog(@"%@",emailBody);
         [picker setMessageBody:emailBody isHTML:NO];
         
         [self presentViewController:picker animated:YES completion:NULL];
@@ -680,7 +668,6 @@ UIImagePickerController *imagePicker;
         
         NSString *lastTable=@"\n";
         [smsString appendString:lastTable];
-        NSLog(@"%@",smsString);
         
         
         messageVC.body = smsString;

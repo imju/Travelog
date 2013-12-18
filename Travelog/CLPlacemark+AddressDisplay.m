@@ -21,7 +21,6 @@
     
     if (self.subThoroughfare){
         NSString *addr = [address stringByAppendingString:self.subThoroughfare];
-        NSLog(@"addr:%@",addr);
         address = addr;
     }
     if (self.thoroughfare){

@@ -32,7 +32,6 @@
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     
     UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
-    navigationController.navigationBar.barTintColor = [UIColor greenColor];
     
     CurrentLocationMapVC *currentLocVC
     = (CurrentLocationMapVC *)[[navigationController viewControllers] objectAtIndex:0];
