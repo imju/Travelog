@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  Travelog
 //
-//  Created by Edo williams on 10/23/13.
-//  Copyright (c) 2013 Edo williams. All rights reserved.
+//  Created by Edo/Imju on 10/23/13.
+// Copyright (c) 2013 Edo/Imju. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -32,6 +32,7 @@
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
     
     UINavigationController *navigationController = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
+    navigationController.navigationBar.barTintColor = [UIColor greenColor];
     
     CurrentLocationMapVC *currentLocVC
     = (CurrentLocationMapVC *)[[navigationController viewControllers] objectAtIndex:0];

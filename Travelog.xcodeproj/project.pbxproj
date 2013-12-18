@@ -46,6 +46,8 @@
 		45ACC091184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */; };
 		45ACC094184AB433001D9D2E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC092184AB433001D9D2E /* facebook.png */; };
 		45ACC095184AB433001D9D2E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC093184AB433001D9D2E /* twitter.png */; };
+		45C39C2B1861EDD100C50E20 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C291861EDD100C50E20 /* iTunesArtwork.png */; };
+		45C39C2C1861EDD100C50E20 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */; };
 		45E20294185D631E00D96458 /* map_pin_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E20293185D631E00D96458 /* map_pin_home.png */; };
 		8A01A37F18189666005A2A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
 		8A01A38118189666005A2A70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38018189666005A2A70 /* CoreGraphics.framework */; };
@@ -61,8 +63,6 @@
 		8A01A3AD18189666005A2A70 /* TravelogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A01A3AC18189666005A2A70 /* TravelogTests.m */; };
 		8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */; };
 		8A0C688B1819B5D60057E670 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C688A1819B5D60057E670 /* CoreLocation.framework */; };
-		8A2BFA8818528C3C0079AFB7 /* Travelpop_150.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */; };
-		8A2BFA8A185290BD0079AFB7 /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A2BFA89185290BD0079AFB7 /* main.png */; };
 		8A41EB36182780D4007B6E9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB35182780D4007B6E9E /* AddressBook.framework */; };
 		8A41EB4C182865F6007B6E9E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB4B182865F6007B6E9E /* MessageUI.framework */; };
 		8A574CE2182DED2A009EA870 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A574CE1182DED2A009EA870 /* camera.png */; };
@@ -145,6 +145,8 @@
 		45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLPlacemark+AddressDisplay.m"; path = "Travelog/CLPlacemark+AddressDisplay.m"; sourceTree = "<group>"; };
 		45ACC092184AB433001D9D2E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Travelog/images/facebook.png; sourceTree = "<group>"; };
 		45ACC093184AB433001D9D2E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Travelog/images/twitter.png; sourceTree = "<group>"; };
+		45C39C291861EDD100C50E20 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		45E20293185D631E00D96458 /* map_pin_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_pin_home.png; path = Travelog/images/map_pin_home.png; sourceTree = "<group>"; };
 		6D875F55ED86444FBE9EBF1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759EECECBE1C4F748E0E6315 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -169,8 +171,6 @@
 		8A08AE4D182C1FE500F61EE8 /* CurrentLocationMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationMapVC.h; sourceTree = "<group>"; };
 		8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationMapVC.m; sourceTree = "<group>"; };
 		8A0C688A1819B5D60057E670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Travelpop_150.png; sourceTree = "<group>"; };
-		8A2BFA89185290BD0079AFB7 /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		8A41EB35182780D4007B6E9E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		8A41EB4B182865F6007B6E9E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		8A574CE1182DED2A009EA870 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = Travelog/images/camera.png; sourceTree = "<group>"; };
@@ -225,9 +225,6 @@
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
-				8A2BFA89185290BD0079AFB7 /* main.png */,
-				8A2BFA8718528C3C0079AFB7 /* Travelpop_150.png */,
-				8AB1A09A184E672A00DA7149 /* ReadmeImages */,
 				8A08AE3A182C1B9C00F61EE8 /* API */,
 				8AFFBA2D182318CE00BAB4FF /* Utils */,
 				8A08AE30182C195E00F61EE8 /* Model */,
@@ -387,13 +384,6 @@
 			name = UISegmentIcon;
 			sourceTree = "<group>";
 		};
-		8AB1A09A184E672A00DA7149 /* ReadmeImages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReadmeImages;
-			sourceTree = "<group>";
-		};
 		8AFFB9F2181F141D00BAB4FF /* HudImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +396,8 @@
 		8AFFBA23182313A300BAB4FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				45C39C291861EDD100C50E20 /* iTunesArtwork.png */,
+				45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */,
 				45E20293185D631E00D96458 /* map_pin_home.png */,
 				45ACC092184AB433001D9D2E /* facebook.png */,
 				45ACC093184AB433001D9D2E /* twitter.png */,
@@ -550,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456D8DFD182DDBF400DD5479 /* house.png in Resources */,
+				45C39C2B1861EDD100C50E20 /* iTunesArtwork.png in Resources */,
 				45ACC094184AB433001D9D2E /* facebook.png in Resources */,
 				456D8E03182DDBF400DD5479 /* people.png in Resources */,
 				456D8E07182DDBF400DD5479 /* shopping.png in Resources */,
@@ -562,13 +555,12 @@
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
 				8A574CE4182DED4E009EA870 /* Default.png in Resources */,
-				8A2BFA8818528C3C0079AFB7 /* Travelpop_150.png in Resources */,
 				456D8DFC182DDBF400DD5479 /* fun.png in Resources */,
 				45E20294185D631E00D96458 /* map_pin_home.png in Resources */,
 				456D8DFE182DDBF400DD5479 /* map-pin.png in Resources */,
 				45ACC095184AB433001D9D2E /* twitter.png in Resources */,
-				8A2BFA8A185290BD0079AFB7 /* main.png in Resources */,
 				456D8E0B182DDC2200DD5479 /* travel.png in Resources */,
+				45C39C2C1861EDD100C50E20 /* iTunesArtwork@2x.png in Resources */,
 				456D8E05182DDBF400DD5479 /* places.png in Resources */,
 				8A01A39A18189666005A2A70 /* Images.xcassets in Resources */,
 				456D8E0A182DDC2200DD5479 /* transportation.png in Resources */,

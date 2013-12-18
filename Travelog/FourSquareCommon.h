@@ -2,7 +2,7 @@
 //  TwitterCommon.h
 //  twitter
 //
-//  Created by bgbb on 8/6/13.
+//  Created by Edo/Imju on 8/6/13.
 //  Copyright (c) 2013 greensprout. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  MapViewController.m
 //  Travelog
 //
-//  Created by Edo williams on 10/29/13.
-//  Copyright (c) 2013 Edo williams. All rights reserved.
+//  Created by Edo/Imju on 10/29/13.
+//  Copyright (c) 2013 Edo/Imju. All rights reserved.
 //
 
 #import "MapViewController.h"

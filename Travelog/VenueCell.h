@@ -2,7 +2,7 @@
 //  VenueCell.h
 //  
 //
-//  Created by bgbb on 10/31/13.
+//  Created by Edo/Imju on 10/31/13.
 //
 //
 

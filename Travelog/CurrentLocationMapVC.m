@@ -2,7 +2,7 @@
 //  CurrentLocationMapVC.m
 //  TravelLog
 //
-//  Created by bgbb on 10/26/13.
+//  Created by Edo/Imju on 10/26/13.
 //  Copyright (c) 2013 MyTravel. All rights reserved.
 //
 
@@ -133,7 +133,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (void)update:(CLLocation *)location {
     self.location = location;
     
-    NSLog(@"after map update: latitude: %f longitude: %f", [location coordinate].latitude,[location coordinate].longitude);
+   // NSLog(@"after map update: latitude: %f longitude: %f", [location coordinate].latitude,[location coordinate].longitude);
     
 }
 
@@ -142,7 +142,6 @@ CLGeocoder *geocoder; //object that performs the geocode
     [[FourSquareClient instance] venueSearchWithLatitude: self.location.coordinate.latitude
                                                longitude: self.location.coordinate.longitude
                                                  success:^(AFHTTPRequestOperation *operation, id response) {
-                                                     NSLog(@"success getting venue %@", response);
                                                      NSDictionary *jsonDict = (NSDictionary *) response;
                                                      NSArray *items = [[jsonDict objectForKey:@"response"] objectForKey:@"venues"];
                                                      
@@ -171,8 +170,6 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                           {
                                                               CLPlacemark *placemark = nil;
                                                               NSString *address = nil;
-                                                              
-                                                              NSLog(@"GeoCode Called: %@, error: %@", placemarksArray, error);
                                                               
                                                               if (error){
                                                                   NSLog(@"Geocode failed with error: %@", error);
@@ -378,7 +375,7 @@ CLGeocoder *geocoder; //object that performs the geocode
 - (void)updateLocations
 {
     
-    NSError *error;
+   // NSError *error;
     
     //execute fecthed data here
     if (self.prevVenueArray == nil && self.venueArray == nil){
@@ -386,7 +383,6 @@ CLGeocoder *geocoder; //object that performs the geocode
         return;
     }
     if (self.prevVenueArray!=nil && self.venueArray == nil) {
-        NSLog(@"Error: %@", error);
         return;
     }
     //we adding pins on the map

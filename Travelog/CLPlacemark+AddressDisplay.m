@@ -2,7 +2,7 @@
 //  CLPlacemark+AddressDisplay.m
 //  Travelog
 //
-//  Created by bgbb on 11/30/13.
+//  Created by Edo/Imju on 11/30/13.
 //  Copyright (c) 2013 Edo Imju. All rights reserved.
 //
 

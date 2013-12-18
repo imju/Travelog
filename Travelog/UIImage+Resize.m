@@ -2,8 +2,8 @@
 //  UIImage+Resize.m
 //  Travelog
 //
-//  Created by Edo williams on 10/30/13.
-//  Copyright (c) 2013 Edo williams. All rights reserved.
+//  Created by Edo/Imju on 10/30/13.
+//  Copyright (c) 2013 Edo/Imju. Apache licensed.
 //
 
 #import "UIImage+Resize.h"
