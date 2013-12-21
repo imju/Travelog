@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454E5B6818662182006E8D05 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454E5B6718662182006E8D05 /* SenTestingKit.framework */; };
+		454E5B6918662182006E8D05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
+		454E5B6A18662182006E8D05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
+		454E5B7018662182006E8D05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 454E5B6E18662182006E8D05 /* InfoPlist.strings */; };
 		456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8C182DC81C00DD5479 /* CheckInImage.png */; };
 		456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */; };
 		456D8DC7182DD28A00DD5479 /* FourSquareOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */; };
@@ -80,6 +84,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		454E5B7418662182006E8D05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A01A37318189666005A2A70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A01A37A18189666005A2A70;
+			remoteInfo = Travelog;
+		};
 		8A01A3A418189666005A2A70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A01A37318189666005A2A70 /* Project object */;
@@ -91,6 +102,11 @@
 
 /* Begin PBXFileReference section */
 		170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		454E5B6618662182006E8D05 /* AcceptanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		454E5B6718662182006E8D05 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		454E5B6D18662182006E8D05 /* AcceptanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AcceptanceTests-Info.plist"; sourceTree = "<group>"; };
+		454E5B6F18662182006E8D05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		454E5B7318662182006E8D05 /* AcceptanceTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Prefix.pch"; sourceTree = "<group>"; };
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
 		456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareOauth.m; path = Travelog/FourSquareOauth.m; sourceTree = "<group>"; };
@@ -190,6 +206,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		454E5B6318662182006E8D05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454E5B6818662182006E8D05 /* SenTestingKit.framework in Frameworks */,
+				454E5B6A18662182006E8D05 /* UIKit.framework in Frameworks */,
+				454E5B6918662182006E8D05 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A01A37818189666005A2A70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +248,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		454E5B6B18662182006E8D05 /* AcceptanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				454E5B6C18662182006E8D05 /* Supporting Files */,
+			);
+			path = AcceptanceTests;
+			sourceTree = "<group>";
+		};
+		454E5B6C18662182006E8D05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				454E5B6D18662182006E8D05 /* AcceptanceTests-Info.plist */,
+				454E5B6E18662182006E8D05 /* InfoPlist.strings */,
+				454E5B7318662182006E8D05 /* AcceptanceTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +278,7 @@
 				8AFFB9F2181F141D00BAB4FF /* HudImages */,
 				8A01A38418189666005A2A70 /* Travelog */,
 				8A01A3A618189666005A2A70 /* TravelogTests */,
+				454E5B6B18662182006E8D05 /* AcceptanceTests */,
 				8A01A37D18189666005A2A70 /* Frameworks */,
 				8A01A37C18189666005A2A70 /* Products */,
 				759EECECBE1C4F748E0E6315 /* Pods.xcconfig */,
@@ -246,6 +291,7 @@
 			children = (
 				8A01A37B18189666005A2A70 /* TravelPop.app */,
 				8A01A39F18189666005A2A70 /* TravelogTests.xctest */,
+				454E5B6618662182006E8D05 /* AcceptanceTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,6 +312,7 @@
 				8A01A3A018189666005A2A70 /* XCTest.framework */,
 				6D875F55ED86444FBE9EBF1B /* libPods.a */,
 				170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */,
+				454E5B6718662182006E8D05 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -464,6 +511,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		454E5B6518662182006E8D05 /* AcceptanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 454E5B7818662182006E8D05 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
+			buildPhases = (
+				454E5B6218662182006E8D05 /* Sources */,
+				454E5B6318662182006E8D05 /* Frameworks */,
+				454E5B6418662182006E8D05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				454E5B7518662182006E8D05 /* PBXTargetDependency */,
+			);
+			name = AcceptanceTests;
+			productName = AcceptanceTests;
+			productReference = 454E5B6618662182006E8D05 /* AcceptanceTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8A01A37A18189666005A2A70 /* Travelog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A01A3B018189666005A2A70 /* Build configuration list for PBXNativeTarget "Travelog" */;
@@ -512,6 +577,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Edo williams";
 				TargetAttributes = {
+					454E5B6518662182006E8D05 = {
+						TestTargetID = 8A01A37A18189666005A2A70;
+					};
 					8A01A39E18189666005A2A70 = {
 						TestTargetID = 8A01A37A18189666005A2A70;
 					};
@@ -532,11 +600,20 @@
 			targets = (
 				8A01A37A18189666005A2A70 /* Travelog */,
 				8A01A39E18189666005A2A70 /* TravelogTests */,
+				454E5B6518662182006E8D05 /* AcceptanceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		454E5B6418662182006E8D05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454E5B7018662182006E8D05 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A01A37918189666005A2A70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -650,6 +727,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		454E5B6218662182006E8D05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A01A37718189666005A2A70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -689,6 +773,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		454E5B7518662182006E8D05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A01A37A18189666005A2A70 /* Travelog */;
+			targetProxy = 454E5B7418662182006E8D05 /* PBXContainerItemProxy */;
+		};
 		8A01A3A518189666005A2A70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8A01A37A18189666005A2A70 /* Travelog */;
@@ -697,6 +786,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		454E5B6E18662182006E8D05 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				454E5B6F18662182006E8D05 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		8A01A38718189666005A2A70 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -724,6 +821,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		454E5B7618662182006E8D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravelPop.app/TravelPop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AcceptanceTests/AcceptanceTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AcceptanceTests/AcceptanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		454E5B7718662182006E8D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravelPop.app/TravelPop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AcceptanceTests/AcceptanceTests-Prefix.pch";
+				INFOPLIST_FILE = "AcceptanceTests/AcceptanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		8A01A3AE18189666005A2A70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -875,6 +1014,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		454E5B7818662182006E8D05 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				454E5B7618662182006E8D05 /* Debug */,
+				454E5B7718662182006E8D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8A01A37618189666005A2A70 /* Build configuration list for PBXProject "Travelog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
