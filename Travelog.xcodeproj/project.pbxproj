@@ -10,7 +10,6 @@
 		454E5B6818662182006E8D05 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454E5B6718662182006E8D05 /* SenTestingKit.framework */; };
 		454E5B6918662182006E8D05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
 		454E5B6A18662182006E8D05 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
-		454E5B7018662182006E8D05 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 454E5B6E18662182006E8D05 /* InfoPlist.strings */; };
 		456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8C182DC81C00DD5479 /* CheckInImage.png */; };
 		456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */; };
 		456D8DC7182DD28A00DD5479 /* FourSquareOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */; };
@@ -63,8 +62,6 @@
 		8A01A3A118189666005A2A70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A3A018189666005A2A70 /* XCTest.framework */; };
 		8A01A3A218189666005A2A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
 		8A01A3A318189666005A2A70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
-		8A01A3AB18189666005A2A70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A01A3A918189666005A2A70 /* InfoPlist.strings */; };
-		8A01A3AD18189666005A2A70 /* TravelogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A01A3AC18189666005A2A70 /* TravelogTests.m */; };
 		8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */; };
 		8A0C688B1819B5D60057E670 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0C688A1819B5D60057E670 /* CoreLocation.framework */; };
 		8A41EB36182780D4007B6E9E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A41EB35182780D4007B6E9E /* AddressBook.framework */; };
@@ -104,9 +101,6 @@
 		170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		454E5B6618662182006E8D05 /* AcceptanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		454E5B6718662182006E8D05 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		454E5B6D18662182006E8D05 /* AcceptanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AcceptanceTests-Info.plist"; sourceTree = "<group>"; };
-		454E5B6F18662182006E8D05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		454E5B7318662182006E8D05 /* AcceptanceTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Prefix.pch"; sourceTree = "<group>"; };
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
 		456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareOauth.m; path = Travelog/FourSquareOauth.m; sourceTree = "<group>"; };
@@ -166,7 +160,6 @@
 		45E20293185D631E00D96458 /* map_pin_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_pin_home.png; path = Travelog/images/map_pin_home.png; sourceTree = "<group>"; };
 		6D875F55ED86444FBE9EBF1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759EECECBE1C4F748E0E6315 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		8428FE6B3AB34F519A602782 /* Pods-TravelogTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelogTests.xcconfig"; path = "Pods/Pods-TravelogTests.xcconfig"; sourceTree = "<group>"; };
 		8A01A37B18189666005A2A70 /* TravelPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A01A37E18189666005A2A70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A01A38018189666005A2A70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,9 +173,6 @@
 		8A01A39918189666005A2A70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8A01A39F18189666005A2A70 /* TravelogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A01A3A018189666005A2A70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		8A01A3A818189666005A2A70 /* TravelogTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TravelogTests-Info.plist"; sourceTree = "<group>"; };
-		8A01A3AA18189666005A2A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8A01A3AC18189666005A2A70 /* TravelogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelogTests.m; sourceTree = "<group>"; };
 		8A08AE41182C1E2600F61EE8 /* FourSquareCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourSquareCommon.h; sourceTree = "<group>"; };
 		8A08AE4D182C1FE500F61EE8 /* CurrentLocationMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocationMapVC.h; sourceTree = "<group>"; };
 		8A08AE4E182C1FE500F61EE8 /* CurrentLocationMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocationMapVC.m; sourceTree = "<group>"; };
@@ -248,24 +238,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		454E5B6B18662182006E8D05 /* AcceptanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				454E5B6C18662182006E8D05 /* Supporting Files */,
-			);
-			path = AcceptanceTests;
-			sourceTree = "<group>";
-		};
-		454E5B6C18662182006E8D05 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				454E5B6D18662182006E8D05 /* AcceptanceTests-Info.plist */,
-				454E5B6E18662182006E8D05 /* InfoPlist.strings */,
-				454E5B7318662182006E8D05 /* AcceptanceTests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
@@ -277,12 +249,9 @@
 				8AFFBA23182313A300BAB4FF /* Resources */,
 				8AFFB9F2181F141D00BAB4FF /* HudImages */,
 				8A01A38418189666005A2A70 /* Travelog */,
-				8A01A3A618189666005A2A70 /* TravelogTests */,
-				454E5B6B18662182006E8D05 /* AcceptanceTests */,
 				8A01A37D18189666005A2A70 /* Frameworks */,
 				8A01A37C18189666005A2A70 /* Products */,
 				759EECECBE1C4F748E0E6315 /* Pods.xcconfig */,
-				8428FE6B3AB34F519A602782 /* Pods-TravelogTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,24 +315,6 @@
 				8A01A38718189666005A2A70 /* InfoPlist.strings */,
 				8A01A38A18189666005A2A70 /* main.m */,
 				8A01A38C18189666005A2A70 /* Travelog-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8A01A3A618189666005A2A70 /* TravelogTests */ = {
-			isa = PBXGroup;
-			children = (
-				8A01A3AC18189666005A2A70 /* TravelogTests.m */,
-				8A01A3A718189666005A2A70 /* Supporting Files */,
-			);
-			path = TravelogTests;
-			sourceTree = "<group>";
-		};
-		8A01A3A718189666005A2A70 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8A01A3A818189666005A2A70 /* TravelogTests-Info.plist */,
-				8A01A3A918189666005A2A70 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -610,7 +561,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				454E5B7018662182006E8D05 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +607,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A01A3AB18189666005A2A70 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,7 +715,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A01A3AD18189666005A2A70 /* TravelogTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,26 +734,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		454E5B6E18662182006E8D05 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				454E5B6F18662182006E8D05 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		8A01A38718189666005A2A70 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A01A38818189666005A2A70 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8A01A3A918189666005A2A70 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A01A3AA18189666005A2A70 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -969,10 +901,9 @@
 		};
 		8A01A3B418189666005A2A70 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8428FE6B3AB34F519A602782 /* Pods-TravelogTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Travelog.app/Travelog";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravelPop.app/TravelPop";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -993,10 +924,9 @@
 		};
 		8A01A3B518189666005A2A70 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8428FE6B3AB34F519A602782 /* Pods-TravelogTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Travelog.app/Travelog";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravelPop.app/TravelPop";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1021,6 +951,7 @@
 				454E5B7718662182006E8D05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A01A37618189666005A2A70 /* Build configuration list for PBXProject "Travelog" */ = {
 			isa = XCConfigurationList;
