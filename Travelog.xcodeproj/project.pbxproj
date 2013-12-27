@@ -46,6 +46,12 @@
 		45ACC091184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */; };
 		45ACC094184AB433001D9D2E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC092184AB433001D9D2E /* facebook.png */; };
 		45ACC095184AB433001D9D2E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC093184AB433001D9D2E /* twitter.png */; };
+		45C1F2D0186E3A7300EF8D2D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454E5B6718662182006E8D05 /* SenTestingKit.framework */; };
+		45C1F2D1186E3A7300EF8D2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
+		45C1F2D2186E3A7300EF8D2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
+		45C1F2D8186E3A7300EF8D2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 45C1F2D6186E3A7300EF8D2D /* InfoPlist.strings */; };
+		45C1F2DA186E3A7300EF8D2D /* AcceptanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C1F2D9186E3A7300EF8D2D /* AcceptanceTests.m */; };
+		45C1F2E7186E45B100EF8D2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38018189666005A2A70 /* CoreGraphics.framework */; };
 		45C39C2B1861EDD100C50E20 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C291861EDD100C50E20 /* iTunesArtwork.png */; };
 		45C39C2C1861EDD100C50E20 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */; };
 		45E20294185D631E00D96458 /* map_pin_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E20293185D631E00D96458 /* map_pin_home.png */; };
@@ -71,7 +77,18 @@
 		8AFFBA0E18203AF500BAB4FF /* TravelLogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFFBA0D18203AF500BAB4FF /* TravelLogsViewController.m */; };
 		8AFFBA1318207DBA00BAB4FF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFFBA1218207DBA00BAB4FF /* MapKit.framework */; };
 		BBC063C2264D4E27B496833D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D875F55ED86444FBE9EBF1B /* libPods.a */; };
+		F273967C58604D43A9B1BD48 /* libPods-AcceptanceTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5FBC71278D43379C513391 /* libPods-AcceptanceTests.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45C1F2DC186E3A7300EF8D2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A01A37318189666005A2A70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A01A37A18189666005A2A70;
+			remoteInfo = Travelog;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +147,11 @@
 		45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLPlacemark+AddressDisplay.m"; path = "Travelog/CLPlacemark+AddressDisplay.m"; sourceTree = "<group>"; };
 		45ACC092184AB433001D9D2E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Travelog/images/facebook.png; sourceTree = "<group>"; };
 		45ACC093184AB433001D9D2E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Travelog/images/twitter.png; sourceTree = "<group>"; };
+		45C1F2CF186E3A7300EF8D2D /* AcceptanceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C1F2D5186E3A7300EF8D2D /* AcceptanceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AcceptanceTests-Info.plist"; sourceTree = "<group>"; };
+		45C1F2D7186E3A7300EF8D2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		45C1F2D9186E3A7300EF8D2D /* AcceptanceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceptanceTests.m; sourceTree = "<group>"; };
+		45C1F2DB186E3A7300EF8D2D /* AcceptanceTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcceptanceTests-Prefix.pch"; sourceTree = "<group>"; };
 		45C39C291861EDD100C50E20 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		45E20293185D631E00D96458 /* map_pin_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_pin_home.png; path = Travelog/images/map_pin_home.png; sourceTree = "<group>"; };
@@ -168,9 +190,22 @@
 		8AFFBA0C18203AF500BAB4FF /* TravelLogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelLogsViewController.h; sourceTree = "<group>"; };
 		8AFFBA0D18203AF500BAB4FF /* TravelLogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelLogsViewController.m; sourceTree = "<group>"; };
 		8AFFBA1218207DBA00BAB4FF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EB8BC1C1AF0C40E8A3B356EF /* Pods-AcceptanceTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.xcconfig"; path = "Pods/Pods-AcceptanceTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		45C1F2CC186E3A7300EF8D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C1F2E7186E45B100EF8D2D /* CoreGraphics.framework in Frameworks */,
+				45C1F2D0186E3A7300EF8D2D /* SenTestingKit.framework in Frameworks */,
+				45C1F2D2186E3A7300EF8D2D /* UIKit.framework in Frameworks */,
+				45C1F2D1186E3A7300EF8D2D /* Foundation.framework in Frameworks */,
+				F273967C58604D43A9B1BD48 /* libPods-AcceptanceTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A01A37818189666005A2A70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +227,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45C1F2D3186E3A7300EF8D2D /* AcceptanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				45C1F2D9186E3A7300EF8D2D /* AcceptanceTests.m */,
+				45C1F2D4186E3A7300EF8D2D /* Supporting Files */,
+			);
+			path = AcceptanceTests;
+			sourceTree = "<group>";
+		};
+		45C1F2D4186E3A7300EF8D2D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				45C1F2D5186E3A7300EF8D2D /* AcceptanceTests-Info.plist */,
+				45C1F2D6186E3A7300EF8D2D /* InfoPlist.strings */,
+				45C1F2DB186E3A7300EF8D2D /* AcceptanceTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8A01A37218189666005A2A70 = {
 			isa = PBXGroup;
 			children = (
@@ -203,9 +257,11 @@
 				8AFFBA23182313A300BAB4FF /* Resources */,
 				8AFFB9F2181F141D00BAB4FF /* HudImages */,
 				8A01A38418189666005A2A70 /* Travelog */,
+				45C1F2D3186E3A7300EF8D2D /* AcceptanceTests */,
 				8A01A37D18189666005A2A70 /* Frameworks */,
 				8A01A37C18189666005A2A70 /* Products */,
 				759EECECBE1C4F748E0E6315 /* Pods.xcconfig */,
+				EB8BC1C1AF0C40E8A3B356EF /* Pods-AcceptanceTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				8A01A37B18189666005A2A70 /* TravelPop.app */,
+				45C1F2CF186E3A7300EF8D2D /* AcceptanceTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -415,6 +472,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		45C1F2CE186E3A7300EF8D2D /* AcceptanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45C1F2E0186E3A7300EF8D2D /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
+			buildPhases = (
+				EE0715DDF14D424F87C95EEB /* Check Pods Manifest.lock */,
+				45C1F2CB186E3A7300EF8D2D /* Sources */,
+				45C1F2CC186E3A7300EF8D2D /* Frameworks */,
+				45C1F2CD186E3A7300EF8D2D /* Resources */,
+				15ED229553314A49A3604A63 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45C1F2DD186E3A7300EF8D2D /* PBXTargetDependency */,
+			);
+			name = AcceptanceTests;
+			productName = AcceptanceTests;
+			productReference = 45C1F2CF186E3A7300EF8D2D /* AcceptanceTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8A01A37A18189666005A2A70 /* Travelog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A01A3B018189666005A2A70 /* Build configuration list for PBXNativeTarget "Travelog" */;
@@ -442,6 +519,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Edo williams";
+				TargetAttributes = {
+					45C1F2CE186E3A7300EF8D2D = {
+						TestTargetID = 8A01A37A18189666005A2A70;
+					};
+				};
 			};
 			buildConfigurationList = 8A01A37618189666005A2A70 /* Build configuration list for PBXProject "Travelog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -457,11 +539,20 @@
 			projectRoot = "";
 			targets = (
 				8A01A37A18189666005A2A70 /* Travelog */,
+				45C1F2CE186E3A7300EF8D2D /* AcceptanceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		45C1F2CD186E3A7300EF8D2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C1F2D8186E3A7300EF8D2D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A01A37918189666005A2A70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,6 +595,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15ED229553314A49A3604A63 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-AcceptanceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8F68AE9B42F54D38A9E71018 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,9 +640,32 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		EE0715DDF14D424F87C95EEB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		45C1F2CB186E3A7300EF8D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C1F2DA186E3A7300EF8D2D /* AcceptanceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A01A37718189666005A2A70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -567,7 +696,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		45C1F2DD186E3A7300EF8D2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A01A37A18189666005A2A70 /* Travelog */;
+			targetProxy = 45C1F2DC186E3A7300EF8D2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		45C1F2D6186E3A7300EF8D2D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45C1F2D7186E3A7300EF8D2D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		8A01A38718189666005A2A70 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -587,6 +732,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		45C1F2DE186E3A7300EF8D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB8BC1C1AF0C40E8A3B356EF /* Pods-AcceptanceTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravelPop.app/TravelPop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AcceptanceTests/AcceptanceTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AcceptanceTests/AcceptanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		45C1F2DF186E3A7300EF8D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB8BC1C1AF0C40E8A3B356EF /* Pods-AcceptanceTests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravelPop.app/TravelPop";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AcceptanceTests/AcceptanceTests-Prefix.pch";
+				INFOPLIST_FILE = "AcceptanceTests/AcceptanceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		8A01A3AE18189666005A2A70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -694,6 +883,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		45C1F2E0186E3A7300EF8D2D /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C1F2DE186E3A7300EF8D2D /* Debug */,
+				45C1F2DF186E3A7300EF8D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A01A37618189666005A2A70 /* Build configuration list for PBXProject "Travelog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
