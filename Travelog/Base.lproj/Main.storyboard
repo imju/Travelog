@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -61,11 +61,11 @@
             </objects>
             <point key="canvasLocation" x="193" y="-693"/>
         </scene>
-        <!--Navigation Controller - Check In-->
+        <!--Navigation Controller - Pop In-->
         <scene sceneID="9l7-ph-BEa">
             <objects>
                 <navigationController definesPresentationContext="YES" id="LEj-Ha-0CQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Check In" image="camera.png" id="yzk-MD-x9Y"/>
+                    <tabBarItem key="tabBarItem" title="Pop In" image="camera.png" id="yzk-MD-x9Y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3W-tG-kOX">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

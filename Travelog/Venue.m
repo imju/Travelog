@@ -83,12 +83,12 @@
                venue.address = [location objectForKey:@"state"];
         }
 
-        if ([location objectForKey:@"country"]){
-            if ([venue.address length]>0)
-                venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"country"]];
-            else // add cached city and state with country
-                venue.address = [NSString stringWithFormat:@"%@ %@ %@", city, state,[location objectForKey:@"country"]];
-        }
+//        if ([location objectForKey:@"country"]){
+//            if ([venue.address length]>0)
+//                venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"country"]];
+//            else // add cached city and state with country
+//                venue.address = [NSString stringWithFormat:@"%@ %@ %@", city, state,[location objectForKey:@"country"]];
+//        }
 
         venue.coordinate = CLLocationCoordinate2DMake([venue.latitude doubleValue], [venue.longitude doubleValue]);
         venue.index = [[NSNumber alloc ] initWithInt:++index];
