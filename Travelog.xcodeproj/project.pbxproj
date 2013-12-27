@@ -75,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C94DE03A2E74A0991A33449 /* Pods-AcceptanceTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.xcconfig"; path = "Pods/Pods-AcceptanceTests.xcconfig"; sourceTree = "<group>"; };
 		454E5B6718662182006E8D05 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
@@ -207,7 +206,6 @@
 				8A01A37D18189666005A2A70 /* Frameworks */,
 				8A01A37C18189666005A2A70 /* Products */,
 				759EECECBE1C4F748E0E6315 /* Pods.xcconfig */,
-				3C94DE03A2E74A0991A33449 /* Pods-AcceptanceTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
