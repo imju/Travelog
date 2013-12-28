@@ -12,8 +12,6 @@
 
 @implementation Venue : RestObject
 
-@synthesize venueId,title,name,subtitle,address,latitude,longitude,distance,coordinate;
-
 
 
 - (id)initWithPlaceName:(NSString *)pname

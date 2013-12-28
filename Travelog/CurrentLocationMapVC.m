@@ -27,11 +27,12 @@ CGFloat const kImageOriginHeight = 240.f;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSArray *venueArray;
 @property (strong, nonatomic) NSArray *prevVenueArray;
+//reverse Geo Coding
+@property (strong, nonatomic) CLGeocoder *geocoder; //object that performs the geocode
+
 
 @end
 
-//reverse Geo Coding
-CLGeocoder *geocoder; //object that performs the geocode
 
 
 @implementation CurrentLocationMapVC
@@ -161,11 +162,11 @@ CLGeocoder *geocoder; //object that performs the geocode
                                                      
                                                      if (!locationMatched){
                                                          
-                                                         if(!geocoder)
+                                                         if(!self.geocoder)
                                                          {
-                                                             geocoder = [[CLGeocoder alloc] init];
+                                                            self.geocoder = [[CLGeocoder alloc] init];
                                                          }
-                                                         [geocoder reverseGeocodeLocation:self.location
+                                                         [self.geocoder reverseGeocodeLocation:self.location
                                                                         completionHandler:^(NSArray * placemarksArray, NSError *error)
                                                           {
                                                               CLPlacemark *placemark = nil;
@@ -316,7 +317,7 @@ CLGeocoder *geocoder; //object that performs the geocode
             
             annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             
-            UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(4, 2, 10, 10)] ;
+            UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(6, 3, 11, 11)] ;
             lbl.backgroundColor = [UIColor clearColor];
             lbl.textColor = [UIColor whiteColor];
             [lbl setFont:[UIFont systemFontOfSize:11]];
@@ -325,7 +326,7 @@ CLGeocoder *geocoder; //object that performs the geocode
             
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            annotationView.image = [UIImage imageNamed:@"map_pin_home.png"];
+            annotationView.image = [UIImage imageNamed:@"map_pin_home_19.png"];
             //annotationView.frame = lbl.frame;
             //annotationView.pinColor = MKPinAnnotationColorGreen;
             

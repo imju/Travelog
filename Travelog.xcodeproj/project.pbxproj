@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8C182DC81C00DD5479 /* CheckInImage.png */; };
 		456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */; };
-		456D8DC7182DD28A00DD5479 /* FourSquareOauth.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */; };
 		456D8DC8182DD28A00DD5479 /* FourSquareClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DC5182DD28A00DD5479 /* FourSquareClient.m */; };
 		456D8DCB182DD2CB00DD5479 /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DCA182DD2CB00DD5479 /* CoreLocationController.m */; };
 		456D8DCE182DD2E400DD5479 /* NSDictionary+CPAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DCD182DD2E400DD5479 /* NSDictionary+CPAdditions.m */; };
 		456D8DD1182DD2F700DD5479 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DD0182DD2F700DD5479 /* UIImage+Resize.m */; };
 		456D8DD4182DD3A200DD5479 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DD3182DD3A200DD5479 /* RestObject.m */; };
-		456D8DD9182DD3D900DD5479 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DD6182DD3D900DD5479 /* User.m */; };
 		456D8DDA182DD3D900DD5479 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DD8182DD3D900DD5479 /* Venue.m */; };
 		456D8DDD182DD3F600DD5479 /* Travelog.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DDC182DD3F600DD5479 /* Travelog.m */; };
 		456D8DE4182DD43500DD5479 /* VenueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DE1182DD43500DD5479 /* VenueCell.m */; };
@@ -46,9 +44,11 @@
 		45ACC091184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */; };
 		45ACC094184AB433001D9D2E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC092184AB433001D9D2E /* facebook.png */; };
 		45ACC095184AB433001D9D2E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC093184AB433001D9D2E /* twitter.png */; };
+		45C1F2E9186E895500EF8D2D /* TagPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C1F2E8186E895500EF8D2D /* TagPickerCell.xib */; };
+		45C1F2EC186E8BE700EF8D2D /* TagPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C1F2EB186E8BE700EF8D2D /* TagPickerCell.m */; };
+		45C1F2F0186E998600EF8D2D /* map_pin_home_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C1F2EF186E998600EF8D2D /* map_pin_home_19.png */; };
 		45C39C2B1861EDD100C50E20 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C291861EDD100C50E20 /* iTunesArtwork.png */; };
 		45C39C2C1861EDD100C50E20 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */; };
-		45E20294185D631E00D96458 /* map_pin_home.png in Resources */ = {isa = PBXBuildFile; fileRef = 45E20293185D631E00D96458 /* map_pin_home.png */; };
 		8A01A37F18189666005A2A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A37E18189666005A2A70 /* Foundation.framework */; };
 		8A01A38118189666005A2A70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38018189666005A2A70 /* CoreGraphics.framework */; };
 		8A01A38318189666005A2A70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A01A38218189666005A2A70 /* UIKit.framework */; };
@@ -78,8 +78,6 @@
 		454E5B6718662182006E8D05 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
-		456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareOauth.m; path = Travelog/FourSquareOauth.m; sourceTree = "<group>"; };
-		456D8DC3182DD28A00DD5479 /* FourSquareOauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareOauth.h; path = Travelog/FourSquareOauth.h; sourceTree = "<group>"; };
 		456D8DC5182DD28A00DD5479 /* FourSquareClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareClient.m; path = Travelog/FourSquareClient.m; sourceTree = "<group>"; };
 		456D8DC6182DD28A00DD5479 /* FourSquareClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourSquareClient.h; path = Travelog/FourSquareClient.h; sourceTree = "<group>"; };
 		456D8DC9182DD2CB00DD5479 /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreLocationController.h; path = Travelog/CoreLocationController.h; sourceTree = "<group>"; };
@@ -90,8 +88,6 @@
 		456D8DD0182DD2F700DD5479 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Travelog/UIImage+Resize.m"; sourceTree = "<group>"; };
 		456D8DD2182DD3A200DD5479 /* RestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestObject.h; path = Travelog/RestObject.h; sourceTree = "<group>"; };
 		456D8DD3182DD3A200DD5479 /* RestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestObject.m; path = Travelog/RestObject.m; sourceTree = "<group>"; };
-		456D8DD5182DD3D900DD5479 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Travelog/User.h; sourceTree = "<group>"; };
-		456D8DD6182DD3D900DD5479 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Travelog/User.m; sourceTree = "<group>"; };
 		456D8DD7182DD3D900DD5479 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Venue.h; path = Travelog/Venue.h; sourceTree = "<group>"; };
 		456D8DD8182DD3D900DD5479 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Venue.m; path = Travelog/Venue.m; sourceTree = "<group>"; };
 		456D8DDB182DD3F600DD5479 /* Travelog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Travelog.h; path = Travelog/Travelog.h; sourceTree = "<group>"; };
@@ -130,9 +126,12 @@
 		45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLPlacemark+AddressDisplay.m"; path = "Travelog/CLPlacemark+AddressDisplay.m"; sourceTree = "<group>"; };
 		45ACC092184AB433001D9D2E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Travelog/images/facebook.png; sourceTree = "<group>"; };
 		45ACC093184AB433001D9D2E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Travelog/images/twitter.png; sourceTree = "<group>"; };
+		45C1F2E8186E895500EF8D2D /* TagPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagPickerCell.xib; sourceTree = "<group>"; };
+		45C1F2EA186E8BE700EF8D2D /* TagPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerCell.h; sourceTree = "<group>"; };
+		45C1F2EB186E8BE700EF8D2D /* TagPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPickerCell.m; sourceTree = "<group>"; };
+		45C1F2EF186E998600EF8D2D /* map_pin_home_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_pin_home_19.png; path = Travelog/images/map_pin_home_19.png; sourceTree = "<group>"; };
 		45C39C291861EDD100C50E20 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		45E20293185D631E00D96458 /* map_pin_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_pin_home.png; path = Travelog/images/map_pin_home.png; sourceTree = "<group>"; };
 		5B5FBC71278D43379C513391 /* libPods-AcceptanceTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AcceptanceTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D875F55ED86444FBE9EBF1B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		759EECECBE1C4F748E0E6315 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -277,8 +276,6 @@
 			children = (
 				456D8DD2182DD3A200DD5479 /* RestObject.h */,
 				456D8DD3182DD3A200DD5479 /* RestObject.m */,
-				456D8DD5182DD3D900DD5479 /* User.h */,
-				456D8DD6182DD3D900DD5479 /* User.m */,
 				456D8DD7182DD3D900DD5479 /* Venue.h */,
 				456D8DD8182DD3D900DD5479 /* Venue.m */,
 				8AFFBA2C182318A600BAB4FF /* CoreData */,
@@ -289,10 +286,8 @@
 		8A08AE3A182C1B9C00F61EE8 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				456D8DC2182DD28A00DD5479 /* FourSquareOauth.m */,
-				456D8DC3182DD28A00DD5479 /* FourSquareOauth.h */,
-				456D8DC5182DD28A00DD5479 /* FourSquareClient.m */,
 				456D8DC6182DD28A00DD5479 /* FourSquareClient.h */,
+				456D8DC5182DD28A00DD5479 /* FourSquareClient.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -347,9 +342,9 @@
 		8AFFBA23182313A300BAB4FF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				45C1F2EF186E998600EF8D2D /* map_pin_home_19.png */,
 				45C39C291861EDD100C50E20 /* iTunesArtwork.png */,
 				45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */,
-				45E20293185D631E00D96458 /* map_pin_home.png */,
 				45ACC092184AB433001D9D2E /* facebook.png */,
 				45ACC093184AB433001D9D2E /* twitter.png */,
 				8A574CE1182DED2A009EA870 /* camera.png */,
@@ -381,6 +376,9 @@
 				456D8DE2182DD43500DD5479 /* VenueCell.xib */,
 				456D8DE6182DD44E00DD5479 /* TravelLogCell.h */,
 				456D8DE7182DD44E00DD5479 /* TravelLogCell.m */,
+				45C1F2EA186E8BE700EF8D2D /* TagPickerCell.h */,
+				45C1F2EB186E8BE700EF8D2D /* TagPickerCell.m */,
+				45C1F2E8186E895500EF8D2D /* TagPickerCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -442,6 +440,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Edo williams";
+				TargetAttributes = {
+					8A01A37A18189666005A2A70 = {
+						DevelopmentTeam = NZM3HKC2XT;
+					};
+				};
 			};
 			buildConfigurationList = 8A01A37618189666005A2A70 /* Build configuration list for PBXProject "Travelog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -478,10 +481,10 @@
 				8A574CE7182DF449009EA870 /* Main.storyboard in Resources */,
 				456D8DFA182DDBF400DD5479 /* events.png in Resources */,
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
+				45C1F2E9186E895500EF8D2D /* TagPickerCell.xib in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
 				8A574CE4182DED4E009EA870 /* Default.png in Resources */,
 				456D8DFC182DDBF400DD5479 /* fun.png in Resources */,
-				45E20294185D631E00D96458 /* map_pin_home.png in Resources */,
 				456D8DFE182DDBF400DD5479 /* map-pin.png in Resources */,
 				45ACC095184AB433001D9D2E /* twitter.png in Resources */,
 				456D8E0B182DDC2200DD5479 /* travel.png in Resources */,
@@ -494,6 +497,7 @@
 				8A01A38918189666005A2A70 /* InfoPlist.strings in Resources */,
 				456D8E00182DDBF400DD5479 /* nature.png in Resources */,
 				456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */,
+				45C1F2F0186E998600EF8D2D /* map_pin_home_19.png in Resources */,
 				456D8E13182DDCC600DD5479 /* tag.png in Resources */,
 				456D8E15182DDCD600DD5479 /* camera-select.png in Resources */,
 				456D8E01182DDBF400DD5479 /* office.png in Resources */,
@@ -547,18 +551,17 @@
 				456D8DE8182DD44E00DD5479 /* TravelLogCell.m in Sources */,
 				456D8DCE182DD2E400DD5479 /* NSDictionary+CPAdditions.m in Sources */,
 				456D8DC8182DD28A00DD5479 /* FourSquareClient.m in Sources */,
-				456D8DD9182DD3D900DD5479 /* User.m in Sources */,
 				456D8DCB182DD2CB00DD5479 /* CoreLocationController.m in Sources */,
 				456D8DDD182DD3F600DD5479 /* Travelog.m in Sources */,
 				8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */,
 				8AFFB9EC181F093600BAB4FF /* HudView.m in Sources */,
 				8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */,
 				8A01A38B18189666005A2A70 /* main.m in Sources */,
-				456D8DC7182DD28A00DD5479 /* FourSquareOauth.m in Sources */,
 				456D8DD4182DD3A200DD5479 /* RestObject.m in Sources */,
 				8AFFB9E6181EC0D000BAB4FF /* CheckInViewController.m in Sources */,
 				456D8DE4182DD43500DD5479 /* VenueCell.m in Sources */,
 				456D8DD1182DD2F700DD5479 /* UIImage+Resize.m in Sources */,
+				45C1F2EC186E8BE700EF8D2D /* TagPickerCell.m in Sources */,
 				456D8DDA182DD3D900DD5479 /* Venue.m in Sources */,
 				45ACC091184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m in Sources */,
 				456D8DEB182DD4D800DD5479 /* MapViewController.m in Sources */,
@@ -666,11 +669,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
 				PRODUCT_NAME = TravelPop;
-				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -682,11 +686,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Travelog/Travelog-Prefix.pch";
 				INFOPLIST_FILE = "Travelog/Travelog-Info.plist";
 				PRODUCT_NAME = TravelPop;
-				PROVISIONING_PROFILE = "294E9897-AC33-4718-8B9E-1C138F4E2EFD";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

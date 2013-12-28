@@ -19,20 +19,4 @@
                         success:(void (^)(AFHTTPRequestOperation *operation, id response))success
                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
-
-// checkin API
-
-- (void)checkinWithVenueId:(NSString *)venueId
-                      text:(NSString *)text
-                   success:(void (^)(AFHTTPRequestOperation *operation, id response))success
-                   failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure ;
-
-// checkin history by user API
-
--(void)checkinsWithLimit:(int) limit
-        success:(void (^)(AFHTTPRequestOperation *operation, id response))success
-        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure ;
-
-
-
 @end

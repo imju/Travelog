@@ -17,6 +17,31 @@
 @interface CheckInViewController ()
 @property (strong, nonatomic)CLGeocoder * geocoder;
 
+@property (nonatomic, strong) IBOutlet UITextView *travelnotesTextView;
+@property (nonatomic, strong) IBOutlet UILabel *tagsLabel;
+@property (nonatomic, strong) IBOutlet UILabel *addressLabel;
+@property (nonatomic, strong) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *tagImageView;
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+
+//for photo
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UILabel *photoLabel;
+
+@property (strong, nonatomic) IBOutlet UIButton *sendMailButton;
+@property (strong, nonatomic) IBOutlet UIButton *sendTextButton;
+
+- (IBAction)done:(id)sender;
+- (IBAction)cancel:(id)sender;
+- (IBAction)getDirections:(id)sender;
+- (IBAction)openMail:(id)sender;
+- (IBAction)openText:(id)sender;
+- (IBAction)postFacebookStatus:(id)sender;
+- (IBAction)twitMsg:(id)sender;
+
+
+
 @end
 
 //create Ivars

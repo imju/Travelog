@@ -14,7 +14,6 @@
 
 // Models
 #import "RestObject.h"
-#import "User.h"
 #import "Venue.h"
 
 // Categories

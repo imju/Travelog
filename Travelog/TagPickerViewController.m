@@ -7,6 +7,7 @@
 //
 
 #import "TagPickerViewController.h"
+#import "TagPickerCell.h"
 
 @implementation TagPickerViewController
 {
@@ -34,6 +35,11 @@
             @"Shopping",
             @"Events",
             nil];
+    
+    //register custom cell
+    UINib *tagPickerCell = [UINib nibWithNibName:@"TagPickerCell" bundle:nil];
+    [self.tableView registerNib:tagPickerCell forCellReuseIdentifier:@"TagPickerCell"];
+
 }
 
 
@@ -54,19 +60,13 @@
 {
     //compare the name of row to selectedTagName, if they match, we store the
     //row index path in the SelectedIndexPath variable
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"TagPickerCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+    TagPickerCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     NSString *tagName = [tags objectAtIndex:indexPath.row];
-    cell.textLabel.text = tagName;
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[tagName lowercaseString]]];
-    cell.imageView.image = imgView.image;
-    
+    cell.tagName.text = tagName;
+    cell.tagImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[tagName lowercaseString]]];
    
     
     if ([tagName isEqualToString:self.selectedTagName])

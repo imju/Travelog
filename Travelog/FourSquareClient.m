@@ -57,60 +57,12 @@ static NSString * const kAccessTokenKey = @"access_token";
         NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"ll":[NSString stringWithFormat:@"%f,%f",latitude,longitude] } ];
         [params setObject:@(5) forKey:@"limit"];
         [params setObject:@"20131030" forKey:@"v"];
-        
-        if (User.currentUser){ // no authentication performed
-            [params setObject:User.currentUser.description forKey:@"oauth_token"];
-        }else{
-            [params setObject:FOURSQUARE_CLIENT_ID forKey:@"client_id"];
-            [params setObject:FOURSQUARE_CLIENT_SECRET forKey:@"client_secret"];
-        }
+
+        [params setObject:FOURSQUARE_CLIENT_ID forKey:@"client_id"];
+        [params setObject:FOURSQUARE_CLIENT_SECRET forKey:@"client_secret"];
         
         [self getPath:@"venues/search" parameters:params success:success failure:failure];
     }
-}
-
-
-// checkin API
-
-- (void)checkinWithVenueId:(NSString *)venueId
-                      text:(NSString *)text
-                   success:(void (^)(AFHTTPRequestOperation *operation, id response))success
-                   failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
-{
-    if (!User.currentUser){
-        NSLog(@"No auth performed");
-        return;
-    }
-
-    self.parameterEncoding = AFFormURLParameterEncoding;
-    
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"venueId":venueId } ];
-    [params setObject:text forKey:@"shout"];
-    [params setObject:User.currentUser.description forKey:@"oauth_token"];
-    [params setObject:@"20131030" forKey:@"v"];
-    [params setObject:@"private" forKey:@"broadcast"];
-    
-    [self postPath:@"checkins/add" parameters:params success:success failure:failure];
-    
-}
-
-// checkin history for user API
-
--(void)checkinsWithLimit:(int) limit
-        success:(void (^)(AFHTTPRequestOperation *operation, id response))success
-        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
-{
-    if (!User.currentUser){
-        NSLog(@"No auth performed");
-        return;
-    }
-    
-    self.parameterEncoding = AFJSONParameterEncoding;
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{@"limit":@(limit)} ];
-    [params setObject:User.currentUser.description forKey:@"oauth_token"];
-    [params setObject:@"20131030" forKey:@"v"];
-    
-    [self getPath:@"users/self/checkins" parameters:params success:success failure:failure];
 }
 
 
