@@ -249,8 +249,6 @@ CGFloat const kImageOriginHeight = 240.f;
     
     Venue *venue = [self.venueArray objectAtIndex:indexPath.row];
     
-    NSLog(@"distance:%@",venue.distance);
-
     NSString *distanceString = [NSString stringWithFormat:@"%.1f ml",
                                 [venue.distance doubleValue]/METERS_PER_MILE];
     
