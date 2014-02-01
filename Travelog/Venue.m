@@ -7,11 +7,22 @@
 //
 
 #import "Venue.h"
-#define METERS_PER_MILE 1609.344
 
 
-@implementation Venue : RestObject
+@implementation Venue
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"id":@"id",
+             @"name":@"name",
+             @"distance":@"location.distance",
+             @"latitude":@"location.lat",
+             @"longitude":@"location.lng",
+             @"address":@"location.address",
+             @"city":@"location.city",
+             @"state":@"location.state"
+             };
+}
 
 
 - (id)initWithPlaceName:(NSString *)pname
@@ -23,7 +34,7 @@
 {
     if (self = [super init]) {
         self.name = pname;
-        self.address = paddress;
+        self.addressDisplay = paddress;
         self.latitude = platitude;
         self.longitude = plongitude;
         self.distance = pdistance;
@@ -42,59 +53,36 @@
     return self.address;
 }
 
-+ (NSMutableArray *)venuesWithArray:(NSArray *)array
-{
-   NSMutableArray *venues = [[NSMutableArray alloc] init];
-   NSString *city = @"";
-   NSString *state = @"";
-    int index =0;
-    for (NSDictionary *params in array) {
-        NSDictionary *venueDic = params;
-        Venue *venue = [[Venue alloc] initWithDictionary:params];
-        venue.venueId = [venueDic valueOrNilForKeyPath:@"id"];
-        venue.name = [venueDic valueOrNilForKeyPath:@"name"];
-        venue.url = [venueDic valueOrNilForKeyPath:@"url"];
-        venue.description = [venueDic valueOrNilForKeyPath:@"description"];
-        NSDictionary *location = (NSDictionary *)[venueDic valueOrNilForKeyPath:@"location"];
-        venue.latitude = (NSNumber *)[location objectForKey:@"lat"];
-        venue.longitude =(NSNumber *)[location objectForKey:@"lng"];
-        venue.distance = [NSNumber numberWithDouble:[(NSNumber *)[location objectForKey:@"distance"] doubleValue]/METERS_PER_MILE];
-        venue.address = @"";
-        
-        if ([location objectForKey:@"address"]){
-            NSString *addr = [venue.address stringByAppendingString:[location objectForKey:@"address"]];
-            NSLog(@"addr:%@",addr);
-            venue.address = addr;
-        }
-        if ([location objectForKey:@"city"]){
-            city = [location objectForKey:@"city"];
-            if ([venue.address length]>0)
-               venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"city"]];
-            else
-               venue.address = [location objectForKey:@"city"];
-        }
-        if ([location objectForKey:@"state"]){
-            state = [location objectForKey:@"state"];
-            if ([venue.address length]>0)
-               venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"state"]];
-            else
-               venue.address = [location objectForKey:@"state"];
-        }
+- (CLLocationCoordinate2D)coordinate{
+    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
 
-//        if ([location objectForKey:@"country"]){
-//            if ([venue.address length]>0)
-//                venue.address = [NSString stringWithFormat:@"%@ %@", venue.address, [location objectForKey:@"country"]];
-//            else // add cached city and state with country
-//                venue.address = [NSString stringWithFormat:@"%@ %@ %@", city, state,[location objectForKey:@"country"]];
-//        }
+}
 
-        venue.coordinate = CLLocationCoordinate2DMake([venue.latitude doubleValue], [venue.longitude doubleValue]);
-        venue.index = [[NSNumber alloc ] initWithInt:++index];
- 
-
-        [venues addObject:venue];
+- (NSString *)addressDisplay{
+    
+    //subThoroughfare - house number
+    //thoroughfare - street name
+    //locality - city
+    //administrativeArea - state/province
+    
+    NSString *addressTemp = @"";
+    
+    if (self.address){
+        addressTemp = [addressTemp stringByAppendingString:self.address];
     }
-    return venues;
+    if (self.city){
+        if ([addressTemp length]>0)
+        addressTemp = [NSString stringWithFormat:@"%@ %@", addressTemp, self.city];
+        else
+        addressTemp = self.city;
+    }
+    if (self.state){
+        if ([addressTemp length]>0)
+        addressTemp = [NSString stringWithFormat:@"%@ %@", addressTemp, self.state];
+        else
+        addressTemp = self.state;
+    }
+    return addressTemp;
 }
 
 
