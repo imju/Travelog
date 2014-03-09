@@ -6,24 +6,26 @@
 //  Copyright (c) 2013 MyTravel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface Venue : RestObject <MKAnnotation>
+@interface Venue : MTLModel <MTLJSONSerializing, MKAnnotation>
 
-@property (nonatomic, strong) NSString *venueId;
+
+@property (nonatomic, readonly) NSString *id;
 @property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *city;
+@property (nonatomic, strong) NSString *state;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *distance;
-@property (nonatomic, strong) NSString *url;
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, readonly) NSString *url;
+//@property (nonatomic, readonly) NSString *description;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) NSNumber *index;
 @property (nonatomic, strong) CLPlacemark *placemark; //address
+@property (nonatomic, strong) NSString *addressDisplay;
 
-
-+ (NSMutableArray *)venuesWithArray:(NSArray *)array;
 
 - (id)initWithPlaceName:(NSString *)pname
                 address:(NSString *)paddress

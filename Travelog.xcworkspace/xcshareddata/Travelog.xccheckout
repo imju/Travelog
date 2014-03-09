@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2ACBB2AA-ECAF-43F0-9BA9-7AF10E79B6BA</string>
+	<string>E74C3A0C-EC7A-475D-A84C-EA0DE5BC6643</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Travelog</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>12F8FC82-929E-4C43-AF1B-B4B5CCA88930</key>
+		<key>FB9C4B59-4E02-4E3C-AA6A-8927094FA580</key>
 		<string>https://github.com/imju/Travelog.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Travelog.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>12F8FC82-929E-4C43-AF1B-B4B5CCA88930</key>
+		<key>FB9C4B59-4E02-4E3C-AA6A-8927094FA580</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,16 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>12F8FC82-929E-4C43-AF1B-B4B5CCA88930</string>
+	<string>FB9C4B59-4E02-4E3C-AA6A-8927094FA580</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>12F8FC82-929E-4C43-AF1B-B4B5CCA88930</string>
+			<string>FB9C4B59-4E02-4E3C-AA6A-8927094FA580</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Travelog_2</string>
+			<string>Travelog</string>
 		</dict>
 	</array>
 </dict>

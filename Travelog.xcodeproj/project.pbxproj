@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452686C9189CE75100AEF591 /* TagPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452686C7189CE75100AEF591 /* TagPickerCell.m */; };
+		452686CA189CE75100AEF591 /* TagPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452686C8189CE75100AEF591 /* TagPickerCell.xib */; };
 		456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8C182DC81C00DD5479 /* CheckInImage.png */; };
 		456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */; };
 		456D8DC8182DD28A00DD5479 /* FourSquareClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DC5182DD28A00DD5479 /* FourSquareClient.m */; };
@@ -44,8 +46,6 @@
 		45ACC091184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */; };
 		45ACC094184AB433001D9D2E /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC092184AB433001D9D2E /* facebook.png */; };
 		45ACC095184AB433001D9D2E /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ACC093184AB433001D9D2E /* twitter.png */; };
-		45C1F2E9186E895500EF8D2D /* TagPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C1F2E8186E895500EF8D2D /* TagPickerCell.xib */; };
-		45C1F2EC186E8BE700EF8D2D /* TagPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C1F2EB186E8BE700EF8D2D /* TagPickerCell.m */; };
 		45C1F2F0186E998600EF8D2D /* map_pin_home_19.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C1F2EF186E998600EF8D2D /* map_pin_home_19.png */; };
 		45C39C2B1861EDD100C50E20 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C291861EDD100C50E20 /* iTunesArtwork.png */; };
 		45C39C2C1861EDD100C50E20 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */; };
@@ -75,6 +75,9 @@
 
 /* Begin PBXFileReference section */
 		170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		452686C6189CE75100AEF591 /* TagPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerCell.h; sourceTree = "<group>"; };
+		452686C7189CE75100AEF591 /* TagPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPickerCell.m; sourceTree = "<group>"; };
+		452686C8189CE75100AEF591 /* TagPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagPickerCell.xib; sourceTree = "<group>"; };
 		454E5B6718662182006E8D05 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
@@ -126,9 +129,6 @@
 		45ACC090184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLPlacemark+AddressDisplay.m"; path = "Travelog/CLPlacemark+AddressDisplay.m"; sourceTree = "<group>"; };
 		45ACC092184AB433001D9D2E /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = Travelog/images/facebook.png; sourceTree = "<group>"; };
 		45ACC093184AB433001D9D2E /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = Travelog/images/twitter.png; sourceTree = "<group>"; };
-		45C1F2E8186E895500EF8D2D /* TagPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagPickerCell.xib; sourceTree = "<group>"; };
-		45C1F2EA186E8BE700EF8D2D /* TagPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerCell.h; sourceTree = "<group>"; };
-		45C1F2EB186E8BE700EF8D2D /* TagPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPickerCell.m; sourceTree = "<group>"; };
 		45C1F2EF186E998600EF8D2D /* map_pin_home_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map_pin_home_19.png; path = Travelog/images/map_pin_home_19.png; sourceTree = "<group>"; };
 		45C39C291861EDD100C50E20 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		45C39C2A1861EDD100C50E20 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
@@ -371,14 +371,14 @@
 		8AFFBA2B1823188000BAB4FF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				452686C6189CE75100AEF591 /* TagPickerCell.h */,
+				452686C7189CE75100AEF591 /* TagPickerCell.m */,
+				452686C8189CE75100AEF591 /* TagPickerCell.xib */,
 				456D8DE0182DD43500DD5479 /* VenueCell.h */,
 				456D8DE1182DD43500DD5479 /* VenueCell.m */,
 				456D8DE2182DD43500DD5479 /* VenueCell.xib */,
 				456D8DE6182DD44E00DD5479 /* TravelLogCell.h */,
 				456D8DE7182DD44E00DD5479 /* TravelLogCell.m */,
-				45C1F2EA186E8BE700EF8D2D /* TagPickerCell.h */,
-				45C1F2EB186E8BE700EF8D2D /* TagPickerCell.m */,
-				45C1F2E8186E895500EF8D2D /* TagPickerCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -481,7 +481,6 @@
 				8A574CE7182DF449009EA870 /* Main.storyboard in Resources */,
 				456D8DFA182DDBF400DD5479 /* events.png in Resources */,
 				456D8DFB182DDBF400DD5479 /* food.png in Resources */,
-				45C1F2E9186E895500EF8D2D /* TagPickerCell.xib in Resources */,
 				456D8E11182DDCA700DD5479 /* email.png in Resources */,
 				8A574CE4182DED4E009EA870 /* Default.png in Resources */,
 				456D8DFC182DDBF400DD5479 /* fun.png in Resources */,
@@ -493,6 +492,7 @@
 				8A01A39A18189666005A2A70 /* Images.xcassets in Resources */,
 				456D8E0A182DDC2200DD5479 /* transportation.png in Resources */,
 				456D8DE5182DD43500DD5479 /* VenueCell.xib in Resources */,
+				452686CA189CE75100AEF591 /* TagPickerCell.xib in Resources */,
 				456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */,
 				8A01A38918189666005A2A70 /* InfoPlist.strings in Resources */,
 				456D8E00182DDBF400DD5479 /* nature.png in Resources */,
@@ -553,6 +553,7 @@
 				456D8DC8182DD28A00DD5479 /* FourSquareClient.m in Sources */,
 				456D8DCB182DD2CB00DD5479 /* CoreLocationController.m in Sources */,
 				456D8DDD182DD3F600DD5479 /* Travelog.m in Sources */,
+				452686C9189CE75100AEF591 /* TagPickerCell.m in Sources */,
 				8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */,
 				8AFFB9EC181F093600BAB4FF /* HudView.m in Sources */,
 				8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */,
@@ -561,7 +562,6 @@
 				8AFFB9E6181EC0D000BAB4FF /* CheckInViewController.m in Sources */,
 				456D8DE4182DD43500DD5479 /* VenueCell.m in Sources */,
 				456D8DD1182DD2F700DD5479 /* UIImage+Resize.m in Sources */,
-				45C1F2EC186E8BE700EF8D2D /* TagPickerCell.m in Sources */,
 				456D8DDA182DD3D900DD5479 /* Venue.m in Sources */,
 				45ACC091184AB3F2001D9D2E /* CLPlacemark+AddressDisplay.m in Sources */,
 				456D8DEB182DD4D800DD5479 /* MapViewController.m in Sources */,

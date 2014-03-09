@@ -24,7 +24,7 @@ CGFloat const kImageOriginHeight = 240.f;
 @property (strong, nonatomic)CLLocation *location;
 @property (strong, nonatomic)CLLocation *selectedLocation;
 @property (strong, nonatomic)Venue *selectedVenue;
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) NSArray *venueArray;
 @property (strong, nonatomic) NSArray *prevVenueArray;
 //reverse Geo Coding
@@ -100,6 +100,13 @@ CGFloat const kImageOriginHeight = 240.f;
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.mapView.showsUserLocation = YES;
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    //disable location manager monitoring
+    self.mapView.showsUserLocation = NO;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -134,28 +141,27 @@ CGFloat const kImageOriginHeight = 240.f;
 - (void)update:(CLLocation *)location {
     self.location = location;
     
-   // NSLog(@"after map update: latitude: %f longitude: %f", [location coordinate].latitude,[location coordinate].longitude);
+//    NSLog(@"after map update: latitude: %f longitude: %f", [location coordinate].latitude,[location coordinate].longitude);
     
 }
 
 -(void)fetchData{
+    
 
     [[FourSquareClient instance] venueSearchWithLatitude: self.location.coordinate.latitude
                                                longitude: self.location.coordinate.longitude
                                                  success:^(AFHTTPRequestOperation *operation, id response) {
-                                                     NSDictionary *jsonDict = (NSDictionary *) response;
-                                                     NSArray *items = [[jsonDict objectForKey:@"response"] objectForKey:@"venues"];
-                                                     
-
-                                                     //self.venueArray = [Venue venuesWithArray:items];
-                                                     // sort by distance
-                                                     __block NSArray *venues = [Venue venuesWithArray:items];
-
+                                                     NSArray *results = response[@"response"][@"venues"];
+                                                     NSValueTransformer *transformer;
+                                                     //transforming using mantle
+                                                     transformer =[NSValueTransformer mtl_JSONArrayTransformerWithModelClass:Venue.class];
+                                                     NSArray *venues = [transformer transformedValue:results];
                                                      
                                                      // adding current location on top
                                                      BOOL locationMatched = false;
-                                                     
+                                                     int index = 1;
                                                      for (Venue *venue in venues) {
+                                                         venue.index = [NSNumber numberWithInt:index++];
                                                          if (venue.distance.doubleValue < 0.0001)
                                                              locationMatched = true;
                                                      }
@@ -212,7 +218,7 @@ CGFloat const kImageOriginHeight = 240.f;
                                                      [self.tableView reloadData];
                                                      [[NSNotificationCenter defaultCenter] postNotificationName:LocationChangedNotification object:self];
                                                      //disable location manager monitoring
-                                                     self.mapView.showsUserLocation = NO;
+                                                     //self.mapView.showsUserLocation = NO;
                                                      
                                                  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                      // send alert
@@ -242,13 +248,14 @@ CGFloat const kImageOriginHeight = 240.f;
     VenueCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VenueCell" forIndexPath:indexPath];
     
     Venue *venue = [self.venueArray objectAtIndex:indexPath.row];
-
-    NSString *distanceString = [NSString stringWithFormat:@"%.1f ml", [venue.distance floatValue]];
+    
+    NSString *distanceString = [NSString stringWithFormat:@"%.1f ml",
+                                [venue.distance doubleValue]/METERS_PER_MILE];
     
     [cell.distanceLabel  setText:distanceString];
     [cell.venueNameLabel setText:venue.name];
     [cell.indexLabel setText:[NSString stringWithFormat:@"%@.",venue.index]];
-    [cell.addressLabel setText:venue.address];
+    [cell.addressLabel setText:venue.addressDisplay];
 
     return cell;
 }
@@ -304,7 +311,8 @@ CGFloat const kImageOriginHeight = 240.f;
     }
     //because MKAnnotation is a protocol, there are many objects it contains
     //ie the blue dot that represent the users current location
-    //so we use isKindOdClass to determine whether teh annotation is a location object, if so we continue
+    //so we use isKindOfClass to determine whether the annotation is a location object, if so we continue
+    
     if ([annotation isKindOfClass:[Venue class]]) {
         
         //reuse an annotation view object and create pins
