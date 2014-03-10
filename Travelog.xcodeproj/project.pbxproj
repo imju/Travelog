@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		452686C9189CE75100AEF591 /* TagPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 452686C7189CE75100AEF591 /* TagPickerCell.m */; };
-		452686CA189CE75100AEF591 /* TagPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452686C8189CE75100AEF591 /* TagPickerCell.xib */; };
+		45507BDA18CD4051001AE0F4 /* TagPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45507BD818CD4051001AE0F4 /* TagPickerCell.m */; };
+		45507BDB18CD4051001AE0F4 /* TagPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45507BD918CD4051001AE0F4 /* TagPickerCell.xib */; };
 		456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8C182DC81C00DD5479 /* CheckInImage.png */; };
 		456D8D8F182DC84D00DD5479 /* CheckInImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */; };
 		456D8DC8182DD28A00DD5479 /* FourSquareClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 456D8DC5182DD28A00DD5479 /* FourSquareClient.m */; };
@@ -75,10 +75,10 @@
 
 /* Begin PBXFileReference section */
 		170BEF4EAABA4A7C9984CEFD /* libPods-TravelogTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravelogTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		452686C6189CE75100AEF591 /* TagPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPickerCell.h; sourceTree = "<group>"; };
-		452686C7189CE75100AEF591 /* TagPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPickerCell.m; sourceTree = "<group>"; };
-		452686C8189CE75100AEF591 /* TagPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagPickerCell.xib; sourceTree = "<group>"; };
 		454E5B6718662182006E8D05 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		45507BD718CD4051001AE0F4 /* TagPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagPickerCell.h; path = Travelog/TagPickerCell.h; sourceTree = "<group>"; };
+		45507BD818CD4051001AE0F4 /* TagPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagPickerCell.m; path = Travelog/TagPickerCell.m; sourceTree = "<group>"; };
+		45507BD918CD4051001AE0F4 /* TagPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TagPickerCell.xib; path = Travelog/TagPickerCell.xib; sourceTree = "<group>"; };
 		456D8D8C182DC81C00DD5479 /* CheckInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CheckInImage.png; path = Travelog/Images.xcassets/HudImages/CheckInImage.png; sourceTree = "<group>"; };
 		456D8D8E182DC84D00DD5479 /* CheckInImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "CheckInImage@2x.png"; path = "Travelog/Images.xcassets/HudImages/CheckInImage@2x.png"; sourceTree = "<group>"; };
 		456D8DC5182DD28A00DD5479 /* FourSquareClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourSquareClient.m; path = Travelog/FourSquareClient.m; sourceTree = "<group>"; };
@@ -371,9 +371,9 @@
 		8AFFBA2B1823188000BAB4FF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				452686C6189CE75100AEF591 /* TagPickerCell.h */,
-				452686C7189CE75100AEF591 /* TagPickerCell.m */,
-				452686C8189CE75100AEF591 /* TagPickerCell.xib */,
+				45507BD718CD4051001AE0F4 /* TagPickerCell.h */,
+				45507BD818CD4051001AE0F4 /* TagPickerCell.m */,
+				45507BD918CD4051001AE0F4 /* TagPickerCell.xib */,
 				456D8DE0182DD43500DD5479 /* VenueCell.h */,
 				456D8DE1182DD43500DD5479 /* VenueCell.m */,
 				456D8DE2182DD43500DD5479 /* VenueCell.xib */,
@@ -492,7 +492,7 @@
 				8A01A39A18189666005A2A70 /* Images.xcassets in Resources */,
 				456D8E0A182DDC2200DD5479 /* transportation.png in Resources */,
 				456D8DE5182DD43500DD5479 /* VenueCell.xib in Resources */,
-				452686CA189CE75100AEF591 /* TagPickerCell.xib in Resources */,
+				45507BDB18CD4051001AE0F4 /* TagPickerCell.xib in Resources */,
 				456D8D8D182DC81C00DD5479 /* CheckInImage.png in Resources */,
 				8A01A38918189666005A2A70 /* InfoPlist.strings in Resources */,
 				456D8E00182DDBF400DD5479 /* nature.png in Resources */,
@@ -553,7 +553,7 @@
 				456D8DC8182DD28A00DD5479 /* FourSquareClient.m in Sources */,
 				456D8DCB182DD2CB00DD5479 /* CoreLocationController.m in Sources */,
 				456D8DDD182DD3F600DD5479 /* Travelog.m in Sources */,
-				452686C9189CE75100AEF591 /* TagPickerCell.m in Sources */,
+				45507BDA18CD4051001AE0F4 /* TagPickerCell.m in Sources */,
 				8AFFB9E9181EE7CA00BAB4FF /* TagPickerViewController.m in Sources */,
 				8AFFB9EC181F093600BAB4FF /* HudView.m in Sources */,
 				8A08AE4F182C1FE500F61EE8 /* CurrentLocationMapVC.m in Sources */,

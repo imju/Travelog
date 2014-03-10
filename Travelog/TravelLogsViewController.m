@@ -541,51 +541,8 @@
         travelogCell.addresslabel.text = @"(No Address)";
     }
     
-    
-    //tags Imags
-    if ([travelog.tag  isEqual: @"Events"]) {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"events.png"];
-    }
-    else if ([travelog.tag  isEqual: @"House"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"house.png"];
-    }
-    
-    else if ([travelog.tag  isEqual: @"Restaurant"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"restaurant.png"];
-    }
-    
-    else if ([travelog.tag  isEqual: @"Travel"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"travel.png"];
-    }
-    
-    else if ([travelog.tag  isEqual: @"Office"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"office.png"];
-    }
-    
-    else if ([travelog.tag  isEqual: @"People"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"people.png"];
-    }
-    
-    else if ([travelog.tag  isEqual: @"Nature"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"nature.png"];
-    }
-    
-    else if ([travelog.tag  isEqual: @"Shopping"])
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"shopping.png"];
-    }
-    
-    else
-    {
-        travelogCell.tagImageView.image  = [UIImage imageNamed:@"other.png"];
-    }
-
+    travelogCell.tagImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",
+                                                           [travelog.tag lowercaseString]]];
     
     
     //date
@@ -597,7 +554,7 @@
         travelogCell.dateLabel.text = @"(No Date)";
     }
     
-    //set teh image size here and load into teh travellog cell
+    //set the image size here and load into teh travellog cell
     UIImage *image = nil;
     if ([travelog hasPhoto]) {
         image = [travelog photoImage];
@@ -669,6 +626,8 @@
         }
         
     }
+    
+    
 }
 
 //this creates the sections needed for coredata
@@ -695,6 +654,7 @@
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
+
     [self.tableView beginUpdates];
 }
 
@@ -723,7 +683,7 @@
             [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
     }
-
+    
 }
 
 - (void)controller:(NSFetchedResultsController *)controller
